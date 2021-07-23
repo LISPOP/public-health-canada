@@ -4,18 +4,52 @@
 library(tidylog) 
 #First we read in Tim's file that used the PCCF+ to assign the FSAs to health regions. 
 ## It is based on code from Tim Gravelle and Laurier's PCCF file, which has to be run elsewhere
-health_regions<-read.csv(file="data/FSA to health region spatial join-2021 04 12.csv")
-#These are just some inspections to familiarize with the file. 
-names(health_regions)
-health_regions$HR
-health_regions$HR_NAME
-health_regions$HR_UID
-health_regions$health_region
-table(health_regions$health_region)
-names(health_regions)
-table(health_regions$PR)
+health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 06 14.csv"))
 
+#### PRovince names in Tim's file ####
+#Tim's file did not have province names, which might be necessary
+health_regions$PR
+names(health_regions)
+health_regions %>% 
+  mutate(province=case_when(
+    PR==10 ~ "Newfoundland and Labrador",
+    PR==11 ~ "PEI",
+    PR==12 ~ "Nova Scotia",
+    PR==13  ~ "New Brunswick",
+    PR==24 ~ "Quebec",
+    PR==35~ "Ontario",
+    PR==46 ~ "Manitoba",
+    PR==47 ~ "Saskatchewan",
+    PR==48 ~ "Alberta",
+    PR==59 ~ "British Columbia",
+    PR==60 ~ "Yukon",
+    PR==61~ "NWT",
+    PR==62 ~ "Nunavut"
+  ))->health_regions
+class(health_regions$province)
+class(full$province)
+table(full$province)
+as.character(full$province)
+health_regions$province<-as.factor(health_regions$province)
+health_regions %>% 
+  select(-PR)->health_regions
+names(health_regions)
+names(full)
 
+#Merge With full
+
+full %>% 
+  left_join(., health_regions, by=c('CID', 'FSA'))->full
+
+full %>% 
+  rename(province=province.x) %>% 
+  select(-province.y)->full
+
+nrow(full)
+full %>% 
+  filter(is.na(HR_UID)) %>% 
+  select(CID, FSA, HR_UID, province) %>% 
+  View()
 #### Compare with covid19 dataset####
 #Note, that this is only a moderately well documented package
 #Uncomment and run this to install the COVID19DATA
@@ -26,15 +60,15 @@ library(Covid19CanadaData)
 #This file has covid case counts for health regions, without HRUIDs
 # But as of May 21, 2021, this was not working at all. 
 #covid<-dl_dataset(uuid='746c01f3-e597-4413-89e0-afa561bf81d8')
-
+head(covid)
 #This line downloads the ccodwg timeseries by health region, but it only includes case counts
 #The dataset below has more data.
 #covid<-read_csv(file="https://raw.githubusercontent.com/ccodwg/Covid19Canada/master/timeseries_hr/cases_timeseries_hr.csv")
-
+head(covid)
 #This appears to download health canada's comprehensive time series by health region
 #However, this file does not contain the HRUIDs 
 covid<-read_csv(file="https://health-infobase.canada.ca/src/data/covidLive/file_out_v5.csv")
-names(covid)
+
 #Note that there are no HR_UID numbers in the covid file.
 
 # THE FUNDAMENTAL PROBLEM IS THAT TIM'S FILE HAS THE HRUID BUT THE COVID CASE DATA DOES NOT
@@ -43,8 +77,10 @@ names(covid)
 
 #### Get HHR_UID####
 #This file does have the health region names and the hruids
-hruid<-read_csv(file="https://health-infobase.canada.ca/src/data/covidLive/covid19-healthregions-hruid.csv")
+hruid<-read_csv(file="https://raw.githubusercontent.com/ccodwg/Covid19Canada/master/other/hr_map.csv")
 names(hruid)
+hruid$health_region
+hruid$health_region_esri
 #Some inspections
 names(covid)
 names(hruid)
@@ -66,63 +102,23 @@ health_regions %>%
 # then be able to merge with Tim's file that contains FSAs and health region data
 
 #THIS MERGES THE COVID FILE WITH THE HRUID FILE BY THE VARIABLE HEALTH_REGION
-
+covid
+names(hruid)
+table(hruid$province)
+table(covid$province)
 covid %>% 
-  left_join(., hruid, by=c("province"="Province", "health_region"))->covid
+  left_join(., hruid, by=c("province"="province", "health_region"))->covid
 
 names(covid)
-#### PRovince names in Tim's file ####
-#Tim's file did not have province names, which might be necessary
-health_regions$PR
-names(health_regions)
-health_regions %>% 
-  mutate(province=case_when(
-    PR==10 ~ "Newfoundland and Labrador",
-    PR==11 ~ "PEI",
-    PR==12 ~ "Nova Scotia",
-    PR==13  ~ "New Brunswick",
-    PR==24 ~ "Quebec",
-    PR==35~ "Ontario",
-    PR==46 ~ "Manitoba",
-    PR==47 ~ "Saskatchewan",
-    PR==48 ~ "Alberta",
-    PR==59 ~ "British Columbia",
-    PR==60 ~ "Yukon",
-    PR==61~ "NWT",
-    PR==62 ~ "Nunavut"
-  ))->health_regions
 
-#This is some checks to see where we are at. 
 names(health_regions)
 health_regions$HR
-health_regions$HR_NAME
 health_regions$HR_UID
-table(health_regions$HR, health_regions$HR_UID)
-
-#This slim's down Tim's file
-# I think there are some duplicate values, not sure.
-# Basically, it is just linking one single FSA with one single health region
-
-health_regions %>% 
-  select(FSA, Comm_Name, HR_UID, HR_NAME, province) %>% 
-  distinct(FSA, .keep_all=T) ->health_regions
 
 
-#### Merge full with tim's file####
-#This now merges the full dataset with Tim's FSA file based on province and FSA
-#After this, each respondent will have their FSA *and* their health region name
-# *and* their HRUID
-
-full %>% 
-  left_join(., health_regions, by=c('province', 'FSA'))->full
+#This is some checks to see where we are at. 
+#Now merge full with 
 names(full)
-#The diagnostics I am getting suggest that there were 53 rows in the data file 
-#This is a check of 50 random rows
-# full %>% 
-#   select(province, FSA, Comm_Name, HR_UID, HR_NAME) %>% 
-#   slice_sample(n=50) %>% 
-#   View()
-
 #### Merge Covid Case Count ####
 
 #We need to be sure that both covid and full have proper date variables
@@ -137,10 +133,8 @@ names(full)
 names(covid)
 #This is a test merge that dumps the merge into out.
 full %>% 
-  left_join(., covid, by=c('province',"HR_UID", "date" )) ->out
-full$date
-names(out)
-out$HR_NAME
+  left_join(., covid, by=c("province", "health_region", "HR_UID", "date" )) ->out
+
 #Check in the new maerged dataset
 # out %>% 
 #   filter(HR_NAME=="Calgary Zone") %>% 
@@ -161,26 +155,37 @@ covid %>%
 #   View()
   
 #### Complete merge #### 
-#This is a test merge that dumps the merge into out.
 full %>% 
   left_join(., covid, by=c('province',"HR_UID", "date" )) ->full
 
 #Which of our respondents do not have health region names
 #It looks like there are 
 names(full)
-full %>% 
-  filter(is.na(HR_UID)) %>% 
-  select(HR_UID, Comm_Name, FSA, HR_NAME, cases, date) %>% 
-  View()
+# full %>% 
+#   filter(is.na(health_region.x)) %>%
+# select(HR_UID, Comm_Name, FSA, HR_NAME, cases, date, Q65_1) %>% 
+#   distinct(Q65_1) %>% 
+#   View()
 
 # full %>% 
 #   filter(is.na(HR_UID)) %>% 
 #   select(HR_UID, Comm_Name, FSA, HR_NAME, cases, date) %>% 
 #   write_csv(., file=here("data", "missing_health_regions.csv"))
+
 #### Make trend variable#### 
-full$avgtotal_last14
-full$avgtotal_last7
+
+
+#This command creates the variable case_trend
+# It divides the 7 day average of cases by the 14 day cases.
+# If the two are equal, (e.g. the most recent seven days average are the same 
+# As the most 14 days average) , then the ratio will equal 1, and the covide
+# Case rate is stabilized. If it the most recent seven day case average is larger
+# than 1, then it is rsiing, if it lower than 1 it is falling. 
 full$case_trend<-full$avgtotal_last7/full$avgtotal_last14
+
+full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$pop
+#Divide by population
+
 qplot(full$case_trend, geom="histogram", title="Distribution of trend variable")
 
       

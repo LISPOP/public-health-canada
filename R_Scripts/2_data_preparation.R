@@ -364,6 +364,17 @@ full %>%
   full_join(., mip, by="other_problem_text") %>%
   rename(.,other_mip=`category.x`)->full
 names(full)
+#### Pandemic Response Preferences #### 
+#This package provides a useful rescale function that rescales variables to 0 and 1
+#remotes::install_github('sjkiss/skpersonal')
+library(skpersonal)
+summary(revScale(full$Q8_1))
+head(revScale(full$Q8_1))
+library(scales)
+full %>% 
+  ungroup() %>% 
+  mutate(across(starts_with('Q8_'), revScale, .names="{.col}_x")) ->full
+
 
 #### Demographics ####
 #Age
@@ -529,9 +540,10 @@ full<-full %>%
 # When troubleshooting the merge script, it is advised to *not* run this line
 # INstead, it is advised to run this full script and then step through the code in 
 # 2b_fsa_merge_covid_incidence.R step by step to see how it works.
-#source('R_scripts/2b_fsa_merge_covid_incidence.R')
+source('R_scripts/2b_fsa_merge_covid_incidence.R')
 
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)
 #write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
+View(full)

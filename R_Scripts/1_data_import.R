@@ -34,14 +34,16 @@ full$FSA<-toupper(full$Q65_1)
 full$province<-as_factor(full$S1)
 #provide date variable
 full$date<-as.Date(full$START_DATE)
-
+nrow(full)
 #### export postal codes####
 #This section exports the unique FSAs and were used by Tim to merge FSAs to health regions.
-#It's no longer necessary to run. 
+#It's no longer necessary to run.
+# names(full)
 # full %>%
-#   distinct(Q65_1) %>%
+#  # distinct(Q65_1) %>%
 #   mutate(fsa=tolower(Q65_1), fsa2=toupper(Q65_1)) %>%
-#   select(fsa:fsa2) %>% 
-#   write_csv(., file=here("data", "fsa.csv"))
+#   select(CID,fsa:fsa2) %>%
+#   #distinct(CID) %>% 
+#   write_csv(., file=here("data", "fsa2.csv"))
 
 

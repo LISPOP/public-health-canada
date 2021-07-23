@@ -1,0 +1,2195 @@
+CID,FSA,Comm_Name,PR,HR,health_region,HR_UID,HR_NAME
+491824829,T2Z,CALGARY,48,4832,Calgary,4832,Calgary Zone
+491824833,L5E,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491824844,A0G,LEWISPORTE,10,1012,Central,1012,Central Regional Health Authority
+491824847,H9W,BEACONSFIELD,24,2406,Montréal,2406,Région de Montréal
+491824858,M8W,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+491824869,T3G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+491824885,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+491824907,M5V,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491824912,L3P,MARKHAM,35,3570,York,3570,York Region Public Health
+491824920,M1G,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+491824928,A1A,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+491824961,B2H,NEW GLASGOW,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+491824984,K6V,BROCKVILLE,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+491824999,A0J,SPRINGDALE,10,1012,Central,1012,Central Regional Health Authority
+491825021,L8K,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+491825023,V2W,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+491825027,H8P,LASALLE,24,2406,Montréal,2406,Région de Montréal
+491825031,T4R,RED DEER,48,4833,Central,4833,Central Zone
+491825032,R3C,WINNIPEG,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+491825038,J3Y,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+491825044,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+491825049,A8A,DEER LAKE,10,1013,Western,1013,Western Regional Health Authority
+491825066,V0K,100 MILE HOUSE,59,5901,Interior,592,Interior
+491825073,E1A,DIEPPE,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+491825080,V9R,NANAIMO,59,5904,Island,593,Vancouver Island
+491825081,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+491825098,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491825162,N0A,PORT DOVER,35,3534,Haldimand-Norfolk,3534,Haldimand-Norfolk Health Unit
+491825200,B1N,SYDNEY,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+491825205,G9N,SHAWINIGAN,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+491825251,K1J,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+491825301,G9H,BECANCOUR,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+491825322,L1J,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+491825355,M3L,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491825357,L5B,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491825404,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+491825410,A0A,HOLYROOD,10,1011,Eastern,1011,Eastern Regional Health Authority
+491825424,V3V,SURREY,59,5902,Fraser,591,Fraser
+491825431,G9H,BECANCOUR,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+491825474,M9R,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+491825494,T4N,RED DEER,48,4833,Central,4833,Central Zone
+491825509,M2M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491825520,V3K,COQUITLAM,59,5902,Fraser,591,Fraser
+491825572,M6M,YORK,35,3595,Toronto,3595,Toronto Public Health
+491825619,S4H,WEYBURN,47,4706,South,476,South
+491825640,V7C,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+491825852,J9E,MANIWAKI,24,2407,Outaouais,2407,Région de l'Outaouais
+491826257,N6J,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+491826299,E1E,MONCTON,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+491826414,J8A,SAINT-HIPPOLYTE,24,2415,Laurentides,2415,Région des Laurentides
+491826542,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+491826639,V0J,VANDERHOOF,59,5905,Northern,594,Northern
+491826790,H1G,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+491826963,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+491827011,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+491827046,L6P,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+491827047,S6J,MOOSE JAW,47,4706,South,476,South
+491827083,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+491827100,N1H,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+491827131,H2N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+491827148,J6E,JOLIETTE,24,2414,Lanaudière,2414,Région de Lanaudière
+491827197,L5A,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491827219,M9M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491827230,B3H,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+491827327,A0N,LOURDES,10,1013,Western,1013,Western Regional Health Authority
+491827348,V1E,SALMON ARM,59,5901,Interior,592,Interior
+491827357,T9W,WAINWRIGHT,48,4833,Central,4833,Central Zone
+491827414,A2V,LABRADOR CITY,10,1014,Labrador-Grenfell,1014,Labrador-Grenfell Regional Health Authority
+491827586,T2K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+491827631,L3Z,BRADFORD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+491827760,M2H,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491827768,M1B,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+491827898,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+491827992,L3X,NEWMARKET,35,3570,York,3570,York Region Public Health
+491828051,V7C,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+491828199,P3E,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+491828287,M6J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491828577,L4Z,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491828634,L6L,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+491829056,E2J,SAINT JOHN,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+491829579,L5L,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491830124,L5R,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+491830828,H3J,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+491831276,K2J,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+491831295,H1Y,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+491831573,P0B,UTTERSON,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+491832658,M1J,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+491832684,R5L,ANOLA,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+491833531,L6C,MARKHAM,35,3570,York,3570,York Region Public Health
+491833767,V3B,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+491834337,M3J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+491834842,M4C,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+491835948,M1W,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+491836747,K1J,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+491837905,V9R,NANAIMO,59,5904,Island,593,Vancouver Island
+491837909,S0E,TISDALE,47,4702,North,472,North
+491838388,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+491856332,T3A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+491857875,L7R,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+491860661,M4K,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491861356,T3M,CALGARY,48,4832,Calgary,4832,Calgary Zone
+491862306,M5N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491863904,M6H,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491869732,L7P,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+491872153,G8V,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+491875657,T6X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+491875672,V8R,VICTORIA,59,5904,Island,593,Vancouver Island
+491881426,V8R,VICTORIA,59,5904,Island,593,Vancouver Island
+491885222,H2X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+491892137,G7J,CHICOUTIMI,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+491894504,M5B,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+491901750,K1P,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+491919193,P3C,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+491938308,V6E,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+491957854,J1J,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+492048071,H4K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492056006,K2V,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+492060304,M6K,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492105114,V3Z,SURREY,59,5902,Fraser,591,Fraser
+492132099,C1E,CHARLOTTETOWN,11,1100,Prince Edward Island,1100,Prince Edward Island
+492151083,R3M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492152432,R3L,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492152498,R2H,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492152790,R1N,PORTAGE LA PRAIRIE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+492154173,R3X,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492167387,R3T,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492189247,L0S,NIAGARA ON THE LAKE,35,3546,Niagara,3546,Niagara Region Public Health Department
+492212174,R2W,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492214159,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492222013,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492224120,R7B,BRANDON,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492248369,R3Y,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492298202,R2W,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492303830,R1A,ST ANDREWS,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492323841,R3M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492326919,R0L,CAMPERVILLE,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492358061,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492380089,R2K,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492387546,N1H,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492387558,T4T,ROCKY MOUNTAIN HOUSE,48,4833,Central,4833,Central Zone
+492387565,E2J,SAINT JOHN,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492387576,H4C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492387596,A0B,HEART'S DESIRE,10,1011,Eastern,1011,Eastern Regional Health Authority
+492387601,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+492387612,V3Y,PITT MEADOWS,59,5902,Fraser,591,Fraser
+492387613,T6A,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492387617,V5J,BURNABY,59,5902,Fraser,591,Fraser
+492387651,N5P,ST THOMAS,35,3575,Southwestern,3575,Southwestern Public Health
+492387658,P7B,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492387684,T4P,RED DEER,48,4833,Central,4833,Central Zone
+492387687,M5N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492387689,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492387692,L7S,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492387726,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492387729,L4T,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492387752,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492387755,M1S,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492387766,L2G,NIAGARA FALLS,35,3546,Niagara,3546,Niagara Region Public Health Department
+492387768,M5R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492387770,N0R,BELLE RIVER,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492387772,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492387774,N5P,ST THOMAS,35,3575,Southwestern,3575,Southwestern Public Health
+492387783,T2R,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492387785,N5V,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492387791,M1P,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492387802,P6C,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+492387814,S7T,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492387815,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492387867,S4S,REGINA,47,4705,Regina,475,Regina
+492387877,N6J,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492387888,K0C,ALEXANDRIA,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492387890,H2J,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492387898,T2A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492387908,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492387917,E1E,MONCTON,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492387930,M1N,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492387936,M2R,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492387945,V9C,VICTORIA,59,5904,Island,593,Vancouver Island
+492387946,L9H,DUNDAS,35,3537,Hamilton,3537,Hamilton Public Health Services
+492387950,M4N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492387962,P6A,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+492387965,N0P,BLENHEIM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492387969,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+492387978,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492387998,J9H,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492388002,V8M,SAANICHTON,59,5904,Island,593,Vancouver Island
+492388009,A1C,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492388010,G5L,RIMOUSKI,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492388012,A0N,LOURDES,10,1013,Western,1013,Western Regional Health Authority
+492388022,P4N,TIMMINS,35,3556,Porcupine,3556,Porcupine Health Unit
+492388024,E2J,SAINT JOHN,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492388028,L1R,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+492388070,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492388077,R2W,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388078,K1V,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492388084,N2E,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492388103,B4A,BEDFORD,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388122,V8S,VICTORIA,59,5904,Island,593,Vancouver Island
+492388124,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492388128,L6S,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492388130,R2Y,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388134,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492388137,K0L,DOURO-DUMMER,35,3555,Peterborough,3555,Peterborough Public Health
+492388160,V6J,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492388176,L5M,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492388210,T2X,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492388223,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492388232,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492388234,L7L,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492388235,A1B,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492388236,S4X,REGINA,47,4705,Regina,475,Regina
+492388247,M8W,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492388258,H9J,KIRKLAND,24,2406,Montréal,2406,Région de Montréal
+492388283,M2J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492388299,V2N,PRINCE GEORGE,59,5905,Northern,594,Northern
+492388303,T7X,SPRUCE GROVE,48,4834,Edmonton,4834,Edmonton Zone
+492388311,V7R,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492388347,N6C,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492388358,N5R,ST THOMAS,35,3575,Southwestern,3575,Southwestern Public Health
+492388367,B3R,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388369,H3E,VERDUN,24,2406,Montréal,2406,Région de Montréal
+492388371,V7W,WEST VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492388380,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+492388394,S4P,REGINA,47,4705,Regina,475,Regina
+492388402,V2G,WILLIAMS LAKE,59,5901,Interior,592,Interior
+492388403,V0E,ARMSTRONG,59,5901,Interior,592,Interior
+492388426,N0L,KOMOKA,35,3575,Southwestern,3575,Southwestern Public Health
+492388433,B2W,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388435,V0N,WHISTLER,59,5904,Island,593,Vancouver Island
+492388436,L5W,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492388437,L4S,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492388452,B3M,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388456,T3L,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492388474,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492388475,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+492388485,V2L,PRINCE GEORGE,59,5905,Northern,594,Northern
+492388486,V0X,HOPE,59,5901,Interior,592,Interior
+492388491,L6C,MARKHAM,35,3570,York,3570,York Region Public Health
+492388492,V0H,SUMMERLAND,59,5901,Interior,592,Interior
+492388501,N4N,HANOVER,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+492388512,V1T,VERNON,59,5901,Interior,592,Interior
+492388520,V9R,NANAIMO,59,5904,Island,593,Vancouver Island
+492388522,G0L,SAINT-PASCAL,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492388524,V7J,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492388533,T6X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492388547,V6P,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492388559,R3J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388564,K1V,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492388581,V2X,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+492388586,L9M,PENETANGUISHENE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492388590,V1Z,WEST KELOWNA,59,5901,Interior,592,Interior
+492388596,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492388608,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492388614,M1G,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492388622,R9A,THE PAS,46,4604,Northern,4604,Northern Regional Health Authority
+492388633,N6B,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492388636,M6J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492388637,K7K,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+492388641,M6P,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492388647,E2H,ROTHESAY,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492388652,M3J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492388655,H1E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492388688,M3A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492388692,L0R,BEAMSVILLE,35,3546,Niagara,3546,Niagara Region Public Health Department
+492388695,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492388696,J6A,REPENTIGNY,24,2414,Lanaudière,2414,Région de Lanaudière
+492388703,V2J,QUESNEL,59,5905,Northern,594,Northern
+492388704,T8L,FORT SASKATCHEWAN,48,4834,Edmonton,4834,Edmonton Zone
+492388710,N6E,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492388718,B1P,SYDNEY,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492388722,R2P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388727,R3T,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388743,R3T,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388745,P3E,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+492388752,G9B,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492388758,B2X,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388765,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492388766,L4L,WOODBRIDGE,35,3570,York,3570,York Region Public Health
+492388799,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388814,H4G,VERDUN,24,2406,Montréal,2406,Région de Montréal
+492388817,H1E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492388825,M9B,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492388830,L4M,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492388831,T1B,MEDICINE HAT,48,4831,South,4831,South Zone
+492388844,N5A,STRATFORD,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492388846,T5X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492388857,R4A,WEST ST PAUL,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388874,S7L,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492388879,L1P,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+492388881,S6H,MOOSE JAW,47,4706,South,476,South
+492388885,V9C,VICTORIA,59,5904,Island,593,Vancouver Island
+492388887,M2M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492388897,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388900,B3H,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492388930,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492388946,R3T,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492388973,L6X,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492388982,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492388992,K2K,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+492388994,V2R,CHILLIWACK,59,5902,Fraser,591,Fraser
+492388996,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492388999,J4W,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492389019,B3V,HERRING COVE,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389029,P6A,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+492389032,V2B,KAMLOOPS,59,5901,Interior,592,Interior
+492389050,M4P,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492389057,B3N,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389065,S0K,WARMAN,47,4703,Central,473,Central
+492389066,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+492389069,N1G,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492389074,M6N,YORK,35,3595,Toronto,3595,Toronto Public Health
+492389099,B3K,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389120,V5S,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492389127,B2V,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389134,V5S,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492389137,V9M,COMOX,59,5904,Island,593,Vancouver Island
+492389138,L6S,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492389151,V0C,BALDONNEL,59,5905,Northern,594,Northern
+492389176,L2G,NIAGARA FALLS,35,3546,Niagara,3546,Niagara Region Public Health Department
+492389224,K1R,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492389253,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492389297,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492389303,V3M,NEW WESTMINSTER,59,5902,Fraser,591,Fraser
+492389324,T3B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492389337,A1E,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492389355,N2L,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492389356,N2N,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492389359,K6K,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492389370,T6W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492389372,N3T,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492389378,J7V,VAUDREUIL-DORION,24,2416,Montérégie,2416,Région de la Montérégie
+492389392,S7M,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492389399,K0H,INVERARY,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+492389403,V3E,COQUITLAM,59,5902,Fraser,591,Fraser
+492389419,G0X,SHAWINIGAN,24,2414,Lanaudière,2414,Région de Lanaudière
+492389432,R2G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492389437,V9W,CAMPBELL RIVER,59,5904,Island,593,Vancouver Island
+492389442,S0E,TISDALE,47,4702,North,472,North
+492389451,R1A,ST ANDREWS,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492389456,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492389465,T6X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492389471,B0J,HUBBARDS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389476,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492389500,A1E,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492389503,K9H,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+492389511,M8Z,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492389515,L6A,MAPLE,35,3570,York,3570,York Region Public Health
+492389518,B3K,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389523,M6R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492389535,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492389572,M9W,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492389575,L6T,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492389610,M6A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492389620,K1J,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+492389624,N0C,MARKDALE,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+492389644,V7M,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492389649,V3M,NEW WESTMINSTER,59,5902,Fraser,591,Fraser
+492389653,K0K,QUINTE WEST,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+492389655,B3A,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492389662,T2G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492389664,V9S,NANAIMO,59,5904,Island,593,Vancouver Island
+492389666,M9R,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492389667,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492389675,M1P,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492389702,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492389708,V4M,DELTA,59,5902,Fraser,591,Fraser
+492389722,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492389743,M1B,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492389783,K2J,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492389784,V1T,VERNON,59,5901,Interior,592,Interior
+492389819,M9V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492389823,L3Z,BRADFORD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492389844,V9V,NANAIMO,59,5904,Island,593,Vancouver Island
+492389863,T5G,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492389867,L5A,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492389879,H4M,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+492389881,V4M,DELTA,59,5902,Fraser,591,Fraser
+492389903,P7K,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492389916,H2A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492389920,M9B,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492389937,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492389941,V2N,PRINCE GEORGE,59,5905,Northern,594,Northern
+492389950,T5Z,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492389960,M4E,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492389970,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492389987,R3B,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492390022,K7G,GANANOQUE,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+492390041,N0M,PARKHILL,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492390056,V5V,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492390070,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492390076,R0C,GIMLI,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492390096,B2T,FALL RIVER,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492390098,L4E,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492390101,E4E,SUSSEX,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492390102,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492390116,K1Y,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492390128,V4R,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+492390137,K2E,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492390169,J1L,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+492390171,M4E,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492390179,R2G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492390187,L1H,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+492390193,V5E,BURNABY,59,5902,Fraser,591,Fraser
+492390194,V1C,CRANBROOK,59,5901,Interior,592,Interior
+492390204,V2Y,LANGLEY,59,5902,Fraser,591,Fraser
+492390216,B0J,HUBBARDS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492390221,B3A,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492390226,C0B,O'LEARY,11,1100,Prince Edward Island,1100,Prince Edward Island
+492390247,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492390249,L6L,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492390256,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492390260,V3E,COQUITLAM,59,5902,Fraser,591,Fraser
+492390285,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492390295,K2B,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492390297,A0A,HOLYROOD,10,1011,Eastern,1011,Eastern Regional Health Authority
+492390347,V6Z,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492390351,L4L,WOODBRIDGE,35,3570,York,3570,York Region Public Health
+492390354,V2S,ABBOTSFORD,59,5902,Fraser,591,Fraser
+492390414,V3B,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492390417,M5C,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492390455,T8X,GRANDE PRAIRIE,48,4835,North,4835,North Zone
+492390461,V3A,LANGLEY,59,5902,Fraser,591,Fraser
+492390483,C0A,CORNWALL,11,1100,Prince Edward Island,1100,Prince Edward Island
+492390485,H4C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492390488,V8V,VICTORIA,59,5904,Island,593,Vancouver Island
+492390489,V7C,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492390507,L5N,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492390529,V1V,KELOWNA,59,5901,Interior,592,Interior
+492390535,T3G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492390537,J4H,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+492390564,T3M,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492390580,L9Z,WASAGA BEACH,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492390594,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492390596,L1G,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+492390608,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492390633,N0P,BLENHEIM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492390638,L8G,STONEY CREEK,35,3537,Hamilton,3537,Hamilton Public Health Services
+492390658,V4N,SURREY,59,5902,Fraser,591,Fraser
+492390677,K2J,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492390681,N0P,BLENHEIM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492390704,H4C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492390738,L8L,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492390752,P7K,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492390768,T9E,LEDUC,48,4834,Edmonton,4834,Edmonton Zone
+492390801,K0C,ALEXANDRIA,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492390839,V6K,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492390848,H7W,LAVAL,24,2413,Laval,2413,Région de Laval
+492390852,K2M,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+492390872,N2H,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492390881,M2K,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492390896,K0K,QUINTE WEST,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+492390901,G0R,SAINT-HENRI-DE-LEVIS,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+492390930,B3J,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492390954,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492390960,V2L,PRINCE GEORGE,59,5905,Northern,594,Northern
+492390961,B2N,TRURO,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492390980,M1N,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492391005,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+492391010,V1C,CRANBROOK,59,5901,Interior,592,Interior
+492391048,T5W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492391050,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+492391055,K7K,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+492391062,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492391077,S6V,PRINCE ALBERT,47,4702,North,472,North
+492391106,L9N,HOLLAND LANDING,35,3570,York,3570,York Region Public Health
+492391114,E3A,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492391120,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492391123,V6P,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492391124,T2R,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492391143,S0J,SHELLBROOK,47,4701,Far North,471,Far North
+492391148,L6Y,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492391192,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492391197,V2E,KAMLOOPS,59,5901,Interior,592,Interior
+492391201,N5Z,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492391210,K2P,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492391239,V3C,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492391246,L5M,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492391261,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492391273,S0N,GULL LAKE,47,4706,South,476,South
+492391304,N7T,SARNIA,35,3542,Lambton,3542,Lambton Public Health
+492391321,N7A,GODERICH,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492391327,T4B,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+492391339,B0J,HUBBARDS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492391344,B2N,TRURO,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492391400,K9V,LINDSAY,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492391406,T3G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492391410,K9A,COBOURG,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492391460,M1M,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492391481,P1A,NORTH BAY,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+492391489,K6J,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492391497,L8V,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492391504,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492391531,V1A,KIMBERLEY,59,5901,Interior,592,Interior
+492391535,H2E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492391540,T1L,BANFF,48,4832,Calgary,4832,Calgary Zone
+492391555,V2S,ABBOTSFORD,59,5902,Fraser,591,Fraser
+492391558,P7A,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492391567,V1V,KELOWNA,59,5901,Interior,592,Interior
+492391586,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492391628,H4N,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+492391648,V5G,BURNABY,59,5902,Fraser,591,Fraser
+492391673,V5C,BURNABY,59,5902,Fraser,591,Fraser
+492391697,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492391704,L9E,MILTON,35,3536,Halton,3536,Halton Region Health Department
+492391719,S4X,REGINA,47,4705,Regina,475,Regina
+492391764,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+492391785,V3J,COQUITLAM,59,5902,Fraser,591,Fraser
+492391791,E4Y,ROGERSVILLE,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492391806,M3N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492391809,L6S,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492391814,L7L,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492391827,L1J,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+492391866,V3S,SURREY,59,5902,Fraser,591,Fraser
+492391867,M8V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492391905,M1M,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492391906,T3G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492391932,N1R,CAMBRIDGE,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492391934,J5W,L'ASSOMPTION,24,2414,Lanaudière,2414,Région de Lanaudière
+492391937,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492391990,L7T,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492392019,M5V,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492392020,T2X,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492392037,K1L,VANIER,35,3551,Ottawa,3551,Ottawa Public Health
+492392064,L6Z,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492392091,L6V,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492392095,V2W,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+492392104,V0X,HOPE,59,5901,Interior,592,Interior
+492392116,S0A,CANORA,47,4703,Central,473,Central
+492392121,V2E,KAMLOOPS,59,5901,Interior,592,Interior
+492392134,T1L,BANFF,48,4832,Calgary,4832,Calgary Zone
+492392169,M4Y,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492392171,L8R,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492392199,L0B,ORONO,35,3530,Durham,3530,Durham Region Health Department
+492392223,L8L,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492392242,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492392258,K7V,RENFREW,35,3557,Renfrew,3557,Renfrew County and District Health Unit
+492392276,T2A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492392277,L6E,MARKHAM,35,3570,York,3570,York Region Public Health
+492392280,V8V,VICTORIA,59,5904,Island,593,Vancouver Island
+492392285,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492392323,L6P,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492392337,S4W,REGINA,47,4705,Regina,475,Regina
+492392340,M1P,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492392344,J4K,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+492392365,V2A,PENTICTON,59,5901,Interior,592,Interior
+492392377,L4S,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492392402,V5R,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492392454,V2E,KAMLOOPS,59,5901,Interior,592,Interior
+492392512,V2Y,LANGLEY,59,5902,Fraser,591,Fraser
+492392549,L4A,STOUFFVILLE,35,3570,York,3570,York Region Public Health
+492392573,M5C,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492392606,L1B,NEWCASTLE,35,3530,Durham,3530,Durham Region Health Department
+492392607,V3S,SURREY,59,5902,Fraser,591,Fraser
+492392629,V6J,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492392672,N5W,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492392720,M8Y,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492392722,K8V,TRENTON,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+492392733,T6E,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492392748,J3V,SAINT-BRUNO,24,2416,Montérégie,2416,Région de la Montérégie
+492392790,N1T,CAMBRIDGE,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492392794,L4A,STOUFFVILLE,35,3570,York,3570,York Region Public Health
+492392819,A1E,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492392844,B4V,BRIDGEWATER,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492392847,K1C,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+492392867,J6E,JOLIETTE,24,2414,Lanaudière,2414,Région de Lanaudière
+492392885,M4E,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492392897,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+492392902,T6R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492392942,T6C,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492392965,M6L,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492392983,T1C,MEDICINE HAT,48,4831,South,4831,South Zone
+492393004,K7A,SMITHS FALLS,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+492393018,L4M,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492393057,V7M,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492393070,L7S,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492393077,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492393104,M9A,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492393115,L4G,AURORA,35,3570,York,3570,York Region Public Health
+492393126,M4K,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492393130,L6H,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492393134,T5R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492393136,T9V,LLOYDMINSTER,48,4833,Central,4833,Central Zone
+492393145,S4T,REGINA,47,4705,Regina,475,Regina
+492393150,T2E,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492393175,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+492393179,L5M,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492393236,V7N,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492393237,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492393258,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492393316,B3M,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492393320,T5P,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492393348,M1L,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492393368,T0C,STETTLER,48,4833,Central,4833,Central Zone
+492393373,H2G,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393377,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492393397,V2R,CHILLIWACK,59,5902,Fraser,591,Fraser
+492393483,T5L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492393492,K1T,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+492393497,H1G,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+492393498,H4B,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393514,H3L,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393520,V1R,TRAIL,59,5901,Interior,592,Interior
+492393537,N4N,HANOVER,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+492393596,T5Z,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492393616,T2W,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492393635,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492393639,M5V,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492393650,L6C,MARKHAM,35,3570,York,3570,York Region Public Health
+492393671,L6S,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492393722,H3M,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393767,V7L,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492393781,K7M,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+492393783,N2A,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492393784,A0G,LEWISPORTE,10,1012,Central,1012,Central Regional Health Authority
+492393802,K2J,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492393822,T6H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492393833,H2T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393846,L6L,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492393868,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492393872,B0P,BERWICK,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492393921,V6G,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492393923,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492393936,T0A,ST PAUL,48,4835,North,4835,North Zone
+492393971,T4H,OLDS,48,4833,Central,4833,Central Zone
+492393976,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+492393989,M3H,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492393999,M4W,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492394037,V7C,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492394067,T4T,ROCKY MOUNTAIN HOUSE,48,4833,Central,4833,Central Zone
+492394128,V5H,BURNABY,59,5902,Fraser,591,Fraser
+492394131,M5B,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492394174,M4L,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492394176,T5R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492394186,N2A,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492394192,H1V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492394216,N3T,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492394238,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492394255,T3H,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492394290,L5A,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492394313,V3R,SURREY,59,5902,Fraser,591,Fraser
+492394315,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492394328,A1E,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492394331,V6Y,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492394343,M6G,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492394372,K4A,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+492394437,R1C,NAROL,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492394442,H9B,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+492394520,T3H,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492394565,V8T,VICTORIA,59,5904,Island,593,Vancouver Island
+492394570,T0M,RED DEER COUNTY,48,4833,Central,4833,Central Zone
+492394605,E2A,BATHURST,13,1306,Zone 6 (Bathurst area),1306,Zone 6 (Bathurst area)
+492394647,J8V,CANTLEY,24,2407,Outaouais,2407,Région de l'Outaouais
+492394660,M1P,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492394688,V5H,BURNABY,59,5902,Fraser,591,Fraser
+492394715,V1S,KAMLOOPS,59,5901,Interior,592,Interior
+492394731,A1Y,CARBONEAR,10,1011,Eastern,1011,Eastern Regional Health Authority
+492394907,V2R,CHILLIWACK,59,5902,Fraser,591,Fraser
+492394915,M2R,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492394917,V5K,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492394918,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492394921,L6P,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492422811,R0K,CARBERRY,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492611818,G4R,SEPT-ILES,24,2409,Côte-Nord,2409,Région de la Côte-Nord
+492618722,R0A,NIVERVILLE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+492638676,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492707670,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492707671,A2H,CORNER BROOK,10,1013,Western,1013,Western Regional Health Authority
+492707740,V2B,KAMLOOPS,59,5901,Interior,592,Interior
+492707849,R3B,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492708011,M4W,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492708126,L4H,WOODBRIDGE,35,3570,York,3570,York Region Public Health
+492708184,M1S,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492708200,K1V,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492708224,P3C,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+492708247,E5T,NORTON,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492708271,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492708280,H8P,LASALLE,24,2406,Montréal,2406,Région de Montréal
+492708282,J7Z,SAINT-JEROME,24,2415,Laurentides,2415,Région des Laurentides
+492708286,K0L,DOURO-DUMMER,35,3555,Peterborough,3555,Peterborough Public Health
+492708365,M1R,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492708390,G5A,LA MALBAIE,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492708447,T6K,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492708549,K0M,MINDEN,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492708560,M1W,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492708670,L4A,STOUFFVILLE,35,3570,York,3570,York Region Public Health
+492708701,V1C,CRANBROOK,59,5901,Interior,592,Interior
+492708769,V3T,SURREY,59,5902,Fraser,591,Fraser
+492708803,G0A,BOISCHATEL,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492708806,T5H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492708843,A1N,MOUNT PEARL,10,1011,Eastern,1011,Eastern Regional Health Authority
+492708946,A1G,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492709000,N9Y,KINGSVILLE,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492709038,L6H,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492709039,L3T,THORNHILL,35,3570,York,3570,York Region Public Health
+492709078,L8E,STONEY CREEK,35,3537,Hamilton,3537,Hamilton Public Health Services
+492709096,N4X,ST MARYS,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492709119,M5R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492709132,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492709141,B3P,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492709162,L4P,KESWICK,35,3570,York,3570,York Region Public Health
+492709225,V3B,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492709231,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+492709249,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492709255,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492709285,L7M,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+492709307,T5K,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492709347,E3Z,GRAND-SAULT/GRAND FALLS,13,1304,Zone 4 (Edmundston area),1304,Zone 4 (Edmundston area)
+492709354,M4C,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+492709362,L6C,MARKHAM,35,3570,York,3570,York Region Public Health
+492709363,L8K,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492709426,R2G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492709427,L9S,INNISFIL,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492709428,M6H,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492709448,S6H,MOOSE JAW,47,4706,South,476,South
+492709547,P7C,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492709556,R2P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492709561,M1B,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492709618,R2K,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492709662,V4G,DELTA,59,5902,Fraser,591,Fraser
+492709670,P7E,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492709675,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492709693,L5M,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492709713,G9H,BECANCOUR,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492709760,H8P,LASALLE,24,2406,Montréal,2406,Région de Montréal
+492709791,A1L,PARADISE,10,1011,Eastern,1011,Eastern Regional Health Authority
+492709798,L5V,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492709827,V7L,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492709829,T5X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492709832,S0J,SHELLBROOK,47,4701,Far North,471,Far North
+492709833,V5A,BURNABY,59,5902,Fraser,591,Fraser
+492709838,K1R,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492709881,V6M,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492709886,V2X,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+492709925,T8V,GRANDE PRAIRIE,48,4835,North,4835,North Zone
+492709967,M1J,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492709976,A1K,TORBAY,10,1011,Eastern,1011,Eastern Regional Health Authority
+492710026,V9W,CAMPBELL RIVER,59,5904,Island,593,Vancouver Island
+492710032,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+492710057,L0S,NIAGARA ON THE LAKE,35,3546,Niagara,3546,Niagara Region Public Health Department
+492710093,N3R,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492710116,L3P,MARKHAM,35,3570,York,3570,York Region Public Health
+492710130,V3M,NEW WESTMINSTER,59,5902,Fraser,591,Fraser
+492710141,V3S,SURREY,59,5902,Fraser,591,Fraser
+492710142,V8A,POWELL RIVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492710149,V9N,COURTENAY,59,5904,Island,593,Vancouver Island
+492710178,N2P,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492710199,L9G,ANCASTER,35,3537,Hamilton,3537,Hamilton Public Health Services
+492710221,M6C,YORK,35,3595,Toronto,3595,Toronto Public Health
+492710225,J6N,BEAUHARNOIS,24,2416,Montérégie,2416,Région de la Montérégie
+492710254,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492710263,L3Y,NEWMARKET,35,3570,York,3570,York Region Public Health
+492710264,H4B,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492710267,K1S,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492710269,N1L,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492710278,E2E,QUISPAMSIS,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492710336,V3C,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492710399,K2B,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492710402,N9K,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492710403,M9B,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492710404,N9A,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492710406,B2H,NEW GLASGOW,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492710417,N3R,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492710473,T2W,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492710482,E2G,QUISPAMSIS,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492710486,N6K,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492710487,V5Z,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492710493,H1T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492710527,T3L,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492710528,T6W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492710532,K1T,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+492710549,N3S,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492710559,L9C,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492710604,S4V,REGINA,47,4705,Regina,475,Regina
+492710607,J0B,AUSTIN,24,2405,Estrie,2405,Région de l'Estrie
+492710635,M2L,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492710645,M9B,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492710670,R2C,WINNIPEG,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492710674,V3H,PORT MOODY,59,5902,Fraser,591,Fraser
+492710679,G0K,SAINTE-LUCE,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492710700,M6J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492710716,G8T,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492710819,M8W,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492710822,J8X,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492710841,R2V,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492710863,K7V,RENFREW,35,3557,Renfrew,3557,Renfrew County and District Health Unit
+492710864,V9Z,SOOKE,59,5904,Island,593,Vancouver Island
+492710867,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+492710871,L6R,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492710873,N2L,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492710877,B0N,BROOKFIELD,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492710891,T1Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492710894,N6E,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492710907,V3C,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492710926,T6W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492710933,L6T,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492710940,M1T,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492710948,N6G,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492710963,N8S,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492710973,V7L,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492710977,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492710985,L0S,NIAGARA ON THE LAKE,35,3546,Niagara,3546,Niagara Region Public Health Department
+492710990,K1W,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+492710997,T4B,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+492711006,H1B,POINTE-AUX-TREMBLES,24,2406,Montréal,2406,Région de Montréal
+492711024,V3T,SURREY,59,5902,Fraser,591,Fraser
+492711030,V6K,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492711040,M1E,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492711050,A1N,MOUNT PEARL,10,1011,Eastern,1011,Eastern Regional Health Authority
+492711076,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492711082,N6G,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492711099,T1L,BANFF,48,4832,Calgary,4832,Calgary Zone
+492711103,V6J,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492711109,V4W,ALDERGROVE,59,5902,Fraser,591,Fraser
+492711116,V6Y,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492711124,E8E,CHARLO,13,1305,Zone 5 (Campbellton area),1305,Zone 5 (Campbellton area)
+492711130,M8Y,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492711133,V9W,CAMPBELL RIVER,59,5904,Island,593,Vancouver Island
+492711162,T5Y,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492711165,N3T,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+492711205,T8H,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+492711219,V4N,SURREY,59,5902,Fraser,591,Fraser
+492711249,J3V,SAINT-BRUNO,24,2416,Montérégie,2416,Région de la Montérégie
+492711306,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492711317,B3M,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492711326,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492711344,K4C,CUMBERLAND,35,3551,Ottawa,3551,Ottawa Public Health
+492711351,V3S,SURREY,59,5902,Fraser,591,Fraser
+492711357,S7L,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492711373,V1Y,KELOWNA,59,5901,Interior,592,Interior
+492711376,B0N,BROOKFIELD,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492711395,V0H,SUMMERLAND,59,5901,Interior,592,Interior
+492711406,S7L,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492711415,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492711421,L8G,STONEY CREEK,35,3537,Hamilton,3537,Hamilton Public Health Services
+492711427,V6Y,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492711433,B0W,TUSKET,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492711452,T1K,LETHBRIDGE,48,4831,South,4831,South Zone
+492711466,B1Y,FLORENCE,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492711471,V5Y,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492711480,N1R,CAMBRIDGE,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492711497,P7G,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+492711509,T2B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711514,K2K,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+492711521,H9H,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+492711525,M1X,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492711561,N5Y,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492711564,T2R,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711567,J1E,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+492711572,V3W,SURREY,59,5902,Fraser,591,Fraser
+492711598,T6E,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492711599,L6M,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492711601,T3H,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711606,T1K,LETHBRIDGE,48,4831,South,4831,South Zone
+492711625,M4K,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492711637,L4E,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492711638,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492711639,M2K,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492711650,R2X,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492711669,V2A,PENTICTON,59,5901,Interior,592,Interior
+492711673,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492711674,L5A,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492711690,M2J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492711707,N0B,PUSLINCH,35,3575,Southwestern,3575,Southwestern Public Health
+492711708,V4B,WHITE ROCK,59,5902,Fraser,591,Fraser
+492711711,B0S,MIDDLETON,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492711718,L1S,AJAX,35,3530,Durham,3530,Durham Region Health Department
+492711728,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492711738,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711748,V8S,VICTORIA,59,5904,Island,593,Vancouver Island
+492711750,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+492711760,N0M,PARKHILL,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492711765,T3A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711771,L2A,FORT ERIE,35,3546,Niagara,3546,Niagara Region Public Health Department
+492711787,T5X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492711793,L0P,CAMPBELLVILLE,35,3536,Halton,3536,Halton Region Health Department
+492711812,L8V,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492711832,K8P,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+492711843,T0M,RED DEER COUNTY,48,4833,Central,4833,Central Zone
+492711875,H2J,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492711877,T1Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492711883,H3H,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492711902,N2T,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492711911,R0J,NEEPAWA,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492711950,M5E,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492711963,N0P,BLENHEIM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492711966,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492711975,N0P,BLENHEIM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492711988,T0M,RED DEER COUNTY,48,4833,Central,4833,Central Zone
+492712023,K0L,DOURO-DUMMER,35,3555,Peterborough,3555,Peterborough Public Health
+492712027,P0H,CORBEIL,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+492712060,H3S,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492712065,T8C,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+492712072,L8K,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492712079,V1K,MERRITT,59,5901,Interior,592,Interior
+492712091,M4S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492712092,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492712124,V5P,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492712129,H1A,POINTE-AUX-TREMBLES,24,2406,Montréal,2406,Région de Montréal
+492712136,V8B,SQUAMISH,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492712156,E1E,MONCTON,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492712160,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492712172,N5R,ST THOMAS,35,3575,Southwestern,3575,Southwestern Public Health
+492712183,N7V,SARNIA,35,3542,Lambton,3542,Lambton Public Health
+492712189,R2P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492712193,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+492712212,L4H,WOODBRIDGE,35,3570,York,3570,York Region Public Health
+492712225,T5X,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492712239,K1S,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492712241,K2T,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+492712253,C0A,CORNWALL,11,1100,Prince Edward Island,1100,Prince Edward Island
+492712274,K0L,DOURO-DUMMER,35,3555,Peterborough,3555,Peterborough Public Health
+492712275,V1Y,KELOWNA,59,5901,Interior,592,Interior
+492712287,L5R,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492712300,K2B,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492712314,M2L,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492712318,E1A,DIEPPE,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492712344,E3A,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492712349,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492712350,V2A,PENTICTON,59,5901,Interior,592,Interior
+492712381,V3R,SURREY,59,5902,Fraser,591,Fraser
+492712383,T2K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492712399,T2V,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492712419,N1E,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492712449,V1R,TRAIL,59,5901,Interior,592,Interior
+492712459,N2N,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492712460,L7A,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492712471,T0B,LEDUC COUNTY,48,4833,Central,4833,Central Zone
+492712481,L8H,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492712510,V3H,PORT MOODY,59,5902,Fraser,591,Fraser
+492712530,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492712575,E8K,BERESFORD,13,1306,Zone 6 (Bathurst area),1306,Zone 6 (Bathurst area)
+492712597,P4N,TIMMINS,35,3556,Porcupine,3556,Porcupine Health Unit
+492712620,V1N,CASTLEGAR,59,5901,Interior,592,Interior
+492712714,N6M,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492712735,T6A,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492712743,M2H,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492712773,K1C,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+492712793,L6S,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492712892,G0C,BONAVENTURE,24,2411,Gaspésie-Îles-de-la-Madeleine,2411,Région de la Gaspésie—Îles-de-la-Madeleine
+492712913,R3Y,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492712920,M9V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492712938,B1L,SYDNEY,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492712948,M1B,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492712964,L9A,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492712970,T5L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492712971,V2J,QUESNEL,59,5905,Northern,594,Northern
+492712979,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492712989,G0W,SAINT-GEDEON,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+492713002,B2T,FALL RIVER,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492713143,N5X,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492713149,V1L,NELSON,59,5901,Interior,592,Interior
+492713153,K4B,NAVAN,35,3551,Ottawa,3551,Ottawa Public Health
+492713246,V7T,WEST VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492713276,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492713310,L4X,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492713315,S4N,REGINA,47,4705,Regina,475,Regina
+492713325,H7V,LAVAL,24,2413,Laval,2413,Région de Laval
+492713334,S0H,GRAVELBOURG,47,4706,South,476,South
+492713337,G0L,SAINT-PASCAL,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492713340,L2S,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+492713380,J0J,SAINT-CYPRIEN-DE-NAPIERVILLE,24,2405,Estrie,2405,Région de l'Estrie
+492713386,J1E,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+492713394,M3A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492713402,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492713437,V5K,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492713441,B0W,TUSKET,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492713509,R3T,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492713520,N8X,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492713554,V6V,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492713570,A0C,BLOOMFIELD,10,1011,Eastern,1011,Eastern Regional Health Authority
+492713601,T0A,ST PAUL,48,4835,North,4835,North Zone
+492713622,T0B,LEDUC COUNTY,48,4833,Central,4833,Central Zone
+492713625,V5Z,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492713675,N5X,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492713782,V4N,SURREY,59,5902,Fraser,591,Fraser
+492713833,R7C,BRANDON,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492713842,B3Z,UPPER TANTALLON,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492713863,J5R,LA PRAIRIE,24,2416,Montérégie,2416,Région de la Montérégie
+492713935,M1T,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492713941,N6K,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492713982,H2S,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492714091,M1C,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492714102,N6A,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492714107,J9T,AMOS,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+492714137,N1H,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492714191,A1V,GANDER,10,1012,Central,1012,Central Regional Health Authority
+492714237,T5H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492714246,T9V,LLOYDMINSTER,48,4833,Central,4833,Central Zone
+492840366,R0A,NIVERVILLE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+492857778,T0H,HIGH LEVEL,48,4835,North,4835,North Zone
+492857881,H3Y,WESTMOUNT,24,2406,Montréal,2406,Région de Montréal
+492857887,M9A,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492858173,B0P,BERWICK,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492858271,T6B,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492858308,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492858374,M6M,YORK,35,3595,Toronto,3595,Toronto Public Health
+492858378,L2V,THOROLD,35,3546,Niagara,3546,Niagara Region Public Health Department
+492858387,H4G,VERDUN,24,2406,Montréal,2406,Région de Montréal
+492858405,R1N,PORTAGE LA PRAIRIE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+492858451,E3C,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492858620,M4A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492858674,J6K,CHATEAUGUAY,24,2416,Montérégie,2416,Région de la Montérégie
+492858682,L5N,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492858695,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492858713,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+492858777,T2X,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492858780,B3M,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492858836,M1R,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492858864,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+492858969,N0G,MOUNT FOREST,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+492858987,S4V,REGINA,47,4705,Regina,475,Regina
+492858994,L4A,STOUFFVILLE,35,3570,York,3570,York Region Public Health
+492859024,M2R,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492859025,K2G,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492859091,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492859122,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492859182,V8L,NORTH SAANICH,59,5904,Island,593,Vancouver Island
+492859202,E7C,SAINT-BASILE,13,1304,Zone 4 (Edmundston area),1304,Zone 4 (Edmundston area)
+492859251,T2A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492859265,E1E,MONCTON,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492859272,R0E,OAKBANK,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492859273,S0G,BALGONIE,47,4705,Regina,475,Regina
+492859298,T5A,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492859341,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492859351,L0B,ORONO,35,3530,Durham,3530,Durham Region Health Department
+492859388,M1V,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492859390,V5C,BURNABY,59,5902,Fraser,591,Fraser
+492859427,M6P,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492859434,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492859480,B3A,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492859489,L8P,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+492859512,S4N,REGINA,47,4705,Regina,475,Regina
+492859525,V9G,LADYSMITH,59,5904,Island,593,Vancouver Island
+492859534,V3Y,PITT MEADOWS,59,5902,Fraser,591,Fraser
+492859547,K0M,MINDEN,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492859575,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492859577,V7E,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492859618,J8P,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492859625,K9A,COBOURG,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492859631,T1V,HIGH RIVER,48,4832,Calgary,4832,Calgary Zone
+492859673,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492859674,T6H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492859681,L3T,THORNHILL,35,3570,York,3570,York Region Public Health
+492859697,A0A,HOLYROOD,10,1011,Eastern,1011,Eastern Regional Health Authority
+492859702,V9T,NANAIMO,59,5904,Island,593,Vancouver Island
+492859707,S7C,RM OF DUNDURN,47,4704,Saskatoon,474,Saskatoon
+492859715,L2P,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+492859728,P3P,HANMER,35,3561,Sudbury,3561,Sudbury and District Health Unit
+492859759,E1A,DIEPPE,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492859791,R2X,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492859830,T4B,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+492859848,T1B,MEDICINE HAT,48,4831,South,4831,South Zone
+492859853,T6V,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492859896,T0H,HIGH LEVEL,48,4835,North,4835,North Zone
+492859919,S4V,REGINA,47,4705,Regina,475,Regina
+492859938,N4X,ST MARYS,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492859951,T2J,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492859954,L5A,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492859959,S0K,WARMAN,47,4703,Central,473,Central
+492859978,N6G,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492859990,L6H,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+492859992,S4T,REGINA,47,4705,Regina,475,Regina
+492860005,E7H,PERTH-ANDOVER,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492860039,J3B,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+492860047,M8V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492860053,H3S,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492860056,H1P,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+492860074,L9G,ANCASTER,35,3537,Hamilton,3537,Hamilton Public Health Services
+492860078,S0K,WARMAN,47,4703,Central,473,Central
+492860095,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492860131,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492860147,M6J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492860185,T0A,ST PAUL,48,4835,North,4835,North Zone
+492860207,T7A,DRAYTON VALLEY,48,4833,Central,4833,Central Zone
+492860217,V0X,HOPE,59,5901,Interior,592,Interior
+492860234,T2E,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492860308,N5Y,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492860313,K4A,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+492860340,K1T,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+492860356,N5V,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492860405,N0E,WATERFORD,35,3534,Haldimand-Norfolk,3534,Haldimand-Norfolk Health Unit
+492860448,M1H,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492860453,V8W,VICTORIA,59,5904,Island,593,Vancouver Island
+492860468,H9J,KIRKLAND,24,2406,Montréal,2406,Région de Montréal
+492860469,T3A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492860472,S7V,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492860491,N1H,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+492860511,V6H,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492860512,C0B,O'LEARY,11,1100,Prince Edward Island,1100,Prince Edward Island
+492860532,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492860541,K6J,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492860550,V2A,PENTICTON,59,5901,Interior,592,Interior
+492860553,L4B,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492860563,V9L,DUNCAN,59,5904,Island,593,Vancouver Island
+492860566,B4N,KENTVILLE,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492860568,V2S,ABBOTSFORD,59,5902,Fraser,591,Fraser
+492860570,N0K,MITCHELL,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492860597,V3A,LANGLEY,59,5902,Fraser,591,Fraser
+492860599,V8T,VICTORIA,59,5904,Island,593,Vancouver Island
+492860647,V6G,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492860679,T3R,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492860680,T0L,DE WINTON,48,4832,Calgary,4832,Calgary Zone
+492860699,P1L,BRACEBRIDGE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492860708,M3B,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492860732,E4L,SACKVILLE,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492860739,T8V,GRANDE PRAIRIE,48,4835,North,4835,North Zone
+492860753,R2L,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492860758,V1X,KELOWNA,59,5901,Interior,592,Interior
+492860824,L5L,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492860838,V2Y,LANGLEY,59,5902,Fraser,591,Fraser
+492860853,V3E,COQUITLAM,59,5902,Fraser,591,Fraser
+492860869,K2H,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492860945,H2E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492860954,T4B,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+492860974,N9E,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+492860989,T6V,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492861019,L3Z,BRADFORD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492861025,N6M,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+492861047,V5E,BURNABY,59,5902,Fraser,591,Fraser
+492861083,V3R,SURREY,59,5902,Fraser,591,Fraser
+492861084,V0E,ARMSTRONG,59,5901,Interior,592,Interior
+492861093,G1C,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492861197,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492861205,N4T,WOODSTOCK,35,3575,Southwestern,3575,Southwestern Public Health
+492861218,T1K,LETHBRIDGE,48,4831,South,4831,South Zone
+492861225,J3Z,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+492861285,T5R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492861290,L6V,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+492861302,V6M,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492861317,K1A,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492861335,H7G,LAVAL,24,2413,Laval,2413,Région de Laval
+492861403,L9R,ALLISTON,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492861427,K4R,RUSSELL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492861429,N2L,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492861433,V4N,SURREY,59,5902,Fraser,591,Fraser
+492861449,B2N,TRURO,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492861465,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+492861474,B0E,BADDECK,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492861521,M5S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+492861651,L2E,NIAGARA FALLS,35,3546,Niagara,3546,Niagara Region Public Health Department
+492861700,L0J,KLEINBURG,35,3570,York,3570,York Region Public Health
+492861710,N7L,CHATHAM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+492861736,R3E,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492861813,T2P,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492861862,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492861863,T1P,STRATHMORE,48,4832,Calgary,4832,Calgary Zone
+492861906,N4K,OWEN SOUND,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+492861952,S4V,REGINA,47,4705,Regina,475,Regina
+492861990,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492862059,M3H,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492862096,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+492862098,S0E,TISDALE,47,4702,North,472,North
+492862148,V6E,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492862151,B3S,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492862260,V8L,NORTH SAANICH,59,5904,Island,593,Vancouver Island
+492862263,V0K,100 MILE HOUSE,59,5901,Interior,592,Interior
+492862318,T5C,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492862328,R3J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492862337,L9G,ANCASTER,35,3537,Hamilton,3537,Hamilton Public Health Services
+492862385,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492862417,B0J,HUBBARDS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492862419,H2V,OUTREMONT,24,2406,Montréal,2406,Région de Montréal
+492862421,T1K,LETHBRIDGE,48,4831,South,4831,South Zone
+492862533,E3C,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492862590,T1Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492862606,B4N,KENTVILLE,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492862612,T4X,BEAUMONT,48,4834,Edmonton,4834,Edmonton Zone
+492862641,M1E,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492862655,L3X,NEWMARKET,35,3570,York,3570,York Region Public Health
+492862667,L5B,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+492862788,T4P,RED DEER,48,4833,Central,4833,Central Zone
+492862802,R2E,EAST ST PAUL,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492862840,M5M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492862853,P1B,NORTH BAY,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+492862862,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+492862866,K2H,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492862876,T6G,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492862885,R0C,GIMLI,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492862947,L1A,PORT HOPE,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+492862950,R2G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492862958,M4G,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+492862964,K0C,ALEXANDRIA,35,3558,Eastern,3558,Eastern Ontario Health Unit
+492862976,V2S,ABBOTSFORD,59,5902,Fraser,591,Fraser
+492862981,B1A,GLACE BAY,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492862983,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492862986,A1G,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492863016,C1E,CHARLOTTETOWN,11,1100,Prince Edward Island,1100,Prince Edward Island
+492863034,K1V,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492863061,M1J,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+492863106,V6K,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492863120,J0G,PIERREVILLE,24,2416,Montérégie,2416,Région de la Montérégie
+492863132,H7M,LAVAL,24,2413,Laval,2413,Région de Laval
+492863150,L3Z,BRADFORD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+492863154,V2N,PRINCE GEORGE,59,5905,Northern,594,Northern
+492863156,V5R,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492863160,V3T,SURREY,59,5902,Fraser,591,Fraser
+492863162,N0M,PARKHILL,35,3539,Huron Perth,3539,Huron Perth Health Unit
+492863186,K1V,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492863207,K2E,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+492863237,T2V,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492863250,V5A,BURNABY,59,5902,Fraser,591,Fraser
+492863262,M8X,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+492863287,R6M,MORDEN,46,4605,Southern Health,4605,Southern Health—Santé Sud
+492863333,M9N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+492863348,R2R,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492863357,T2X,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492863369,N2H,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+492863390,S4R,REGINA,47,4705,Regina,475,Regina
+492863438,V9P,PARKSVILLE,59,5904,Island,593,Vancouver Island
+492863487,R2C,WINNIPEG,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+492863596,T4S,SYLVAN LAKE,48,4833,Central,4833,Central Zone
+492863603,H8S,LACHINE,24,2406,Montréal,2406,Région de Montréal
+492863659,T5W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492863774,R2G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492863866,V2Z,LANGLEY,59,5902,Fraser,591,Fraser
+492863867,J4W,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492863870,S7T,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492863884,V6X,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492863935,T9K,FORT MCMURRAY,48,4835,North,4835,North Zone
+492864014,H1K,ANJOU,24,2406,Montréal,2406,Région de Montréal
+492864064,B2X,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492864094,E3A,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+492864110,V9G,LADYSMITH,59,5904,Island,593,Vancouver Island
+492864158,T6W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492864275,V0N,WHISTLER,59,5904,Island,593,Vancouver Island
+492864284,T0H,HIGH LEVEL,48,4835,North,4835,North Zone
+492864285,T3M,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492864374,V9B,VICTORIA,59,5904,Island,593,Vancouver Island
+492864378,V7A,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492864420,R0K,CARBERRY,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+492864482,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492864507,A0C,BLOOMFIELD,10,1011,Eastern,1011,Eastern Regional Health Authority
+492864583,H8Z,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+492864731,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+492864747,V3T,SURREY,59,5902,Fraser,591,Fraser
+492864755,T2B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492864771,V3N,BURNABY,59,5902,Fraser,591,Fraser
+492864859,H9E,L'ILE-BIZARD,24,2406,Montréal,2406,Région de Montréal
+492864861,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+492864883,T4H,OLDS,48,4833,Central,4833,Central Zone
+492864951,T4P,RED DEER,48,4833,Central,4833,Central Zone
+492865009,J7W,PINCOURT,24,2416,Montérégie,2416,Région de la Montérégie
+492865031,J8X,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492865036,G1N,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492865070,E4G,PENOBSQUIS,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492865080,T3J,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492865120,V6T,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492865157,R2K,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492865228,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+492865278,T3B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492865315,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492865336,T2G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492865354,B3M,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492865499,V8P,VICTORIA,59,5904,Island,593,Vancouver Island
+492865554,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492865749,V0R,GABRIOLA,59,5904,Island,593,Vancouver Island
+492865798,B2V,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492865813,V5X,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492865902,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492865993,T5Z,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492866006,S6H,MOOSE JAW,47,4706,South,476,South
+492866065,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492866107,B0W,TUSKET,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492866109,V0P,SAYWARD,59,5904,Island,593,Vancouver Island
+492866142,A1A,ST. JOHN'S,10,1011,Eastern,1011,Eastern Regional Health Authority
+492866150,V3H,PORT MOODY,59,5902,Fraser,591,Fraser
+492866177,V3E,COQUITLAM,59,5902,Fraser,591,Fraser
+492866182,V3B,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+492866268,H3X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492866296,T8N,ST. ALBERT,48,4834,Edmonton,4834,Edmonton Zone
+492866353,H1G,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+492866696,J2G,GRANBY,24,2405,Estrie,2405,Région de l'Estrie
+492866699,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+492866800,B2W,DARTMOUTH,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492866857,J3Y,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+492867095,A0L,PASADENA,10,1013,Western,1013,Western Regional Health Authority
+492867150,T2W,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492867197,V8V,VICTORIA,59,5904,Island,593,Vancouver Island
+492867198,J2Y,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+492867242,L1V,PICKERING,35,3530,Durham,3530,Durham Region Health Department
+492867424,S7L,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492867697,K1J,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+492868073,E4Z,ELGIN,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492868434,J0S,SAINT-ANICET,24,2416,Montérégie,2416,Région de la Montérégie
+492868910,A0B,HEART'S DESIRE,10,1011,Eastern,1011,Eastern Regional Health Authority
+492869166,V4M,DELTA,59,5902,Fraser,591,Fraser
+492869602,J9X,ROUYN-NORANDA,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+492869631,A0H,BISHOPS FALLS,10,1012,Central,1012,Central Regional Health Authority
+492869824,G1J,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492870082,V5N,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+492870944,G0M,SAINT-COME-LINIERE,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+492871107,J8T,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492871169,H9S,DORVAL,24,2406,Montréal,2406,Région de Montréal
+492871348,R3J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+492871390,E1B,RIVERVIEW,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+492871582,S7L,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+492871731,V5H,BURNABY,59,5902,Fraser,591,Fraser
+492871810,E8C,DALHOUSIE,13,1305,Zone 5 (Campbellton area),1305,Zone 5 (Campbellton area)
+492872095,B0T,SHELBURNE,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+492872176,J7K,MASCOUCHE,24,2414,Lanaudière,2414,Région de Lanaudière
+492872191,A0A,HOLYROOD,10,1011,Eastern,1011,Eastern Regional Health Authority
+492872199,H1B,POINTE-AUX-TREMBLES,24,2406,Montréal,2406,Région de Montréal
+492872222,J7R,SAINT-EUSTACHE,24,2415,Laurentides,2415,Région des Laurentides
+492872237,V3N,BURNABY,59,5902,Fraser,591,Fraser
+492872393,T6V,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+492872559,G2E,L'ANCIENNE-LORETTE,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492872742,H1K,ANJOU,24,2406,Montréal,2406,Région de Montréal
+492873277,B0M,DEBERT,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492873299,E3N,CAMPBELLTON,13,1305,Zone 5 (Campbellton area),1305,Zone 5 (Campbellton area)
+492873370,G9A,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492873493,B2N,TRURO,12,1202,Zone 2 - Northern,1202,Zone 2 - Northern
+492873682,G6P,VICTORIAVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492873756,B0N,BROOKFIELD,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+492873857,B2A,NORTH SYDNEY,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+492874207,H4R,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+492874364,C1N,SUMMERSIDE,11,1100,Prince Edward Island,1100,Prince Edward Island
+492874443,J6W,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+492874733,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+492874769,E2S,ROTHESAY,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+492877672,T0J,DRUMHELLER,48,4831,South,4831,South Zone
+492877692,T2V,CALGARY,48,4832,Calgary,4832,Calgary Zone
+492877847,J0N,POINTE-CALUMET,24,2415,Laurentides,2415,Région des Laurentides
+492879232,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+492880394,H3K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492880469,H8Z,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+492880613,J1X,MAGOG,24,2405,Estrie,2405,Région de l'Estrie
+492881314,H2K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492881693,H2N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492883051,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492884798,J9J,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492884968,J5W,L'ASSOMPTION,24,2414,Lanaudière,2414,Région de Lanaudière
+492885523,H9H,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+492885527,H1A,POINTE-AUX-TREMBLES,24,2406,Montréal,2406,Région de Montréal
+492886883,G5Z,SAINT-GEORGES,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+492887607,H2S,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492894465,H1E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492894764,H2T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492895078,H1J,ANJOU,24,2406,Montréal,2406,Région de Montréal
+492896301,J0N,POINTE-CALUMET,24,2415,Laurentides,2415,Région des Laurentides
+492896354,G0L,SAINT-PASCAL,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492901407,J0A,DANVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492903871,H7N,LAVAL,24,2413,Laval,2413,Région de Laval
+492904386,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+492904468,G6P,VICTORIAVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492907141,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+492911648,H1X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492912141,J4Z,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492912945,J8L,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492913893,J7Y,SAINT-JEROME,24,2415,Laurentides,2415,Région des Laurentides
+492914486,H7N,LAVAL,24,2413,Laval,2413,Région de Laval
+492914961,J3B,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+492916034,G8C,ALMA,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+492916863,H2L,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492923520,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492924556,H2A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492924711,K1K,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+492929303,H1P,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+492933915,G1H,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492938834,J8P,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492939280,J9H,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+492942000,H3X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492942838,G6L,PLESSISVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+492945179,J7Y,SAINT-JEROME,24,2415,Laurentides,2415,Région des Laurentides
+492948276,G5L,RIMOUSKI,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+492974868,J6A,REPENTIGNY,24,2414,Lanaudière,2414,Région de Lanaudière
+492978908,J3Y,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+492979639,J0S,SAINT-ANICET,24,2416,Montérégie,2416,Région de la Montérégie
+492982680,J0Z,ROUYN-NORANDA,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+492983697,J0Z,ROUYN-NORANDA,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+492984366,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492985721,H2K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492986671,H4R,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+492987043,H3W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492988265,G0A,BOISCHATEL,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+492989117,H1Z,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492990308,G5Y,SAINT-GEORGES,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+492991224,J4Y,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+492992721,H2L,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492992799,H9S,DORVAL,24,2406,Montréal,2406,Région de Montréal
+492992865,H3M,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+492992875,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+492994977,H3W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493001382,G0W,SAINT-GEDEON,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+493003103,J0E,SUTTON,24,2405,Estrie,2405,Région de l'Estrie
+493003807,H9P,DORVAL,24,2406,Montréal,2406,Région de Montréal
+493005323,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493006479,H8P,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493009132,H4N,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493014463,J2K,COWANSVILLE,24,2405,Estrie,2405,Région de l'Estrie
+493017248,L6R,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+493019471,H2T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493021377,J4K,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493027900,H1K,ANJOU,24,2406,Montréal,2406,Région de Montréal
+493031974,G0K,SAINTE-LUCE,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+493034482,J8Y,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493040942,J4R,SAINT-LAMBERT,24,2416,Montérégie,2416,Région de la Montérégie
+493050053,J6Y,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493054120,G0A,BOISCHATEL,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493054696,J8V,CANTLEY,24,2407,Outaouais,2407,Région de l'Outaouais
+493070420,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493095771,H7N,LAVAL,24,2413,Laval,2413,Région de Laval
+493099675,J7R,SAINT-EUSTACHE,24,2415,Laurentides,2415,Région des Laurentides
+493101315,H3Z,WESTMOUNT,24,2406,Montréal,2406,Région de Montréal
+493109378,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+493161321,J0S,SAINT-ANICET,24,2416,Montérégie,2416,Région de la Montérégie
+493161576,J3Y,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+493164051,H3W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493164612,H4L,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493167086,G8A,JONQUIERE,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+493169412,L0A,MILLBROOK,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493169457,P1B,NORTH BAY,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493169790,V5X,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493169798,L6Z,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+493169916,R2V,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493169960,N0H,PORT ELGIN,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493169980,H7X,LAVAL,24,2413,Laval,2413,Région de Laval
+493169994,N7M,CHATHAM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+493170043,R1A,ST ANDREWS,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493170063,M6C,YORK,35,3595,Toronto,3595,Toronto Public Health
+493170078,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493170087,J7V,VAUDREUIL-DORION,24,2416,Montérégie,2416,Région de la Montérégie
+493170130,N5X,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493170208,R3N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493170250,N0B,PUSLINCH,35,3575,Southwestern,3575,Southwestern Public Health
+493170278,T3M,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493170356,M4E,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493170434,N1E,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493170436,P7E,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493170471,K9A,COBOURG,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493170506,N4T,WOODSTOCK,35,3575,Southwestern,3575,Southwestern Public Health
+493170512,S0G,BALGONIE,47,4705,Regina,475,Regina
+493170530,J2J,GRANBY,24,2405,Estrie,2405,Région de l'Estrie
+493170569,P3C,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493170626,R2M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493170633,T4A,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+493170668,K7P,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+493170684,K8N,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493170771,G1K,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493170783,K6J,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493170857,H7M,LAVAL,24,2413,Laval,2413,Région de Laval
+493170866,L4S,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+493170896,K2R,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+493170921,P3E,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493170930,T8R,MORINVILLE,48,4834,Edmonton,4834,Edmonton Zone
+493170954,P0N,PORCUPINE,35,3556,Porcupine,3556,Porcupine Health Unit
+493171012,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493171037,L3X,NEWMARKET,35,3570,York,3570,York Region Public Health
+493171058,M6H,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493171088,M1W,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493171126,L0A,MILLBROOK,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493171131,K1B,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+493171215,R5A,GRANDE POINTE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+493171234,M4Y,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493171243,M3A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493171249,L0L,TINY,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493171251,N0G,MOUNT FOREST,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493171254,L4Y,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493171281,N8W,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493171290,L5G,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493171311,G2C,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493171334,K1H,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493171345,R0A,NIVERVILLE,46,4605,Southern Health,4605,Southern Health—Santé Sud
+493171349,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493171352,N0G,MOUNT FOREST,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493171400,M4G,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+493171426,T5H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493171434,M4S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493171448,M3C,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493171496,K1R,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493171517,G2J,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493171520,L9M,PENETANGUISHENE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493171579,L8V,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+493171642,K0K,QUINTE WEST,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493171683,L9S,INNISFIL,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493171696,N1L,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493171704,T1J,LETHBRIDGE,48,4831,South,4831,South Zone
+493171708,L9W,ORANGEVILLE,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493171728,M1W,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493171746,T1K,LETHBRIDGE,48,4831,South,4831,South Zone
+493171749,K8P,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493171774,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493171775,M2J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493171845,N0L,KOMOKA,35,3575,Southwestern,3575,Southwestern Public Health
+493171846,H1X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493171873,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493171874,H7R,LAVAL,24,2413,Laval,2413,Région de Laval
+493171909,H2T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493171935,L9X,MIDHURST,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493171940,N8W,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493171949,K4R,RUSSELL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493171965,N2H,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493171969,K0C,ALEXANDRIA,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493171982,L5L,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493172006,N5Z,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493172054,J8T,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493172075,L6M,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+493172112,N3T,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+493172130,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493172135,K2M,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+493172181,M4W,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493172194,L8E,STONEY CREEK,35,3537,Hamilton,3537,Hamilton Public Health Services
+493172199,L9X,MIDHURST,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493172200,H2K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493172237,P8T,SIOUX LOOKOUT,35,3549,Northwestern,3549,Northwestern Health Unit
+493172247,N3R,BRANTFORD,35,3527,Brant,3527,Brant County Health Unit
+493172253,M8V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493172266,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493172269,L9T,MILTON,35,3536,Halton,3536,Halton Region Health Department
+493172293,V5N,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493172298,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+493172319,L1X,PICKERING,35,3530,Durham,3530,Durham Region Health Department
+493172351,P1B,NORTH BAY,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493172364,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+493172395,R5G,STEINBACH,46,4605,Southern Health,4605,Southern Health—Santé Sud
+493172407,M9C,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493172430,P1B,NORTH BAY,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493172433,H9H,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+493172467,L9W,ORANGEVILLE,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493172530,M3A,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493172536,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+493172537,T6V,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493172576,K8V,TRENTON,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493172585,H4R,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493172588,P1P,GRAVENHURST,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493172602,M5J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493172606,M5V,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493172620,K7R,NAPANEE,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+493172646,M1J,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493172722,V0N,WHISTLER,59,5904,Island,593,Vancouver Island
+493172743,L4J,THORNHILL,35,3570,York,3570,York Region Public Health
+493172770,S4P,REGINA,47,4705,Regina,475,Regina
+493172788,P8N,DRYDEN,35,3549,Northwestern,3549,Northwestern Health Unit
+493172795,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493172798,N6H,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493172817,M5M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493172850,R2N,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493172852,N8X,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493172868,L5H,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493172879,L3V,ORILLIA,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493172926,J7V,VAUDREUIL-DORION,24,2416,Montérégie,2416,Région de la Montérégie
+493172935,L9S,INNISFIL,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493173008,N5P,ST THOMAS,35,3575,Southwestern,3575,Southwestern Public Health
+493173011,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173017,K1Y,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493173025,R7C,BRANDON,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+493173036,P6A,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+493173042,M5M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493173062,M8Y,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493173078,R3G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493173112,P7C,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493173120,L1P,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+493173154,N5Z,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493173166,V4R,MAPLE RIDGE,59,5902,Fraser,591,Fraser
+493173174,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+493173175,K2K,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+493173207,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493173230,L1G,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493173248,V6H,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493173250,K8V,TRENTON,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493173263,P0A,DUNCHURCH,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493173279,V8V,VICTORIA,59,5904,Island,593,Vancouver Island
+493173285,L0B,ORONO,35,3530,Durham,3530,Durham Region Health Department
+493173338,N9Y,KINGSVILLE,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493173339,L7T,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+493173352,K8V,TRENTON,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493173354,L8B,WATERDOWN,35,3537,Hamilton,3537,Hamilton Public Health Services
+493173360,R3R,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493173377,M8V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493173439,P2A,SEGUIN,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493173443,T2E,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493173460,P0M,CHELMSFORD,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493173468,V1Y,KELOWNA,59,5901,Interior,592,Interior
+493173470,K0E,PRESCOTT,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493173544,S7H,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493173564,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173565,S4W,REGINA,47,4705,Regina,475,Regina
+493173585,N4L,MEAFORD,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493173616,M4C,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+493173620,M2M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493173636,L1K,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493173641,M3C,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493173651,J0H,ACTON VALE,24,2416,Montérégie,2416,Région de la Montérégie
+493173666,R2P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493173719,H8N,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493173726,M1K,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493173731,H3Z,WESTMOUNT,24,2406,Montréal,2406,Région de Montréal
+493173736,L7L,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+493173739,P7G,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493173743,P0J,NEW LISKEARD,35,3563,Timiskaming,3563,Timiskaming Health Unit
+493173756,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+493173766,M4M,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173842,M6K,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173848,M9A,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493173872,K7L,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+493173890,S6H,MOOSE JAW,47,4706,South,476,South
+493173897,J1J,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+493173936,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+493173941,L0M,ANGUS,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493173963,M4Y,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173991,M5A,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493173992,L1H,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493174052,K1G,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493174084,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+493174093,R0E,OAKBANK,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493174124,N0K,MITCHELL,35,3539,Huron Perth,3539,Huron Perth Health Unit
+493174126,V4L,DELTA,59,5902,Fraser,591,Fraser
+493174137,M1M,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493174138,L4N,BARRIE,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493174178,K0M,MINDEN,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493174239,N2L,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493174259,L5L,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493174268,R1A,ST ANDREWS,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493174277,M8V,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493174323,N0R,BELLE RIVER,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493174390,S4V,REGINA,47,4705,Regina,475,Regina
+493174440,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493174462,K2G,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+493174509,P3B,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493174514,N0G,MOUNT FOREST,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493174540,L1G,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493174632,M5N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493174640,L1B,NEWCASTLE,35,3530,Durham,3530,Durham Region Health Department
+493174651,L7M,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+493174657,L4J,THORNHILL,35,3570,York,3570,York Region Public Health
+493174686,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+493174701,H4K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493174723,T1H,LETHBRIDGE,48,4831,South,4831,South Zone
+493174735,L4X,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493174752,N9G,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493174765,K0K,QUINTE WEST,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493174770,J0R,SAINT-SAUVEUR,24,2415,Laurentides,2415,Région des Laurentides
+493174815,V4N,SURREY,59,5902,Fraser,591,Fraser
+493174844,M2H,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493174879,L1G,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493174903,R0G,ALTONA,46,4605,Southern Health,4605,Southern Health—Santé Sud
+493174949,L3T,THORNHILL,35,3570,York,3570,York Region Public Health
+493174952,M6H,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493175071,L5N,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493175074,L2M,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+493175093,K1R,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493175100,G0N,ADSTOCK,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+493175107,V7K,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493175120,M1T,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493175138,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+493175151,K6A,HAWKESBURY,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493175162,P3C,SUDBURY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493175197,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493175238,M5R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493175276,L6B,MARKHAM,35,3570,York,3570,York Region Public Health
+493175278,N6A,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493175288,M6G,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493175302,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493175336,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493175376,T2H,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493175392,L1C,BOWMANVILLE,35,3530,Durham,3530,Durham Region Health Department
+493175398,P0H,CORBEIL,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+493175399,M1T,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493175404,L2T,ST CATHARINES,35,3546,Niagara,3546,Niagara Region Public Health Department
+493175409,K8N,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+493175437,J6W,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493175463,M9W,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+493175509,M1R,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493175526,N2N,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493175534,N5Z,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493175541,T3K,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493175543,L7G,GEORGETOWN,35,3536,Halton,3536,Halton Region Health Department
+493175629,J6W,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493175632,L3V,ORILLIA,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493175635,K1C,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+493175637,L5N,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493175641,N8A,WALLACEBURG,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+493175673,R2R,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493175718,K4A,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+493175736,N2T,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493175792,K1E,ORLEANS,35,3551,Ottawa,3551,Ottawa Public Health
+493175811,M6E,YORK,35,3595,Toronto,3595,Toronto Public Health
+493175814,L3P,MARKHAM,35,3570,York,3570,York Region Public Health
+493175845,K1H,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493175883,K7A,SMITHS FALLS,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493175902,L0G,MOUNT ALBERT,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493175954,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+493175981,L0R,BEAMSVILLE,35,3546,Niagara,3546,Niagara Region Public Health Department
+493176015,L5C,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493176077,K0E,PRESCOTT,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493176084,N8Y,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493176090,L9G,ANCASTER,35,3537,Hamilton,3537,Hamilton Public Health Services
+493176096,N0C,MARKDALE,35,3533,Grey Bruce,3533,Grey Bruce Health Unit
+493176125,L7M,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+493176127,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+493176137,M4X,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493176140,H3E,VERDUN,24,2406,Montréal,2406,Région de Montréal
+493176143,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493176146,L3R,MARKHAM,35,3570,York,3570,York Region Public Health
+493176170,P0P,MASSEY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493176186,L4S,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+493176276,H1N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493176282,T3H,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493176290,N5L,PORT STANLEY,35,3575,Southwestern,3575,Southwestern Public Health
+493176302,P7G,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493176337,T5M,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493176355,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493176364,N9J,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493176372,M4N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493176379,J9Y,ROUYN-NORANDA,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+493176417,V7S,WEST VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493176419,M6R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493176450,M2K,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176459,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176484,V2Y,LANGLEY,59,5902,Fraser,591,Fraser
+493176497,M3M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176510,M9M,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176531,L1N,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+493176560,L8K,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+493176561,V2K,PRINCE GEORGE,59,5905,Northern,594,Northern
+493176570,P3Y,LIVELY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493176582,M4C,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+493176634,V2P,CHILLIWACK,59,5902,Fraser,591,Fraser
+493176646,K6V,BROCKVILLE,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493176653,K6J,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493176663,N3A,NEW HAMBURG,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493176677,S7N,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493176679,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493176692,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493176697,M5T,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493176700,S4X,REGINA,47,4705,Regina,475,Regina
+493176709,M3C,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176714,N1L,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493176716,V7M,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493176725,R2V,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493176731,H9G,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493176732,M4Y,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493176767,N7L,CHATHAM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+493176797,L7E,BOLTON,35,3553,Peel,3553,Peel Public Health
+493176803,K9A,COBOURG,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493176812,L3P,MARKHAM,35,3570,York,3570,York Region Public Health
+493176842,S6H,MOOSE JAW,47,4706,South,476,South
+493176844,S0K,WARMAN,47,4703,Central,473,Central
+493176845,K4K,ROCKLAND,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493176856,P2N,KIRKLAND LAKE,35,3563,Timiskaming,3563,Timiskaming Health Unit
+493176893,R3X,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493176925,S7T,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493176947,M3J,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493176950,L0R,BEAMSVILLE,35,3546,Niagara,3546,Niagara Region Public Health Department
+493176959,V1M,LANGLEY,59,5902,Fraser,591,Fraser
+493176966,K7H,PERTH,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493176976,R3X,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493176985,T3B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493177028,T5G,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493177049,S7S,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493177070,S0A,CANORA,47,4703,Central,473,Central
+493177080,N0B,PUSLINCH,35,3575,Southwestern,3575,Southwestern Public Health
+493177119,T2G,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493177170,M4P,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493177180,K0J,COBDEN,35,3557,Renfrew,3557,Renfrew County and District Health Unit
+493177214,T5A,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493177220,K2W,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+493177239,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493177254,V3L,NEW WESTMINSTER,59,5902,Fraser,591,Fraser
+493177275,N2H,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493177316,L9Y,COLLINGWOOD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+493177333,T4G,RED DEER COUNTY,48,4833,Central,4833,Central Zone
+493177357,R3L,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493177378,H1M,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493177404,M5R,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493177476,L1J,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+493177539,R3P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493177548,P0W,EMO,35,3549,Northwestern,3549,Northwestern Health Unit
+493177573,L8M,HAMILTON,35,3537,Hamilton,3537,Hamilton Public Health Services
+493177585,M2R,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493177589,T1A,MEDICINE HAT,48,4831,South,4831,South Zone
+493177596,S7K,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+493177598,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493177602,L7T,BURLINGTON,35,3536,Halton,3536,Halton Region Health Department
+493177627,S9H,SWIFT CURRENT,47,4706,South,476,South
+493177637,P7A,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493177647,N0B,PUSLINCH,35,3575,Southwestern,3575,Southwestern Public Health
+493177656,R0G,ALTONA,46,4605,Southern Health,4605,Southern Health—Santé Sud
+493177663,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+493177676,L6V,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+493177738,V1T,VERNON,59,5901,Interior,592,Interior
+493177762,V5X,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493177852,L4C,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+493177857,V3J,COQUITLAM,59,5902,Fraser,591,Fraser
+493177921,H4N,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493178023,T5P,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493178230,H7G,LAVAL,24,2413,Laval,2413,Région de Laval
+493178251,T2E,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493178426,J0P,RIGAUD,24,2416,Montérégie,2416,Région de la Montérégie
+493178478,J2J,GRANBY,24,2405,Estrie,2405,Région de l'Estrie
+493178694,J6T,SALABERRY-DE-VALLEYFIELD,24,2416,Montérégie,2416,Région de la Montérégie
+493179297,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+493179302,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493179360,H9G,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493179377,J5A,SAINT-CONSTANT,24,2416,Montérégie,2416,Région de la Montérégie
+493179405,G0M,SAINT-COME-LINIERE,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+493179842,G7A,LEVIS,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+493179847,J0R,SAINT-SAUVEUR,24,2415,Laurentides,2415,Région des Laurentides
+493179927,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493179939,H8N,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493179946,H4G,VERDUN,24,2406,Montréal,2406,Région de Montréal
+493180197,J4T,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+493180405,H3N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493180604,H9E,L'ILE-BIZARD,24,2406,Montréal,2406,Région de Montréal
+493181221,J2C,DRUMMONDVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493181276,H1K,ANJOU,24,2406,Montréal,2406,Région de Montréal
+493181368,G0S,SAINT-APOLLINAIRE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493181376,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+493181423,H9H,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+493181498,J2K,COWANSVILLE,24,2405,Estrie,2405,Région de l'Estrie
+493181620,J3L,CHAMBLY,24,2416,Montérégie,2416,Région de la Montérégie
+493181636,J5W,L'ASSOMPTION,24,2414,Lanaudière,2414,Région de Lanaudière
+493181910,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493182017,H2C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493182145,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493182192,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493182257,G0C,BONAVENTURE,24,2411,Gaspésie-Îles-de-la-Madeleine,2411,Région de la Gaspésie—Îles-de-la-Madeleine
+493182305,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493182521,J6Y,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493182692,H2R,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493183026,H3G,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493183596,J4V,GREENFIELD PARK,24,2416,Montérégie,2416,Région de la Montérégie
+493183675,H2E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493184409,J0T,VAL-DAVID,24,2414,Lanaudière,2414,Région de Lanaudière
+493184841,H1W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493185171,T5T,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493185391,J7R,SAINT-EUSTACHE,24,2415,Laurentides,2415,Région des Laurentides
+493185536,H9G,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493185699,H4E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493185780,G6P,VICTORIAVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493186339,T6R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493186347,R2C,WINNIPEG,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493186525,K7K,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+493186949,N5W,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+493187444,N5A,STRATFORD,35,3539,Huron Perth,3539,Huron Perth Health Unit
+493187695,H2G,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493187921,H8N,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493188016,K0A,CARP,35,3543,Leeds Grenville and Lanark,3543,"Leeds, Grenville and Lanark District Health Unit"
+493188677,H4W,COTE SAINT-LUC,24,2406,Montréal,2406,Région de Montréal
+493188885,H1T,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493189870,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+493190027,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493190104,J7J,MIRABEL,24,2415,Laurentides,2415,Région des Laurentides
+493190167,J7T,SAINT-LAZARE,24,2416,Montérégie,2416,Région de la Montérégie
+493190376,G0X,SHAWINIGAN,24,2414,Lanaudière,2414,Région de Lanaudière
+493190661,G7H,CHICOUTIMI,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+493190868,H2R,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493192871,H2G,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493193527,J8R,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493193532,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493193610,G0A,BOISCHATEL,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493194379,J6K,CHATEAUGUAY,24,2416,Montérégie,2416,Région de la Montérégie
+493194402,H2H,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493195191,H4E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493195263,G7A,LEVIS,24,2412,Chaudière-Appalaches,2412,Région de la Chaudière-Appalaches
+493195548,H9C,L'ILE-BIZARD,24,2406,Montréal,2406,Région de Montréal
+493196551,J8T,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493197467,G0P,SAINT-VALERE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493198745,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493200024,G5H,MONT-JOLI,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+493200509,G8Y,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493200547,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493200600,H8S,LACHINE,24,2406,Montréal,2406,Région de Montréal
+493200639,J1T,ASBESTOS,24,2405,Estrie,2405,Région de l'Estrie
+493200800,J6E,JOLIETTE,24,2414,Lanaudière,2414,Région de Lanaudière
+493201881,G2C,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493202344,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+493202435,H1S,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493203406,J4Y,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493204262,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+493205063,H9J,KIRKLAND,24,2406,Montréal,2406,Région de Montréal
+493205253,J6X,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493206137,H8T,LACHINE,24,2406,Montréal,2406,Région de Montréal
+493206780,J2X,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+493206879,H7T,LAVAL,24,2413,Laval,2413,Région de Laval
+493207684,J9X,ROUYN-NORANDA,24,2408,Abitibi-Témiscamingue,2408,Région de l'Abitibi-Témiscamingue
+493208295,J3E,SAINTE-JULIE,24,2416,Montérégie,2416,Région de la Montérégie
+493209085,J8T,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493209299,J4R,SAINT-LAMBERT,24,2416,Montérégie,2416,Région de la Montérégie
+493209944,J1L,SHERBROOKE,24,2405,Estrie,2405,Région de l'Estrie
+493209983,J0S,SAINT-ANICET,24,2416,Montérégie,2416,Région de la Montérégie
+493210113,H9R,POINTE-CLAIRE,24,2406,Montréal,2406,Région de Montréal
+493210405,G0K,SAINTE-LUCE,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+493210623,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493212343,J8P,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493212450,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493212809,R3M,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493213099,H7M,LAVAL,24,2413,Laval,2413,Région de Laval
+493213314,H7X,LAVAL,24,2413,Laval,2413,Région de Laval
+493213491,J5V,LOUISEVILLE,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493213681,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493214152,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493214335,H7E,LAVAL,24,2413,Laval,2413,Région de Laval
+493214418,J6E,JOLIETTE,24,2414,Lanaudière,2414,Région de Lanaudière
+493214915,J0X,WAKEFIELD,24,2407,Outaouais,2407,Région de l'Outaouais
+493216079,J8G,BROWNSBURG-CHATHAM,24,2415,Laurentides,2415,Région des Laurentides
+493216100,J4J,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493217399,G1B,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493217781,H3N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493217996,J5Y,REPENTIGNY,24,2414,Lanaudière,2414,Région de Lanaudière
+493218019,J4G,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493219045,H2G,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493221110,H9S,DORVAL,24,2406,Montréal,2406,Région de Montréal
+493221416,G3G,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493222081,J2S,SAINT-HYACINTHE,24,2416,Montérégie,2416,Région de la Montérégie
+493222498,J0B,AUSTIN,24,2405,Estrie,2405,Région de l'Estrie
+493223155,J4X,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493223596,J4K,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493223638,H1X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493224983,G0X,SHAWINIGAN,24,2414,Lanaudière,2414,Région de Lanaudière
+493226115,H1G,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+493226354,H3H,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493226542,G0C,BONAVENTURE,24,2411,Gaspésie-Îles-de-la-Madeleine,2411,Région de la Gaspésie—Îles-de-la-Madeleine
+493226949,H1H,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+493226959,J6K,CHATEAUGUAY,24,2416,Montérégie,2416,Région de la Montérégie
+493227048,H4N,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493227529,J3A,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+493227617,H7L,LAVAL,24,2413,Laval,2413,Région de Laval
+493227770,J6K,CHATEAUGUAY,24,2416,Montérégie,2416,Région de la Montérégie
+493228032,G2K,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493228194,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+493228718,H1V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493229027,H3W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493229535,J3B,SAINT-JEAN-SUR-RICHELIEU,24,2416,Montérégie,2416,Région de la Montérégie
+493229720,J4B,BOUCHERVILLE,24,2416,Montérégie,2416,Région de la Montérégie
+493230687,H2X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493230780,J4G,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493231461,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493231906,G3A,SAINT-AUGUSTIN-DE-DESMAURES,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493232126,J3G,BELOEIL,24,2416,Montérégie,2416,Région de la Montérégie
+493232407,G8Y,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493232902,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493232922,H1N,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493232997,J8B,SAINTE-ADELE,24,2415,Laurentides,2415,Région des Laurentides
+493234647,J0N,POINTE-CALUMET,24,2415,Laurentides,2415,Région des Laurentides
+493234743,J7V,VAUDREUIL-DORION,24,2416,Montérégie,2416,Région de la Montérégie
+493235291,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493238340,J4W,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493239543,H4H,VERDUN,24,2406,Montréal,2406,Région de Montréal
+493239653,H3X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493240034,H4K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493240170,H9S,DORVAL,24,2406,Montréal,2406,Région de Montréal
+493240931,G5R,RIVIERE-DU-LOUP,24,2401,Bas-Saint-Laurent,2401,Région du Bas-Saint-Laurent
+493241166,J4Z,BROSSARD,24,2416,Montérégie,2416,Région de la Montérégie
+493242227,G7H,CHICOUTIMI,24,2402,Saguenay,2402,Région du Saguenay—Lac-Saint-Jean
+493242546,J6E,JOLIETTE,24,2414,Lanaudière,2414,Région de Lanaudière
+493242663,J6Z,LORRAINE,24,2415,Laurentides,2415,Région des Laurentides
+493242720,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493243629,H8Z,PIERREFONDS,24,2406,Montréal,2406,Région de Montréal
+493244406,J0R,SAINT-SAUVEUR,24,2415,Laurentides,2415,Région des Laurentides
+493244960,J4T,SAINT-HUBERT,24,2416,Montérégie,2416,Région de la Montérégie
+493245036,H9B,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493245074,J3P,SOREL-TRACY,24,2416,Montérégie,2416,Région de la Montérégie
+493245921,H4N,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493245923,J0B,AUSTIN,24,2405,Estrie,2405,Région de l'Estrie
+493245928,H1G,MONTREAL-NORD,24,2406,Montréal,2406,Région de Montréal
+493245939,H1E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493247530,H9B,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493247885,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+493249340,H1X,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493250032,J7A,ROSEMERE,24,2415,Laurentides,2415,Région des Laurentides
+493251355,H7T,LAVAL,24,2413,Laval,2413,Région de Laval
+493251636,J4N,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493253254,H8N,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493253399,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493256180,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493256263,J5J,SAINTE-SOPHIE,24,2415,Laurentides,2415,Région des Laurentides
+493258337,J8P,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493259768,J8L,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493261690,H1W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493262609,H4L,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493264727,J4J,LONGUEUIL,24,2416,Montérégie,2416,Région de la Montérégie
+493264891,G1V,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493265201,G9A,TROIS-RIVIERES,24,2404,Mauricie,2404,Région de la Mauricie et du Centre-du-Québec
+493265457,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493265665,H9B,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493265746,H2K,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493266104,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493266546,H4X,MONTREAL-OUEST,24,2406,Montréal,2406,Région de Montréal
+493266656,G1V,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493266887,J0T,VAL-DAVID,24,2414,Lanaudière,2414,Région de Lanaudière
+493266904,G0C,BONAVENTURE,24,2411,Gaspésie-Îles-de-la-Madeleine,2411,Région de la Gaspésie—Îles-de-la-Madeleine
+493267619,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493267973,H1R,SAINT-LEONARD,24,2406,Montréal,2406,Région de Montréal
+493268695,G1B,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+493268983,H4V,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493269146,J9H,GATINEAU,24,2407,Outaouais,2407,Région de l'Outaouais
+493278820,J3V,SAINT-BRUNO,24,2416,Montérégie,2416,Région de la Montérégie
+493281667,H7V,LAVAL,24,2413,Laval,2413,Région de Laval
+493281752,J7M,TERREBONNE,24,2414,Lanaudière,2414,Région de Lanaudière
+493282828,H2A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493290141,R0E,OAKBANK,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493300212,R3G,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493450918,K2B,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493451079,L1V,PICKERING,35,3530,Durham,3530,Durham Region Health Department
+493451710,M4J,EAST YORK,35,3595,Toronto,3595,Toronto Public Health
+493452016,P7G,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+493452019,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493452391,K1R,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493452398,K8H,PETAWAWA,35,3557,Renfrew,3557,Renfrew County and District Health Unit
+493453224,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493453451,M1B,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493453576,J6N,BEAUHARNOIS,24,2416,Montérégie,2416,Région de la Montérégie
+493454132,H2A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493454446,H4R,SAINT-LAURENT,24,2406,Montréal,2406,Région de Montréal
+493454526,H2W,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493454782,H3C,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493458361,J0E,SUTTON,24,2405,Estrie,2405,Région de l'Estrie
+493459001,H4E,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493459671,J0E,SUTTON,24,2405,Estrie,2405,Région de l'Estrie
+493459775,M1E,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493464040,M6H,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493464128,M6S,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493471686,H7M,LAVAL,24,2413,Laval,2413,Région de Laval
+493472045,L6E,MARKHAM,35,3570,York,3570,York Region Public Health
+493514255,K7M,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+493514274,R1C,NAROL,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493514711,N1G,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+493514768,T6E,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493516337,S0J,SHELLBROOK,47,4701,Far North,471,Far North
+493518058,K2H,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+493521446,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+493521501,L6M,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+493522774,T6L,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493524080,P0J,NEW LISKEARD,35,3563,Timiskaming,3563,Timiskaming Health Unit
+493535223,R0E,OAKBANK,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493539139,M4L,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493539422,P3Y,LIVELY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+493539771,P6A,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+493539856,V9J,COURTENAY,59,5904,Island,593,Vancouver Island
+493539860,T5Y,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493539864,V1L,NELSON,59,5901,Interior,592,Interior
+493539920,T2W,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493539990,T7E,YELLOWHEAD COUNTY,48,4835,North,4835,North Zone
+493540031,L4J,THORNHILL,35,3570,York,3570,York Region Public Health
+493540088,L4P,KESWICK,35,3570,York,3570,York Region Public Health
+493540094,K9V,LINDSAY,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+493540125,L5V,MISSISSAUGA,35,3553,Peel,3553,Peel Public Health
+493540127,M1T,SCARBOROUGH,35,3595,Toronto,3595,Toronto Public Health
+493540158,T2A,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493540168,M2N,NORTH YORK,35,3595,Toronto,3595,Toronto Public Health
+493540315,M5J,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+493540353,H4A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493541701,V2Z,LANGLEY,59,5902,Fraser,591,Fraser
+493542018,P6C,SAULT STE. MARIE,35,3526,Algoma,3526,Algoma Public Health Unit
+493542050,R3B,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493543488,J0K,RAWDON,24,2414,Lanaudière,2414,Région de Lanaudière
+493544406,N2A,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+493545769,H7X,LAVAL,24,2413,Laval,2413,Région de Laval
+493546336,H2A,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493546792,K6H,CORNWALL,35,3558,Eastern,3558,Eastern Ontario Health Unit
+493548416,V6E,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493549828,R2P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+493554727,V3C,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+493554982,T6J,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493554994,T4C,COCHRANE,48,4832,Calgary,4832,Calgary Zone
+493555067,S4S,REGINA,47,4705,Regina,475,Regina
+493557304,H8R,LASALLE,24,2406,Montréal,2406,Région de Montréal
+493559146,T6K,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+493560287,H9A,DOLLARD-DES-ORMEAUX,24,2406,Montréal,2406,Région de Montréal
+493565228,R2C,WINNIPEG,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493572297,L2V,THOROLD,35,3546,Niagara,3546,Niagara Region Public Health Department
+493576242,R0E,OAKBANK,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority
+493583137,H2R,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+493591588,J4B,BOUCHERVILLE,24,2416,Montérégie,2416,Région de la Montérégie
+493594893,T2N,CALGARY,48,4832,Calgary,4832,Calgary Zone
+493595562,V5X,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+493687692,K1Y,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+493857553,H2J,MONTREAL,24,2406,Montréal,2406,Région de Montréal
+494000530,E1G,MONCTON,13,1301,Zone 1 (Moncton area),1301,Zone 1 (Moncton area)
+494079952,R3V,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+494110535,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+494269159,N2M,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+494273841,K7P,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+494308302,M8Z,ETOBICOKE,35,3595,Toronto,3595,Toronto Public Health
+494534717,K9L,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+494534731,T1J,LETHBRIDGE,48,4831,South,4831,South Zone
+494534931,V6Y,RICHMOND,59,5903,Vancouver Coastal,595,Vancouver Coastal
+494536114,V5M,VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+494540641,B3N,HALIFAX,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+494540698,M4N,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+494540953,S7T,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+494542078,B0N,BROOKFIELD,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+494543063,L8G,STONEY CREEK,35,3537,Hamilton,3537,Hamilton Public Health Services
+494545781,L9T,MILTON,35,3536,Halton,3536,Halton Region Health Department
+494547229,T4P,RED DEER,48,4833,Central,4833,Central Zone
+494547244,K7M,KINGSTON,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+494548163,R3Y,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+494550417,T6R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+494552418,R7B,BRANDON,46,4602,Prairie Mountain,4602,Prairie Mountain Health
+494557355,S3N,YORKTON,47,4703,Central,473,Central
+494558518,T4P,RED DEER,48,4833,Central,4833,Central Zone
+494560682,N3W,CALEDONIA,35,3534,Haldimand-Norfolk,3534,Haldimand-Norfolk Health Unit
+494563896,T3B,CALGARY,48,4832,Calgary,4832,Calgary Zone
+494567184,V3R,SURREY,59,5902,Fraser,591,Fraser
+494569754,V1T,VERNON,59,5901,Interior,592,Interior
+494572498,N9G,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+494573547,R3P,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+494576389,V1M,LANGLEY,59,5902,Fraser,591,Fraser
+494577754,X0E,HAY RIVER,61,6101,NWT,6101,Northwest Territories
+494580664,V1C,CRANBROOK,59,5901,Interior,592,Interior
+494580904,K8P,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+494635768,G2B,QUEBEC,24,2403,Capitale-Nationale,2403,Région de la Capitale-Nationale
+494636860,L4E,RICHMOND HILL,35,3570,York,3570,York Region Public Health
+494649385,L3X,NEWMARKET,35,3570,York,3570,York Region Public Health
+494655633,L4P,KESWICK,35,3570,York,3570,York Region Public Health
+494662489,K2L,KANATA,35,3551,Ottawa,3551,Ottawa Public Health
+494665141,L9N,HOLLAND LANDING,35,3570,York,3570,York Region Public Health
+494666279,L6G,MARKHAM,35,3570,York,3570,York Region Public Health
+494674377,L6T,BRAMPTON,35,3553,Peel,3553,Peel Public Health
+494685756,N2E,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+494689395,K8N,BELLEVILLE,35,3538,Hastings Prince Edward,3538,Hastings and Prince Edward Counties Health Unit
+494711736,L6A,MAPLE,35,3570,York,3570,York Region Public Health
+494715561,L8B,WATERDOWN,35,3537,Hamilton,3537,Hamilton Public Health Services
+494725786,B4V,BRIDGEWATER,12,1201,Zone 1 - Western,1201,Zone 1 - Western
+494735947,B0E,BADDECK,12,1203,Zone 3 - Eastern,1203,Zone 3 - Eastern
+494752557,C1A,CHARLOTTETOWN,11,1100,Prince Edward Island,1100,Prince Edward Island
+494755017,S7V,SASKATOON,47,4704,Saskatoon,474,Saskatoon
+494832470,A1K,TORBAY,10,1011,Eastern,1011,Eastern Regional Health Authority
+494844608,N2B,KITCHENER,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+494883279,V7G,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+494894003,T3P,CALGARY,48,4832,Calgary,4832,Calgary Zone
+494964884,L9H,DUNDAS,35,3537,Hamilton,3537,Hamilton Public Health Services
+495022385,E2K,SAINT JOHN,13,1302,Zone 2 (Saint John area),1302,Zone 2 (Saint John area)
+495033691,P0M,CHELMSFORD,35,3561,Sudbury,3561,Sudbury and District Health Unit
+495034928,P0G,NOBEL,35,3547,North Bay Parry Sound,3547,North Bay Parry Sound District Health Unit
+495035390,K9J,PETERBOROUGH,35,3555,Peterborough,3555,Peterborough Public Health
+495036069,P4N,TIMMINS,35,3556,Porcupine,3556,Porcupine Health Unit
+495039371,K0H,INVERARY,35,3541,Kingston Frontenac Lennox & Addington,3541,"Kingston, Frontenac and Lennox and Addington Health Unit"
+495051278,K9V,LINDSAY,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+495058073,A0L,PASADENA,10,1013,Western,1013,Western Regional Health Authority
+495062201,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+495063690,L1N,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+495064174,T5R,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+495065966,R2J,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+495073702,T8A,SHERWOOD PARK,48,4834,Edmonton,4834,Edmonton Zone
+495073897,T2V,CALGARY,48,4832,Calgary,4832,Calgary Zone
+495076297,T4B,AIRDRIE,48,4832,Calgary,4832,Calgary Zone
+495076776,V1Y,KELOWNA,59,5901,Interior,592,Interior
+495078960,R3Y,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+495081005,M5C,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+495085514,V9W,CAMPBELL RIVER,59,5904,Island,593,Vancouver Island
+495088063,V1C,CRANBROOK,59,5901,Interior,592,Interior
+495090887,R3R,WINNIPEG,46,4601,Winnipeg,4601,Winnipeg Regional Health Authority
+495105330,E3B,FREDERICTON,13,1303,Zone 3 (Fredericton area),1303,Zone 3 (Fredericton area)
+495108076,V7N,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+495115019,X0C,ARVIAT,62,6201,Nunavut,6201,Nunavut
+495117363,P0K,MATHESON,35,3556,Porcupine,3556,Porcupine Health Unit
+495125420,V2A,PENTICTON,59,5901,Interior,592,Interior
+495128663,P0P,MASSEY,35,3561,Sudbury,3561,Sudbury and District Health Unit
+495129675,V2N,PRINCE GEORGE,59,5905,Northern,594,Northern
+495142516,V2A,PENTICTON,59,5901,Interior,592,Interior
+495147015,T5K,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+495148905,N7M,CHATHAM,35,3540,Chatham-Kent,3540,Chatham-Kent Health Unit
+495149394,B0J,HUBBARDS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+495174755,N6H,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+495174909,V8B,SQUAMISH,59,5903,Vancouver Coastal,595,Vancouver Coastal
+495191669,V7P,NORTH VANCOUVER,59,5903,Vancouver Coastal,595,Vancouver Coastal
+495209110,V2E,KAMLOOPS,59,5901,Interior,592,Interior
+495315711,N1G,GUELPH,35,3566,Wellington Dufferin Guelph,3566,Wellington-Dufferin-Guelph Health Unit
+495321798,K2G,NEPEAN,35,3551,Ottawa,3551,Ottawa Public Health
+495336657,L3X,NEWMARKET,35,3570,York,3570,York Region Public Health
+495341301,N2J,WATERLOO,35,3565,Waterloo,3565,"Region of Waterloo, Public Health"
+495344897,P0J,NEW LISKEARD,35,3563,Timiskaming,3563,Timiskaming Health Unit
+495352275,T5W,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+495363887,X1A,YELLOWKNIFE,61,6101,NWT,6101,Northwest Territories
+495366481,V1E,SALMON ARM,59,5901,Interior,592,Interior
+495370590,C1B,STRATFORD,11,1100,Prince Edward Island,1100,Prince Edward Island
+495419559,P7C,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+495420686,T2Y,CALGARY,48,4832,Calgary,4832,Calgary Zone
+495427994,L1N,WHITBY,35,3530,Durham,3530,Durham Region Health Department
+495440850,L3Z,BRADFORD,35,3560,Simcoe Muskoka,3560,Simcoe Muskoka District Health Unit
+495454162,N6K,LONDON,35,3544,Middlesex-London,3544,Middlesex-London Health Unit
+495454885,V9S,NANAIMO,59,5904,Island,593,Vancouver Island
+495574064,N8N,WINDSOR,35,3568,Windsor-Essex,3568,Windsor-Essex County Health Unit
+495620369,K0C,ALEXANDRIA,35,3558,Eastern,3558,Eastern Ontario Health Unit
+495645374,P0L,MOONBEAM,35,3556,Porcupine,3556,Porcupine Health Unit
+495677102,L1G,OSHAWA,35,3530,Durham,3530,Durham Region Health Department
+495732418,L6M,OAKVILLE,35,3536,Halton,3536,Halton Region Health Department
+495811595,N3L,PARIS,35,3527,Brant,3527,Brant County Health Unit
+496062041,K0M,MINDEN,35,3535,Haliburton Kawartha Pineridge,3535,"Haliburton, Kawartha, Pine Ridge District Health Unit"
+496154447,V1V,KELOWNA,59,5901,Interior,592,Interior
+496450103,K1G,OTTAWA,35,3551,Ottawa,3551,Ottawa Public Health
+496528049,K1B,GLOUCESTER,35,3551,Ottawa,3551,Ottawa Public Health
+496728036,T5H,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+496951099,K0L,DOURO-DUMMER,35,3555,Peterborough,3555,Peterborough Public Health
+496955329,M6G,TORONTO,35,3595,Toronto,3595,Toronto Public Health
+496978536,V3B,PORT COQUITLAM,59,5902,Fraser,591,Fraser
+496983429,T2Z,CALGARY,48,4832,Calgary,4832,Calgary Zone
+497010886,B4B,HAMMONDS PLAINS,12,1204,Zone 4 - Central,1204,Zone 4 - Central
+497053361,P7A,THUNDER BAY,35,3562,Thunder Bay,3562,Thunder Bay District Health Unit
+497082097,T6E,EDMONTON,48,4834,Edmonton,4834,Edmonton Zone
+498645565,S9H,SWIFT CURRENT,47,4706,South,476,South
+498774424,V9B,VICTORIA,59,5904,Island,593,Vancouver Island
+499285481,R0C,GIMLI,46,4603,Interlake-Eastern,4603,Interlake-Eastern Regional Health Authority

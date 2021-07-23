@@ -135,9 +135,48 @@ mutate(name=str_replace_all(name, pattern="_|_|should", replace=" ")) %>%
   mutate(Percent=n/sum(n), error=sqrt((Percent*(1-Percent))/n)) %>% 
   filter(value==1) %>% 
   as_factor() %>% 
-  ggplot(., aes(y=name, x=Percent, fill=Sample, group=Sample))+geom_col(position="dodge")+labs(y="Influence")+geom_errorbarh(aes(xmin=Percent-(1.96*error), xmax=Percent+(1.96*error)),height=0, position=position_dodge(0.9))
+  ggplot(., aes(y=name, x=Percent, fill=Sample, group=Sample))+geom_col(position="dodge")+labs(y="Influence")+geom_errorbar(aes(xmin=Percent-(1.96*error), xmax=Percent+(1.96*error)),height=0, position=position_dodge(0.9))
 
 #ggsave(here("Plots", "influences_should_group.png"), width=6, height=2)
 #### Science Literacy ####
 
+#### Response to Local Conditions ####
+#install.packages('corrr')
+library(corrr)
+var_label(full$Q8_3)
+full %>% 
+  select(Q8_1_x:Q8_3_x, case_trend, Sample) %>% 
+  rename(`Mandatory Vaccines`=1, `Close Bars`=2, `No Mask Fines`=3) %>% 
+group_by(Sample) %>% 
+  nest() %>% 
+  mutate(
+    cor=map(data, correlate)
+  ) %>% 
+  unnest(cor)->out
+out
+out %>% 
+  pivot_longer(4:7) %>% 
+  filter(term=="case_trend") %>% 
+  filter(name!="case_trend") %>% 
+  ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
 
+#caption="This shows the correlation between the trend in COVID cases in ther respondent's local health region and the respondent's support for various policy trade-offs. Note that the public health world's support for closing bars is linked to local case trends, but the general public's views are not. Note that the general public's desires to fine non-mask wearers is slightly correlated with local conditions, the public health workforce is moderately inversely correlated with local conditions."
+
+library(corrr)
+var_label(full$Q8_3)
+names(full)
+full %>% 
+  select(Q8_1_x:Q8_3_x, avgtotal_last7_pop_per_capita, Sample) %>% 
+  rename(`Mandatory Vaccines`=1, `Close Bars`=2, `No Mask Fines`=3) %>% 
+  group_by(Sample) %>% 
+  nest() %>% 
+  mutate(
+    cor=map(data, correlate)
+  ) %>% 
+  unnest(cor)->out
+out$term
+out %>% 
+  pivot_longer(4:7) %>% 
+  filter(term=="avgtotal_last7_pop_per_capita") %>% 
+  filter(name!="avgtotal_last7_pop_per_capita") %>% 
+  ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
