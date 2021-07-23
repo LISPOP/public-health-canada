@@ -1,0 +1,106 @@
+---
+title: "Practice Document"
+author: "Simon J. Kiss"
+date: "18/02/2021"
+output: html_document
+---
+
+```{r setup, include=TRUE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## R Markdown
+
+This is an R Markdown document. Markdown is a simple formatting syntax for authoring HTML, PDF, and MS Word documents. For more details on using R Markdown see <http://rmarkdown.rstudio.com>.
+
+We will be using this document to practice using GitHub for LISPOP projects. 
+
+When you click the **Knit** button a document will be generated that includes both content as well as the output of any embedded R code chunks within the document. You can embed an R code chunk like this:
+
+```{r cars}
+summary(cars)
+```
+
+## Including Plots
+
+You can also embed plots, for example:
+
+```{r pressure, echo=FALSE}
+plot(pressure)
+```
+
+Note that the `echo = FALSE` parameter was added to the code chunk to prevent printing of the R code that generated the plot.
+
+## Instructions for Matt and Scott
+
+Practice the following things. 
+
+1. Clone the repository to your computer. 
+2. Make a branch for yourself that will be temporary.
+3. Try to make some changes to this Markdown document 
+    - Try to make different headers with `### `
+    - Try bolding some text 
+    - Try italicizing some text
+    - try to make a numbered list of things
+    - Try to make a bulleted list of things. 
+4. Try embedding a chunk of R code in the document, anything.
+5. Commit and push your changes up to the remote repository. 
+6. Try to file a pull request to the `main` branch. 
+
+testing below:
+
+bold text: **bold blue cheese**
+
+italic text: *italian style dressing*
+
+strikethrough: ~~toliet paper~~ 
+
+superscript: e=mc^2^
+
+link: [LISPOP Homepage](LISPOP _ Laurier Institute for the Study of Public Opinion and Policy.html)
+
+# Large
+
+## Medium
+
+### Small
+
+#### Snack Size
+
+##### Kids
+
+Image:
+![I'm from Buffalo where it's cold in summer](billnation.jpg "Title")
+
+# Buff
+
+
+* Fruit
+    + Apples
+    + Oranges
+    + Bananas
+    + Grapes
+
+1. January
+    + New Year's
+2. February
+    + Valentine's
+3. March
+    + St Patricks
+4. April
+    + April Fool's
+    
+
+> thread indented
+
+Chunks below:
+```{r test}
+help(cars)
+# this pulls up the documentation
+```
+
+| Produce      | Stock          | Price |
+| ------------- |:-------------:| -----:|
+| Apples     | 4 | $1 |
+| Bananas      | 3     |   $0.5 |
+| Oranges | 2     |    $0.79 |
