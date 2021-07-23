@@ -546,4 +546,4 @@ source('R_scripts/2b_fsa_merge_covid_incidence.R')
 # names(full)
 # table(full$Sample)
 #write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
-View(full)
+

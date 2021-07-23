@@ -75,12 +75,17 @@ full %>%
   mutate(name=str_trim(name)) %>% 
   group_by(Sample, name, value) %>% 
   summarize(n=n()) %>% 
-  mutate(Percent=n/sum(n), error=sqrt((Percent*(1-Percent))/n)) %>% 
+  mutate(Percent=(n/sum(n)), error=sqrt((Percent*(1-Percent))/n)) %>%
+  mutate(Percent=Percent*100, error=error*100) %>% 
   filter(value==1) %>% 
   as_factor() %>% 
-  ggplot(., aes(y=name, x=Percent*100, fill=Sample, group=Sample))+
-  geom_col(position="dodge")+theme(legend.position = "bottom")+labs(y="", x="Percentage", title= str_wrap("Which of the following influences do you think should affect government decision-making in Canada about COVID-19", width=60))+geom_errorbarh(aes(xmin=Percent-(1.96*error), xmax=Percent+(1.96*error)),height=0, position=position_dodge(0.9))+
+  ggplot(., aes(y=name, x=Percent, fill=Sample, group=Sample))+
+  geom_col(position="dodge")+
+  theme(legend.position = "bottom")+
+  xlim(c(0,100)) %>% 
+  labs(y="", x="Percentage", title= str_wrap("Which of the following influences do you think should affect government decision-making in Canada about COVID-19", width=60))+geom_errorbarh(aes(xmin=Percent-(1.96*error), xmax=Percent+(1.96*error)),height=0, position=position_dodge(0.9))+
   guides(fill=guide_legend(title=""))
+?scale_x_continuous
 ggsave(here("Plots", "influences_should_group.png"))
 
 ###sIGNIFICANCE TESTING - Work in progress
@@ -98,10 +103,11 @@ full %>%
   mutate(name=str_trim(name)) %>% 
   group_by(Sample, name, value) %>% 
   summarize(n=n()) %>% 
-  mutate(Percent=n/sum(n), error=sqrt((Percent*(1-Percent/n)))) %>% 
+  mutate(Percent=(n/sum(n)), error=sqrt((Percent*(1-Percent))/n)) %>%
+  mutate(Percent=Percent*100, error=error*100) %>% 
   filter(value==1) %>% 
   as_factor() %>% 
-  ggplot(., aes(y=name, x=Percent*100, fill=Sample, group=Sample))+
+  ggplot(., aes(y=name, x=Percent, fill=Sample, group=Sample))+
   geom_col(position="dodge")+theme(legend.position = "bottom")+labs(y="", x="Percentage", title= str_wrap("Which of the following influences do you think do affect government decision-making in Canada about COVID-19", width=60))+geom_errorbarh(aes(xmin=Percent-(1.96*error), xmax=Percent+(1.96*error)),height=0, position=position_dodge(0.9))+
   guides(fill=guide_legend(title=""))
 ggsave(here("Plots", "influences_do_group.png"))
@@ -183,7 +189,19 @@ wilcox.test(Q7_6 ~ Sample, data=full)
 wilcox.test(Q7_7 ~ Sample, data=full)
 wilcox.test(Q7_8 ~ Sample, data=full)
 
+# Can also write out the results using tidy() and kable()
+q7_1_test<-wilcox.test(Q7_1 ~ Sample, data=full)
 
+#https://stackoverflow.com/questions/55654017/how-to-visualize-a-loop-of-wilcoxon-tests-in-one-tidy-output
+library(broom)
+
+kable(
+  tidy(q7_1_test)
+  , format="html", file="")
+#?kable
+
+
+#But a simple linear 
 #### Q8 Difference Between Samples and Support For Measures #####
 full %>% 
   select(starts_with('Q8_'), Sample) %>% 
@@ -243,6 +261,9 @@ full %>%
   #form groups based on the variable Sample and the new variable name, which was created
   #In the pivotting process. 
   group_by(Sample, name) %>% 
+  #Mutate
+  mutate(name=str_replace_all(name, pattern="_", replacement=" "), 
+         name=str_to_title(name)) %>% 
   #Summarize each group by calculating the mean of value, which was also created 
   #in the pivotting process, and the sd, the sample size, and calculate the se for each
   summarize(average=mean(value), sd=sd(value), n=n(), se=sd/sqrt(n)) %>% 
@@ -294,7 +315,7 @@ ggsave(here("Plots", "Greater_Federal_Powers_Mental_Health.png"))
 lookfor(full, "recovery")
 full$Q25
 ggplot(full, aes(x=as.numeric(Q25), fill=Sample))+
-  geom_bar(aes(y = (..count../sum(..count..))), position = "dodge") +
+  geom_bar(aes(y = (..count../sum(..count..))*100), position = "dodge") +
   labs(x="")+
   guides(fill=guide_legend(title=""))
 ggsave(here("Plots", "Government_Prioritize_Speedy_Recovery"))

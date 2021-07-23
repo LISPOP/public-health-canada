@@ -1,7 +1,7 @@
 #### Merge Region Health name #### 
 #install.packages('tidylog')
 #This is a little package that provides diagnostics after merging. 
-library(tidylog) 
+#library(tidylog) 
 #First we read in Tim's file that used the PCCF+ to assign the FSAs to health regions. 
 ## It is based on code from Tim Gravelle and Laurier's PCCF file, which has to be run elsewhere
 health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 06 14.csv"))

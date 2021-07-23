@@ -63,3 +63,9 @@ full %>%
 
 
 # The key philosophy behind ggplot and the tidyverse is that every graphical element of a graph that is meant to communicate some information must come from a "column". So, in this case, the panel communicates the informatino about which particular variable has been responded to. 
+
+
+####1. Q3 (Line 71) and Q4 (Line 93): The confidence intervals don't seem to be working properly. Also, I've been using the Wilcoxon test for other questions (e.g. lines 40-42), but having difficulty getting it to work properly for Q3 and Q4. 
+2. Q5 (Line 112), Q24 (Line 269), Q32-36 (Line 314): Trying to adjust the X-axis to be a % rather than decimal point. 
+3. Q9 (Line 236): How do I remove the underscore in the y-axis labels?
+  4. Q25 (Line 291): Is there a way to show the % of the sample population rather than the count?
