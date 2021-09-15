@@ -357,7 +357,7 @@ mip<-readWorkbook(xlsxFile="data/mip_list.xlsx", sheet=2)
 mip %>%
   select(other_problem_text, category.x)->mip
 #The responses are categorized in other_problem_text
-#The codes are categorized in caegory.x
+#The codes are categorized in category.x
 names(full)
 full %>%
   mutate(other_problem_text=tolower(Q1_9_SP)) %>%
@@ -374,7 +374,7 @@ library(scales)
 full %>% 
   ungroup() %>% 
   mutate(across(starts_with('Q8_'), revScale, .names="{.col}_x")) ->full
-
+names(full)
 
 #### Demographics ####
 #Age
@@ -506,31 +506,6 @@ full %>%
   #Bind the columns from the original `full` dataframe and add to them the new variables we just made
   bind_cols(full, .) ->full
 
-#### Assign Value labels and variable labels ####
-#This code section assigns some value labels and variable labels to new variables 
-# to improve communication with colleagues
-#Ensure the library(labelled) is loaded
-library(labelled)
-names(full)
-#Set the variable label for each variable
-var_label(full$old)<-'Dichotomous variable, R is 65+'
-#Set the value labels for each variable
-val_labels(full$old)<-c(`Over 65`=1, `Under 65`=2)
-
-var_label(full$rich)<-'Dichotomous variable, R household > $100,000'
-val_labels(full$rich)<-c(`Over $100,000`=1, `Under $100,000`=0)
-
-var_label(full$quebec)<-'Dichotomous variable, R is resident of Quebec'
-val_labels(full$quebec)<-c(`Quebecker`=1, `Outside Quebec`=0)
-
-var_label(full$francophone)<- 'Dichotomous variable, R is francophone'
-val_labels(full$francophone)<-c(`Francophone`=1, `Not Francophone`=0)
-
-
-add_value_labels(full, 
-                 Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
-                         'Public policy should be determined by many factors including scientific evidence'=7))
-val_labels(full$rural)<-c('Rural'=1, `Not Rural`=0)
 
 #### Provide names for trade-off variables
 full<-full %>% 
@@ -570,8 +545,61 @@ full %>%
     TRUE ~ NA_real_
   ))->full
 
+names(full)
+#### Assign Value labels and variable labels ####
+#This code section assigns some value labels and variable labels to new variables 
+# to improve communication with colleagues
+#Ensure the library(labelled) is loaded
+library(labelled)
+names(full)
+#Set the variable label for each variable
+var_label(full$old)<-'Dichotomous variable, R is 65+'
+#Set the value labels for each variable
+val_labels(full$old)<-c(`Over 65`=1, `Under 65`=2)
+
+var_label(full$rich)<-'Dichotomous variable, R household > $100,000'
+val_labels(full$rich)<-c(`Over $100,000`=1, `Under $100,000`=0)
+
+var_label(full$quebec)<-'Dichotomous variable, R is resident of Quebec'
+val_labels(full$quebec)<-c(`Quebecker`=1, `Outside Quebec`=0)
+
+var_label(full$francophone)<- 'Dichotomous variable, R is francophone'
+val_labels(full$francophone)<-c(`Francophone`=1, `Not Francophone`=0)
+
+
+add_value_labels(full, 
+                 Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
+                         'Public policy should be determined by many factors including scientific evidence'=7))
+val_labels(full$rural)<-c('Rural'=1, `Not Rural`=0)
+
+
+# Add Variable Labels for Q8_1_x specifying that they are reversed versions of Q8_1, Q8_2, etc. 
+
+# Add Variable label for Vaccines specifying it is vaccine hesitancy from Q23
+
+#add Variable Label for rural specifying that 1 = rural and 0 = not rural 
+
+#Add variable label 
+names(full)
+#Add variable label to HR specifying that it is Health Region code
+#Add var_label to HR_Name specifying it is the name of the health region
+
+
+#Add variable label to pop.2016 specifying that it is population for FSA
+#Add Var label to area.km2 specifying it is FSA Square Kilometer
+# Add var label to date_report specifying it is the date reported of Covid cases for Respondent Health Region
+# Add var label to cases specifying it is the # of COVID cases for that health region
+# Add var label to cumulative_cases specifyihng it is the # of covid cases for that health region
+#Add var label to cumulative_deaths specifying that it is the cumuilative covid deaths
+#add var label to deaths specifyhing that it is the deaths.
+
+#Add var label to case_trend specifying that it is the covid trending number, the average covid cases in the last 7 days divided by the last 14 days 
+#Add var_label to pop to health region population
+#Add var_label to avgtotal_last7_pop_per_capita 
+
+full$case_trend
 #### Write out the data save file ####
-# names(full)
-# table(full$Sample)
-# write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
+names(full)
+table(full$Sample)
+write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
 
