@@ -530,6 +530,7 @@ val_labels(full$francophone)<-c(`Francophone`=1, `Not Francophone`=0)
 add_value_labels(full, 
                  Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
                          'Public policy should be determined by many factors including scientific evidence'=7))
+val_labels(full$rural)<-c('Rural'=1, `Not Rural`=0)
 
 #### Provide names for trade-off variables
 full<-full %>% 
@@ -542,8 +543,35 @@ full<-full %>%
 # 2b_fsa_merge_covid_incidence.R step by step to see how it works.
 source('R_scripts/2b_fsa_merge_covid_incidence.R')
 
+#### Assigning Rural Values ####
+#Draw a histogram of the population density
+
+qplot(full$pop.km2)
+summary(full$pop.km2) #median is at 903
+# mean is at 4593, so there are some huge outliers, very dense populations. 
+full$Sample
+full %>% 
+  filter(Sample=="Public Health") %>% 
+  ggplot(., aes(x=pop.km2))+geom_histogram()
+full %>% 
+  group_by(Sample) %>% 
+  summarize(mean=mean(pop.km2, na.rm=T), median=median(pop.km2, na.rm=T))
+
+full %>% 
+  filter(pop.km2<25000) %>% 
+  ggplot(., aes(x=pop.km2))+geom_histogram()+facet_grid(~Sample)
+
+# First Cut Rural < 2500 people per square km urban > 2500 people per square km
+
+full %>% 
+  mutate(rural=case_when(
+    pop.km2 < 2500 ~ 1,
+    pop.km2 > 2499 ~ 0,
+    TRUE ~ NA_real_
+  ))->full
+
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)
-#write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
+# write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
 

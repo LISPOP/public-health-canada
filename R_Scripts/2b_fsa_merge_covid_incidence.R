@@ -4,7 +4,7 @@
 #library(tidylog) 
 #First we read in Tim's file that used the PCCF+ to assign the FSAs to health regions. 
 ## It is based on code from Tim Gravelle and Laurier's PCCF file, which has to be run elsewhere
-health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 06 14.csv"))
+health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 09 10.csv"))
 
 #### PRovince names in Tim's file ####
 #Tim's file did not have province names, which might be necessary
@@ -40,7 +40,7 @@ names(full)
 
 full %>% 
   left_join(., health_regions, by=c('CID', 'FSA'))->full
-
+names(full)
 full %>% 
   rename(province=province.x) %>% 
   select(-province.y)->full
@@ -60,15 +60,15 @@ library(Covid19CanadaData)
 #This file has covid case counts for health regions, without HRUIDs
 # But as of May 21, 2021, this was not working at all. 
 #covid<-dl_dataset(uuid='746c01f3-e597-4413-89e0-afa561bf81d8')
-head(covid)
+
 #This line downloads the ccodwg timeseries by health region, but it only includes case counts
 #The dataset below has more data.
 #covid<-read_csv(file="https://raw.githubusercontent.com/ccodwg/Covid19Canada/master/timeseries_hr/cases_timeseries_hr.csv")
-head(covid)
+
 #This appears to download health canada's comprehensive time series by health region
 #However, this file does not contain the HRUIDs 
 covid<-read_csv(file="https://health-infobase.canada.ca/src/data/covidLive/file_out_v5.csv")
-
+head(covid)
 #Note that there are no HR_UID numbers in the covid file.
 
 # THE FUNDAMENTAL PROBLEM IS THAT TIM'S FILE HAS THE HRUID BUT THE COVID CASE DATA DOES NOT
@@ -188,4 +188,5 @@ full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$pop
 
 qplot(full$case_trend, geom="histogram", title="Distribution of trend variable")
 
+      names(full)
       
