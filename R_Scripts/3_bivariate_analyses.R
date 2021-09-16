@@ -180,3 +180,4 @@ out %>%
   filter(term=="avgtotal_last7_pop_per_capita") %>% 
   filter(name!="avgtotal_last7_pop_per_capita") %>% 
   ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
+ggsave(here("Plots", "local_covid_evidence_preferences.png"))

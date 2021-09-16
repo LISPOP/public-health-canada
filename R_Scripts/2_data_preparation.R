@@ -599,7 +599,7 @@ names(full)
 
 full$case_trend
 #### Write out the data save file ####
-names(full)
-table(full$Sample)
-write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
+# names(full)
+# table(full$Sample)
+# write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
 
