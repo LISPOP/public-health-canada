@@ -13,6 +13,7 @@ look_for(full, 'tomatoes')
 #Check value labels for Q14
 val_labels(full$Q14_1)
 
+
 full %>%
   #We are mutating existing variables so the mutate command
   mutate(
@@ -72,6 +73,7 @@ mutate(across(starts_with('know'),as.numeric)) %>%
 # We need to code the correct answers to these questions as correct.
 # This code spits out an html table that has all the responses in it. T/here are 229 unique responses.
 #
+
 library(knitr)
 
 full %>%
@@ -566,36 +568,51 @@ val_labels(full$quebec)<-c(`Quebecker`=1, `Outside Quebec`=0)
 var_label(full$francophone)<- 'Dichotomous variable, R is francophone'
 val_labels(full$francophone)<-c(`Francophone`=1, `Not Francophone`=0)
 
-
 add_value_labels(full, 
                  Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
                          'Public policy should be determined by many factors including scientific evidence'=7))
-val_labels(full$rural)<-c('Rural'=1, `Not Rural`=0)
-
+val_labels(full$rural)<-c(`Rural`=1, `Not Rural`=0)
 
 # Add Variable Labels for Q8_1_x specifying that they are reversed versions of Q8_1, Q8_2, etc. 
+Val_labels(full$Q8_1_x)<- 'Reversed version of Q8_1'
+Val_labels(full$Q8_2_x)<- 'Reversed version of Q8_2'
+Val_labels(full$Q8_3_x)<- 'Reversed version of Q8_3'
 
 # Add Variable label for Vaccines specifying it is vaccine hesitancy from Q23
+var_label(full$Vaccines)<- 'Vaccine hesitancy question, Q23'
 
 #add Variable Label for rural specifying that 1 = rural and 0 = not rural 
+var_label(full$rural)<- 'Dichotomous variable, R lives in a rural neighborhood'
 
 #Add variable label 
 names(full)
 #Add variable label to HR specifying that it is Health Region code
-#Add var_label to HR_Name specifying it is the name of the health region
+var_label(full$HR)<- 'Health region code'
 
+#Add var_label to HR_Name specifying it is the name of the health region
+var_label(full$HR_Name) <- 'Name of health region'
 
 #Add variable label to pop.2016 specifying that it is population for FSA
+var_label(full$pop.2016)<- 'Population for FSA'
 #Add Var label to area.km2 specifying it is FSA Square Kilometer
+var_label(full$area.km2)<- 'FSA Square Kilometer'
 # Add var label to date_report specifying it is the date reported of Covid cases for Respondent Health Region
+var_label(full$date_report)<- 'Date reported of COVID cases for the respondent health region'
 # Add var label to cases specifying it is the # of COVID cases for that health region
-# Add var label to cumulative_cases specifyihng it is the # of covid cases for that health region
-#Add var label to cumulative_deaths specifying that it is the cumuilative covid deaths
-#add var label to deaths specifyhing that it is the deaths.
+var_label(full$cases)<- '# of COVID cases for that health region'
+# Add var label to cumulative_cases specifying it is the # of covid cases for that health 
+var_label(full$cumulative_cases)<- 'Cumulative COVID cases for that health region'
+#Add var label to cumulative_deaths specifying that it is the cumulative covid deaths
+var_label(full$cumulative_deaths)<- 'Cumulative deaths from COVID'
+#add var label to deaths specifying that it is the deaths.
+var_label(full$deaths)<- 'Deaths'
 
-#Add var label to case_trend specifying that it is the covid trending number, the average covid cases in the last 7 days divided by the last 14 days 
+#Add var label to case_trend specifying that it is the covid trending number, the average covid cases in the last 7 days divided by the last 14 days
+var_label(full$case_trend)<- 'Covid trending numbers (average covid cases in the last 7 days divided by average cases in the last 14 days'
 #Add var_label to pop to health region population
+var_label(full$pop) <- 'Population of health region'
 #Add var_label to avgtotal_last7_pop_per_capita 
+var_label(full$avgtotal_last7_pop_per_capita) <- 'Average COVID cases in last 7 days per capita'
 
 full$case_trend
 #### Write out the data save file ####
