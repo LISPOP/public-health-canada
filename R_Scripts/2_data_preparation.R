@@ -574,9 +574,9 @@ add_value_labels(full,
 val_labels(full$rural)<-c(`Rural`=1, `Not Rural`=0)
 
 # Add Variable Labels for Q8_1_x specifying that they are reversed versions of Q8_1, Q8_2, etc. 
-Val_labels(full$Q8_1_x)<- 'Reversed version of Q8_1'
-Val_labels(full$Q8_2_x)<- 'Reversed version of Q8_2'
-Val_labels(full$Q8_3_x)<- 'Reversed version of Q8_3'
+val_labels(full$Q8_1_x)<- 'Reversed version of Q8_1'
+val_labels(full$Q8_2_x)<- 'Reversed version of Q8_2'
+val_labels(full$Q8_3_x)<- 'Reversed version of Q8_3'
 
 # Add Variable label for Vaccines specifying it is vaccine hesitancy from Q23
 var_label(full$Vaccines)<- 'Vaccine hesitancy question, Q23'
