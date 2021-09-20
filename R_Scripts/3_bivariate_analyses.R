@@ -1,6 +1,13 @@
 source('R_Scripts/2_data_preparation.R')
-theme_set(theme_bw())
-
+library(gtsummary)
+full %>% 
+  select(as_factor(rural)) %>% 
+  tbl_summary()
+install.packages('descriptr')
+library(descriptr)
+full$degree
+full$female
+full$old
 #### Most Important Problem#### 
 names(full)
 full %>% 

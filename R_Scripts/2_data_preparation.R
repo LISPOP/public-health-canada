@@ -557,7 +557,7 @@ names(full)
 #Set the variable label for each variable
 var_label(full$old)<-'Dichotomous variable, R is 65+'
 #Set the value labels for each variable
-val_labels(full$old)<-c(`Over 65`=1, `Under 65`=2)
+val_labels(full$old)<-c(`Over 65`=1, `Under 65`=0)
 
 var_label(full$rich)<-'Dichotomous variable, R household > $100,000'
 val_labels(full$rich)<-c(`Over $100,000`=1, `Under $100,000`=0)
@@ -574,9 +574,9 @@ add_value_labels(full,
 val_labels(full$rural)<-c(`Rural`=1, `Not Rural`=0)
 
 # Add Variable Labels for Q8_1_x specifying that they are reversed versions of Q8_1, Q8_2, etc. 
-val_labels(full$Q8_1_x)<- 'Reversed version of Q8_1'
-val_labels(full$Q8_2_x)<- 'Reversed version of Q8_2'
-val_labels(full$Q8_3_x)<- 'Reversed version of Q8_3'
+var_label(full$Q8_1_x)<- 'Reversed version of Q8_1'
+var_label(full$Q8_2_x)<- 'Reversed version of Q8_2'
+var_label(full$Q8_3_x)<- 'Reversed version of Q8_3'
 
 # Add Variable label for Vaccines specifying it is vaccine hesitancy from Q23
 var_label(full$Vaccines)<- 'Vaccine hesitancy question, Q23'
@@ -590,7 +590,7 @@ names(full)
 var_label(full$HR)<- 'Health region code'
 
 #Add var_label to HR_Name specifying it is the name of the health region
-var_label(full$HR_Name) <- 'Name of health region'
+var_label(full$HR_NAME) <- 'Name of health region'
 
 #Add variable label to pop.2016 specifying that it is population for FSA
 var_label(full$pop.2016)<- 'Population for FSA'
