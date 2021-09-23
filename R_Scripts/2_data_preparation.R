@@ -547,6 +547,9 @@ full %>%
     TRUE ~ NA_real_
   ))->full
 
+#Creating new variable called Age
+Age <- 2021-Q55_1
+
 names(full)
 #### Assign Value labels and variable labels ####
 #This code section assigns some value labels and variable labels to new variables 
@@ -558,6 +561,8 @@ names(full)
 var_label(full$old)<-'Dichotomous variable, R is 65+'
 #Set the value labels for each variable
 val_labels(full$old)<-c(`Over 65`=1, `Under 65`=0)
+
+val_labels(full$degree)<-c(`Degree`=1, `No Degree`=0)
 
 var_label(full$rich)<-'Dichotomous variable, R household > $100,000'
 val_labels(full$rich)<-c(`Over $100,000`=1, `Under $100,000`=0)
@@ -613,6 +618,20 @@ var_label(full$case_trend)<- 'Covid trending numbers (average covid cases in the
 var_label(full$pop) <- 'Population of health region'
 #Add var_label to avgtotal_last7_pop_per_capita 
 var_label(full$avgtotal_last7_pop_per_capita) <- 'Average COVID cases in last 7 days per capita'
+
+#Converting demographic variables to factors
+as_factor(rich)
+as_factor(rural)
+as_factor(francophone)
+as_factor(degree)
+as_factor(female)
+
+#Saving factors with capitalized names
+full$Rich<-as_factor(full$rich)
+full$Rural<-as_factor(full$rural)
+full$Francophone<-as_factor(full$francophone)
+full$Degree<-as_factor(full$degree)
+full$Female<-as_factor(full$female)
 
 full$case_trend
 #### Write out the data save file ####
