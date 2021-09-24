@@ -614,6 +614,8 @@ var_label(full$pop) <- 'Population of health region'
 #Add var_label to avgtotal_last7_pop_per_capita 
 var_label(full$avgtotal_last7_pop_per_capita) <- 'Average COVID cases in last 7 days per capita'
 
+
+
 full$case_trend
 #### Write out the data save file ####
 # names(full)
