@@ -4,12 +4,16 @@
 #library(tidylog) 
 #First we read in Tim's file that used the PCCF+ to assign the FSAs to health regions. 
 ## It is based on code from Tim Gravelle and Laurier's PCCF file, which has to be run elsewhere
-health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 09 10.csv"))
+health_regions<-read.csv(file=here("data", "CID health region spatial join-2021 09 24.csv"))
 
 #### PRovince names in Tim's file ####
 #Tim's file did not have province names, which might be necessary
 health_regions$PR
 names(health_regions)
+health_regions %>% 
+  filter(CID==492388703| CID==492712971) %>% 
+  select(CID, PR, FSA)
+
 health_regions %>% 
   mutate(province=case_when(
     PR==10 ~ "Newfoundland and Labrador",
@@ -26,30 +30,30 @@ health_regions %>%
     PR==61~ "NWT",
     PR==62 ~ "Nunavut"
   ))->health_regions
-class(health_regions$province)
-class(full$province)
-table(full$province)
-as.character(full$province)
+
+#Convert to factor
 health_regions$province<-as.factor(health_regions$province)
+#Delete -PR
 health_regions %>% 
   select(-PR)->health_regions
 names(health_regions)
 names(full)
 
 #Merge With full
-
-full %>% 
-  left_join(., health_regions, by=c('CID', 'FSA'))->full
-names(full)
-full %>% 
-  rename(province=province.x) %>% 
-  select(-province.y)->full
-
 nrow(full)
 full %>% 
-  filter(is.na(HR_UID)) %>% 
-  select(CID, FSA, HR_UID, province) %>% 
-  View()
+  left_join(., health_regions, by=c("CID", "FSA"))->full
+full %>% 
+  select(-province.x) %>% 
+  rename(province=province.y)->full
+full$province
+nrow(health_regions)
+health_regions$province
+table(health_regions$province)
+table(full$province)
+full$HR_UID
+#Now full has the full FSA and health region name added
+
 #### Compare with covid19 dataset####
 #Note, that this is only a moderately well documented package
 #Uncomment and run this to install the COVID19DATA
@@ -75,71 +79,69 @@ head(covid)
 # WE NEED TO ADD THE HRUID TO THE COVID CASE DATA FILE SO THAT WE CAN THEN LINK THE COVID CASE DATA FILE
 # TO THE FSA VIA THE HEALTH REGIONS (HRUID) 
 
-#### Get HHR_UID####
-#This file does have the health region names and the hruids
+# #### Get HHR_UID AND HEALTH REGION POPULATION####
+# #This file does have the health region names and the hruids
 hruid<-read_csv(file="https://raw.githubusercontent.com/ccodwg/Covid19Canada/master/other/hr_map.csv")
 names(hruid)
 hruid$health_region
 hruid$health_region_esri
+
 #Some inspections
 names(covid)
 names(hruid)
 names(health_regions)
-
-# THE NEED TO MERGE BY HR_UID IS  ALSO NECESSARY BECAUSE THE NAMES IN THE FILES ARE DIFFERENT
-# FOR EXAMPLE IN THE covid case set there is this
-covid %>% 
-  filter(str_detect(health_region, 'Calgary')) #Calgary
-# IN THE HRUID FILE THERE IS THIS
-hruid%>% 
-  filter(str_detect(health_region, 'Calgary')) # Calgary
-#AND IN TIM'S FILE THERE IS THIS. 
-health_regions %>% 
-  filter(str_detect(HR_NAME, "Calgary")) #Calgary Zone
-#You see the problem.
-# Tim's data has "Caglary Zone"
-#But the CCODWG has "Calgary". But, by adding the hruid to the covid case count data, we should 
-# then be able to merge with Tim's file that contains FSAs and health region data
-
-#THIS MERGES THE COVID FILE WITH THE HRUID FILE BY THE VARIABLE HEALTH_REGION
-covid
-names(hruid)
+# 
+hruid$province
+# Clean up the province names
+table(full$province)
+table(health_regions$province)
 table(hruid$province)
+hruid$province<-car::Recode(hruid$province, "'BC'='British Columbia'; 'NL'='Newfoundland and Labrador'")
 table(covid$province)
-covid %>% 
-  left_join(., hruid, by=c("province"="province", "health_region"))->covid
+covid$province<-car::Recode(covid$province, "'BC'='British Columbia'; 'NL'='Newfoundland and Labrador'")
+#THIS MERGES THE COVID FILE WITH THE HRUID FILE BY THE VARIABLE HEALTH_REGION
+covid %>%
+left_join(., hruid, by=c("province"="province", "health_region"))->covid
 
-names(covid)
 
 names(health_regions)
 health_regions$HR
 health_regions$HR_UID
 
 
-#This is some checks to see where we are at. 
-#Now merge full with 
-names(full)
 #### Merge Covid Case Count ####
 
 #We need to be sure that both covid and full have proper date variables
 #Because we want to get the case counts for the day the repsondent too the interview
 qplot(full$START_DATE, geom='histogram')
+
+
 library(lubridate)
 covid$date<-dmy(covid$date_report)
 class(covid$date)
 class(full$date)
-
+qplot(covid$date, geom='histogram')
 names(full)
 names(covid)
 #This is a test merge that dumps the merge into out.
+names(covid)
+nrow(covid)
+covid$province
+full$prov
+names(full)
 full %>% 
-  left_join(., covid, by=c("province", "health_region", "HR_UID", "date" )) ->out
+  left_join(., covid, by=c("province", "health_region",  "HR_UID", "date" )) %>% nrow()
+
+nrow(covid)
+full %>% 
+  left_join(., covid, by=c("province", "health_region",  "date" )) ->out
+nrow(out)
 
 #Check in the new maerged dataset
-# out %>% 
-#   filter(HR_NAME=="Calgary Zone") %>% 
-#   #filter(date=="2020-02-16") %>% 
-#   select(date, HR_UID,cases, Comm_Name, health_region, HR_NAME) %>% 
+# out %>%
+#   filter(HR_NAME=="Calgary Zone") %>%
+#   #filter(date=="2020-02-16") %>%
+#   select(date, HR_UID,cases, Comm_Name, health_region, HR_NAME) %>%
 #   View()
 #Compare CAlgary in the original covid data-set
 
@@ -156,8 +158,26 @@ covid %>%
   
 #### Complete merge #### 
 full %>% 
-  left_join(., covid, by=c('province',"HR_UID", "date" )) ->full
+  left_join(., covid, by=c( "province", "health_region","HR_UID",  "date" )) ->full
 
+#Some variable renames
+full %>% 
+  rename("health_region_population"="pop", "FSA_population"="pop.2016")->full
+
+#Checkout missing FSA data
+full %>% 
+  filter(is.na(FSA_population)) %>% 
+  select(FSA, health_region, pop.km2, CID,Comm_Name) ->missing_CID
+missing_CID
+
+#### Fill IN Missing Data
+missing_CID %>% 
+  filter(!is.na(health_region))->missing_CID
+missing_CID
+# For these 6 cases, can you look up an adjacent FSA, find the pop.km2 somewhere of that FSA and change the values here,in the line below IN ORDER!!!!
+#missing_CID$pop.km2<-c()
+
+nrow(health_regions)
 #Which of our respondents do not have health region names
 #It looks like there are 
 names(full)
@@ -183,10 +203,11 @@ names(full)
 # than 1, then it is rsiing, if it lower than 1 it is falling. 
 full$case_trend<-full$avgtotal_last7/full$avgtotal_last14
 
-full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$pop
+full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$health_region_population
 #Divide by population
 
-qplot(full$case_trend, geom="histogram", title="Distribution of trend variable")
+qplot(full$case_trend, geom="histogram", main="Distribution of case trend variable")
+names(full)
 
-      names(full)
-      
+names(full)
+

@@ -397,6 +397,8 @@ full %>%
     S1==13 ~1,
     TRUE~ 0
   ))->full
+
+full$Age<-2021-full$Q55_1
 #Please repeat this for:"
 
 lookfor(full, "education")
@@ -525,11 +527,13 @@ source('R_scripts/2b_fsa_merge_covid_incidence.R')
 
 qplot(full$pop.km2)
 summary(full$pop.km2) #median is at 903
+
 # mean is at 4593, so there are some huge outliers, very dense populations. 
 full$Sample
 full %>% 
   filter(Sample=="Public Health") %>% 
   ggplot(., aes(x=pop.km2))+geom_histogram()
+
 full %>% 
   group_by(Sample) %>% 
   summarize(mean=mean(pop.km2, na.rm=T), median=median(pop.km2, na.rm=T))
@@ -538,17 +542,19 @@ full %>%
   filter(pop.km2<25000) %>% 
   ggplot(., aes(x=pop.km2))+geom_histogram()+facet_grid(~Sample)
 
-# First Cut Rural < 2500 people per square km urban > 2500 people per square km
+# First Cut Rural < 1430 people per square km urban > 1429 people per square km
 
 full %>% 
   mutate(rural=case_when(
-    pop.km2 < 2500 ~ 1,
-    pop.km2 > 2499 ~ 0,
+    pop.km2 < 1430 ~ 1,
+    pop.km2 > 1429 ~ 0,
     TRUE ~ NA_real_
   ))->full
 
+
+
 #Creating new variable called Age
-Age <- 2021-Q55_1
+full$Age <- 2021-Q55_1
 
 names(full)
 #### Assign Value labels and variable labels ####
@@ -573,6 +579,9 @@ val_labels(full$quebec)<-c(`Quebecker`=1, `Outside Quebec`=0)
 var_label(full$francophone)<- 'Dichotomous variable, R is francophone'
 val_labels(full$francophone)<-c(`Francophone`=1, `Not Francophone`=0)
 
+var_label(full$female)<-'Dichotomous variable, R is female'
+val_labels(full$female)<-c(`Female`=1,`Not Female`=0)
+
 add_value_labels(full, 
                  Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
                          'Public policy should be determined by many factors including scientific evidence'=7))
@@ -593,12 +602,12 @@ var_label(full$rural)<- 'Dichotomous variable, R lives in a rural neighborhood'
 names(full)
 #Add variable label to HR specifying that it is Health Region code
 var_label(full$HR)<- 'Health region code'
-
+var_label(full$HR_UID)<- 'Health region code'
 #Add var_label to HR_Name specifying it is the name of the health region
 var_label(full$HR_NAME) <- 'Name of health region'
 
 #Add variable label to pop.2016 specifying that it is population for FSA
-var_label(full$pop.2016)<- 'Population for FSA'
+var_label(full$FSA_population)<- 'Population for FSA'
 #Add Var label to area.km2 specifying it is FSA Square Kilometer
 var_label(full$area.km2)<- 'FSA Square Kilometer'
 # Add var label to date_report specifying it is the date reported of Covid cases for Respondent Health Region
@@ -615,19 +624,27 @@ var_label(full$deaths)<- 'Deaths'
 #Add var label to case_trend specifying that it is the covid trending number, the average covid cases in the last 7 days divided by the last 14 days
 var_label(full$case_trend)<- 'Covid trending numbers (average covid cases in the last 7 days divided by average cases in the last 14 days'
 #Add var_label to pop to health region population
-var_label(full$pop) <- 'Population of health region'
+var_label(full$health_region_population) <- 'Population of health region'
 #Add var_label to avgtotal_last7_pop_per_capita 
 var_label(full$avgtotal_last7_pop_per_capita) <- 'Average COVID cases in last 7 days per capita'
+var_label(full$Age)<-"R Age"
+
+#Rename some variables
 
 #Saving factors with capitalized names
-full$Rich<-as_factor(full$rich)
-full$Rural<-as_factor(full$rural)
-full$Francophone<-as_factor(full$francophone)
-full$Degree<-as_factor(full$degree)
-full$Female<-as_factor(full$female)
+full$`High Income`<-as_factor(full$rich)
+full$Rural1<-as_factor(full$rural)
+full$Francophone1<-as_factor(full$francophone)
+full$Degree1<-as_factor(full$degree)
+full$Female1<-as_factor(full$female)
 
+names(full)
 
-full$case_trend
+#Missing FSA,population or hrealth region data
+
+full %>% 
+  filter(is.na(pop.km2)) %>% 
+  select(CID, FSA, province, health_region)
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)

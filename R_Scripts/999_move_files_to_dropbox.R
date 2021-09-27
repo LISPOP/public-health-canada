@@ -1,8 +1,16 @@
 
 #### Move Graphs over to Dropbox####
-file.copy(here("Plots", list.files("Plots")), to="~/Dropbox/Public_Health/Results/Graphs")
+#Move all graphs over to Results folder
+file.copy(here("Plots", list.files("Plots")), to="
+          ~/Dropbox/Public_Health/CJPH/Results")
+#Move CJPH Plots over to CJPH subfolder
+cjph_plots<-here("Plots", list.files("Plots"))
+file.copy(cjph_plots[str_detect(cjph_plots, "cjph")], to="~/Dropbox/Public_Health/CJPH/Plots")
 
+#Move CJPH Tables over
+cjph_tables<-here("Tables", list.files("Tables"))
+file.copy(cjph_tables[str_detect(cjph_tables, "cjph")], to="~/Dropbox/Public_Health/CJPH/Tables", overwrite=T)
 #### Move Recoded Data File ####
 
 
-file.copy(here('data', str_extract(list.files(path="data"), "^recoded_data.+[0-9].sav?")), to="~/Dropbox/Public_Health/Data")
+#file.copy(here('data', str_extract(list.files(path="data"), "^recoded_data.+[0-9].sav?")), to="~/Dropbox/Public_Health/Data")

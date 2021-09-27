@@ -1,13 +1,16 @@
 source('R_Scripts/2_data_preparation.R')
+theme_set(theme_minimal())
+#### Demographic Summary ####
+library(flextable)
 library(gtsummary)
+library(gt)
+
 full %>% 
-  select(as_factor(rural)) %>% 
-  tbl_summary()
-install.packages('descriptr')
-library(descriptr)
-full$degree
-full$female
-full$old
+  select(Sample, `High Income`, Francophone, Rural, Degree, Female, Age) %>% 
+tbl_summary(by=Sample, type=list(Age~"continuous"), statistic=list(Age ~ " {mean} ")) %>% 
+as_gt() %>% 
+  gtsave(filename=here("Tables", "cjph_demographics_comparison.html"))
+
 #### Most Important Problem#### 
 names(full)
 full %>% 
@@ -16,10 +19,11 @@ full %>%
   group_by(Sample, name, value) %>%
   as_factor() %>% 
   summarize(n=n()) %>% 
-  mutate(pct=n/sum(n)) %>% 
+  mutate(Percent=(n/sum(n))*100) %>% 
   filter(value!="Not Selected") %>% 
-  ggplot(., aes(y=name, x=pct, fill=Sample))+geom_col(position="dodge")+scale_fill_grey()+labs(title=str_wrap("Percent Selecting Issues as Most Important Public Health Problem After COVID-19", width=40))
-ggsave(here("Plots", "most_important_problem_group.png"), width=6, height=3)
+  ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Sample))+geom_col(position="dodge")+scale_fill_grey()+labs(title=str_wrap("Percent Selecting Issues as Most Important Public Health Problem After COVID-19", width=40), y="Issue")+guides(fill=guide_legend(reverse=T))
+
+ggsave(here("Plots", "cjph_most_important_problem_group.png"), width=6, height=3)
 ####  Views on science in policy ####
 lookfor(full, "policy")
 ggplot(full, aes(x=as.numeric(Q30_1), fill=Sample,..scaled..))+
@@ -188,3 +192,4 @@ out %>%
   filter(name!="avgtotal_last7_pop_per_capita") %>% 
   ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
 ggsave(here("Plots", "local_covid_evidence_preferences.png"))
+
