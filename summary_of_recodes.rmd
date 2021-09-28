@@ -14,7 +14,7 @@ knitr::opts_chunk$set(echo = TRUE, message=F, warning=T, echo=F, cache=T)
 ```{r load-data, results="hide", eval=T, echo=F}
 library(here)
 library(knitr)
-source(here('R_Scripts', '2_data_preparation.R'))
+source(here('R_Scripts/2_data_preparation.R'))
 ```
 
 ## Introduction
@@ -197,6 +197,19 @@ full %>%
   kable()
 ```
 
-They are pretty self-explanatory, although the variables `Comm_Name` is just the generic name for the community the health region was in; `HR_UID` is a Statistics Canada identifier for health regions, `HR_Name` and `health_region` are both versions of the health region name from the different datasets involved in merging this.But I will point out `case_trend`. It is just the result of the `avgtotal_last7` divided by the `avgtotal_last14`. So, I'm trying to capture the trend of COVID severity. So, if the average number of cases in the respondent's health region was the same in the last seven days as in the previous 14 days, then they would get a 1, so their health region would be stable. But, if the seven day average was double the average 14 day total, then they would get a two, cases would be rising. 
+They are pretty self-explanatory, although the variables `Comm_Name` is just the generic name for the community the health region was in; `HR_UID` is a Statistics Canada identifier for health regions, `HR_Name` and `health_region` are both versions of the health region name from the different datasets involved in merging this.But I will point out **`case_trend` **. It is just the result of the `avgtotal_last7` divided by the `avgtotal_last14`. So, I'm trying to capture the trend of COVID severity. So, if the average number of cases in the respondent's health region was the same in the last seven days as in the previous 14 days, then they would get a 1, so their health region would be stable. But, if the seven day average was double the average 14 day total, then they would get a two, cases would be rising. 
 
+## Province FSA mismatch
 
+As part of the process of merging our data with the health region file in order to access the covid19 case counts, it was discovered that 
+`r nrow(subset(full, province_fsa_bad==1))`  cases feature reported provinces that do not match the reported FSA. These have been flagged in the variable `province_fsa_bad`. For the moment, the assigned health region and rural variable assume that the reported FSA is correct and the reported province is a mistake. 
+
+```{r eval=F, echo=F}
+names(full)
+full %>% 
+  filter(province_fsa_bad==1) %>% 
+  select(CID, FSA, province_original, province)
+```
+
+# Rural
+Matt can you add in a section here describing how we added in the rural variable?

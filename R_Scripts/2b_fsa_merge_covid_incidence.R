@@ -17,7 +17,7 @@ health_regions %>%
 health_regions %>% 
   mutate(province=case_when(
     PR==10 ~ "Newfoundland and Labrador",
-    PR==11 ~ "PEI",
+    PR==11 ~ "Prince Edward Island",
     PR==12 ~ "Nova Scotia",
     PR==13  ~ "New Brunswick",
     PR==24 ~ "Quebec",
@@ -27,7 +27,7 @@ health_regions %>%
     PR==48 ~ "Alberta",
     PR==59 ~ "British Columbia",
     PR==60 ~ "Yukon",
-    PR==61~ "NWT",
+    PR==61~ "Northwest Territories",
     PR==62 ~ "Nunavut"
   ))->health_regions
 
@@ -43,15 +43,23 @@ names(full)
 nrow(full)
 full %>% 
   left_join(., health_regions, by=c("CID", "FSA"))->full
+names(full)
+#Check which cases have deviant provinces
 full %>% 
-  select(-province.x) %>% 
-  rename(province=province.y)->full
-full$province
-nrow(health_regions)
-health_regions$province
-table(health_regions$province)
-table(full$province)
-full$HR_UID
+  mutate(province_fsa_bad=case_when(
+    as.character(province.x)!=as.character(province.y)~ 1,
+    TRUE ~ 0
+  ))->full
+
+full %>% 
+  filter(province_fsa_bad==1) %>% 
+  select(CID, FSA, province.x, province.y) %>% 
+  write.csv(here("data", "fsa_province_mismatch.csv"))
+
+full %>% 
+ # select(-province.x) %>% 
+  rename(province_original=province.x, province=province.y)->full
+
 #Now full has the full FSA and health region name added
 
 #### Compare with covid19 dataset####

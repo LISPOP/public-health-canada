@@ -381,8 +381,8 @@ names(full)
 #### Demographics ####
 #Age
 look_for(full, 'year')
-#Q55_1 is the age variable
-#Start with dataframe
+# Q55_1 is the age variable
+# Start with dataframe
 full %>%
   #mutate and create a new variable with a meaningful name
   mutate(old=case_when(
@@ -391,7 +391,9 @@ full %>%
     #otherwise they get a zero
     TRUE~ 0
   ))->full
+
 lookfor(full, "province")
+
 full %>%
   mutate(quebec=case_when(
     S1==13 ~1,
@@ -417,7 +419,6 @@ full %>%
   #e.g. Is the person "Old" or not? Is the person "Male" or not
   # e.g. Is the person a "Quebecker or not"
   mutate(female=case_when(
-    #If Q55_1 is greater than 2021-65, then yes, they are "old" , so they get a 1
     Q53==2~1,
     #otherwise they get a zero
     TRUE~ 0
@@ -551,10 +552,6 @@ full %>%
     TRUE ~ NA_real_
   ))->full
 
-
-
-#Creating new variable called Age
-full$Age <- 2021-Q55_1
 
 names(full)
 #### Assign Value labels and variable labels ####
