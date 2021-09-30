@@ -210,6 +210,9 @@ full %>%
   rowwise() %>% 
   mutate(mean_crt=mean(c_across(starts_with('crt')))) %>% 
   ungroup()->full
+#### Ideology ####
+full %>%
+  mutate(Ideology=skpersonal::revScale(Q51))->full
 
 ####TRUST SCALE####
 

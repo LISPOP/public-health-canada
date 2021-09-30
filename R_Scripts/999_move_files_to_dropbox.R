@@ -5,7 +5,7 @@ file.copy(here("Plots", list.files("Plots")), to="
           ~/Dropbox/Public_Health/CJPH/Results")
 #Move CJPH Plots over to CJPH subfolder
 cjph_plots<-here("Plots", list.files("Plots"))
-file.copy(cjph_plots[str_detect(cjph_plots, "cjph")], to="~/Dropbox/Public_Health/CJPH/Plots")
+file.copy(cjph_plots[str_detect(cjph_plots, "cjph")], to="~/Dropbox/Public_Health/CJPH/Plots", overwrite=T)
 
 #Move CJPH Tables over
 cjph_tables<-here("Tables", list.files("Tables"))

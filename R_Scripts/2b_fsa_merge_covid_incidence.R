@@ -135,7 +135,7 @@ names(covid)
 names(covid)
 nrow(covid)
 covid$province
-full$prov
+
 names(full)
 full %>% 
   left_join(., covid, by=c("province", "health_region",  "HR_UID", "date" )) %>% nrow()
