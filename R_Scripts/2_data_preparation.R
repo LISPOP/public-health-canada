@@ -395,7 +395,45 @@ full %>%
     TRUE~ 0
   ))->full
 
-lookfor(full, "province")
+#
+full$Age<-2021-full$Q55_1
+
+full %>% 
+mutate(age_4=case_when(
+#18 to 34
+  Age > 17 & Age < 35 ~ 1,
+#35-50  
+  Age > 34 & Age < 51 ~ 2,
+#51-64
+  Age > 50 & Age < 65 ~ 3,
+#65+
+  Age > 64 ~ 4
+))->full
+
+var_label(full$age_4)<-'Age Category (4), R Age'
+val_labels(full$age_4)<-c('Age 65+' = 4, 'Age 51-64'= 3, 'Age 35-50' = 2, 'Age 18-34' = 1)
+
+full%>%
+mutate(age_2=case_when(
+#Under 50
+  Age < 50 ~ 1,
+#50 and up
+  Age > 49 ~ 2
+))->full
+
+var_label(full$age_2)<-'Age Category (2), R Age'
+val_labels(full$age_2)<-c('Age 50+' = 2, 'Age 18-49' = 1)
+
+names(full)
+
+full%>%
+  select(Age, Sample)%>%
+  ggplot(., aes(x=Age))+geom_histogram()+facet_grid(~Sample)
+
+full%>%
+  select(Sample, age_3, Q8_3)%>%
+  group_by(Sample, age_3)%>%
+  summarize(avg=mean(Q8_3, na.rm=T))
 
 full %>%
   mutate(quebec=case_when(
@@ -403,7 +441,7 @@ full %>%
     TRUE~ 0
   ))->full
 
-full$Age<-2021-full$Q55_1
+
 #Please repeat this for:"
 
 lookfor(full, "education")
