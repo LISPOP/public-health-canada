@@ -426,14 +426,6 @@ val_labels(full$age_2)<-c('Age 50+' = 2, 'Age 18-49' = 1)
 
 names(full)
 
-full%>%
-  select(Age, Sample)%>%
-  ggplot(., aes(x=Age))+geom_histogram()+facet_grid(~Sample)
-
-full%>%
-  select(Sample, age_3, Q8_3)%>%
-  group_by(Sample, age_3)%>%
-  summarize(avg=mean(Q8_3, na.rm=T))
 
 full %>%
   mutate(quebec=case_when(

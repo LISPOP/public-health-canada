@@ -210,10 +210,27 @@ names(full)
 # Case rate is stabilized. If it the most recent seven day case average is larger
 # than 1, then it is rsiing, if it lower than 1 it is falling. 
 full$case_trend<-full$avgtotal_last7/full$avgtotal_last14
+#Model Cases getting better
+seven_day<-c(rep(10,7))
+fourteen_day<-c(rep(100, 7), seven_day)
+mean(seven_day)/mean(fourteen_day)
 
-full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$health_region_population
+#Model cases steady
+seven_day<-c(rep(10,7))
+fourteen_day<-c(rep(10,14))
+mean(seven_day)/mean(fourteen_day)
+
+#Model cases increasing
+#Make seven days of 10 cases
+seven_day<-c(rep(10,7))
+#Make fourteen days where the first seven days have 1 case a day and the second seven cases have 10 a day, as above
+fourteen_day<-c(rep(1,7), seven_day)
+#Take the average of the seven day and divide by the average o the fourteen day
+mean(seven_day)/mean(fourteen_day)
+
+
 #Divide by population
-
+full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$health_region_population
 qplot(full$case_trend, geom="histogram", main="Distribution of case trend variable")
 names(full)
 

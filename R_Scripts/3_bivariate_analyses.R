@@ -99,8 +99,14 @@ ggplot(full, aes(x=trust_average,fill=Sample,..scaled..))+geom_density(alpha=0.5
 ggsave(here("Plots", "trust_average_group_density.png"))
 
 #### Ideology ####
+full %>%
+  select(Sample, Q51)%>%
+  rename(Ideology=Q51)%>%
+  group_by(Sample)%>%
+  summarize(Average=mean(Ideology, na.rm=T), n=n(), sd=sd(Ideology, na.rm=T), se=sd/sqrt(n))%>%
+  ggplot(., aes(x=Sample, y=Average))+geom_point()+geom_errorbar(aes(ymin=Average-(1.96*se), ymax=Average+1.96*se), width=0)+ylim(c(0,10))
 
-ggsave(here("Plots", "ideology_group_density.png"))
+ggsave(here("Plots", "cjph_ideology_group_density.png"))
 
 #### Influence #### 
 lookfor(full, "influence")
@@ -158,42 +164,61 @@ mutate(name=str_replace_all(name, pattern="_|_|should", replace=" ")) %>%
 #### Response to Local Conditions ####
 #install.packages('corrr')
 library(corrr)
-var_label(full$Q8_3)
+# var_label(full$Q8_3)
+# full %>% 
+#   select(Q8_1_x:Q8_3_x, case_trend, Sample) %>% 
+#   rename(`Mandatory Vaccines`=1, `Close Bars`=2, `No Mask Fines`=3) %>% 
+# group_by(Sample) %>% 
+#   nest() %>% 
+#   mutate(
+#     cor=map(data, correlate)
+#   ) %>% 
+#   unnest(cor)->out
+# out
+# out %>% 
+#   pivot_longer(4:7) %>% 
+#   filter(term=="case_trend") %>% 
+#   filter(name!="case_trend") %>% 
+#   ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
+
+
 full %>% 
-  select(Q8_1_x:Q8_3_x, case_trend, Sample) %>% 
-  rename(`Mandatory Vaccines`=1, `Close Bars`=2, `No Mask Fines`=3) %>% 
-group_by(Sample) %>% 
-  nest() %>% 
-  mutate(
-    cor=map(data, correlate)
-  ) %>% 
-  unnest(cor)->out
-out
-out %>% 
-  pivot_longer(4:7) %>% 
-  filter(term=="case_trend") %>% 
-  filter(name!="case_trend") %>% 
-  ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
+  select(Sample, Q8_1:Q8_3, case_trend) %>% 
+  rename(., `Mandatory Vaccine`=2, `Close Down Bars and Restaurants`=3, `Fines For People Not Wearing Masks`=4) %>%
+  pivot_longer(cols=2:4,  names_to="Policy", values_to="Support") %>% 
+  ggplot(., aes(x=case_trend, y=Support, col=Sample))+facet_grid(~Policy)+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+geom_vline(xintercept=1, linetype=2)+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
 
-#caption="This shows the correlation between the trend in COVID cases in ther respondent's local health region and the respondent's support for various policy trade-offs. Note that the public health world's support for closing bars is linked to local case trends, but the general public's views are not. Note that the general public's desires to fine non-mask wearers is slightly correlated with local conditions, the public health workforce is moderately inversely correlated with local conditions."
 
-library(corrr)
-var_label(full$Q8_3)
+ggsave(here("Plots", "cjph_local_case_trend_preferences.png"), width=8, height=2)
+
+lookfor(full, "economy")
 names(full)
-full %>% 
-  select(Q8_1_x:Q8_3_x, avgtotal_last7_pop_per_capita, Sample) %>% 
-  rename(`Mandatory Vaccines`=1, `Close Bars`=2, `No Mask Fines`=3) %>% 
-  group_by(Sample) %>% 
-  nest() %>% 
-  mutate(
-    cor=map(data, correlate)
-  ) %>% 
-  unnest(cor)->out
-out$term
-out %>% 
-  pivot_longer(4:7) %>% 
-  filter(term=="avgtotal_last7_pop_per_capita") %>% 
-  filter(name!="avgtotal_last7_pop_per_capita") %>% 
-  ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
-ggsave(here("Plots", "local_covid_evidence_preferences.png"))
 
+full %>% 
+  select(decline_economy:seniors_isolation, Sample, case_trend) %>% 
+  rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
+  pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
+  ggplot(., aes(x=case_trend, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
+ggsave(here("Plots", "cjph_local_case_trend_trade_offs.png"), width=8, height=3)
+#### Local Conditions Case Severity ####
+
+full %>% 
+  select(Sample, Q8_1:Q8_3, avgtotal_last7_pop_per_capita) %>% 
+  rename(., `Mandatory Vaccine`=2, `Close Down Bars and Restaurants`=3, `Fines For People Not Wearing Masks`=4) %>%
+  pivot_longer(cols=2:4,  names_to="Policy", values_to="Support") %>% 
+  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Support, col=Sample))+facet_grid(~str_wrap(Policy, width=20))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
+ggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), width=8, height=3)
+full %>% 
+  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>% 
+  rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
+  pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
+  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
+ggsave(here("Plots", "cjph_local_case_severity_per_capita_trade_offs.png"), width=8, height=3)
+
+full %>% 
+  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>% 
+  rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
+  pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
+  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="loess", se=F)+scale_color_grey()+facet_grid(~Goal)
+
+#### Local Conditions 
