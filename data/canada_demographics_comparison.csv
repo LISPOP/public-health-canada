@@ -1,6 +1,23 @@
-﻿data_source,variable,percent
-census,degree,23.3
-census,francophone,22.2
-census,female,50
-census,old,16.9
-census,rich,32.4
+﻿data_source,variable,value,n
+Census,Degree1,No Degree,28643015
+Census,Degree1,Degree,6659620
+Census,Francophone1,Not Francophone,27600550
+Census,Francophone1,Francophone,7166705
+Census,Female1,Not Female,17264200
+Census,Female1,Female,17887530
+Census,Old1,Under 65,29216095
+Census,Old1,Over 65,5935635
+Census,High Income,"Under $100,000",26376380
+Census,High Income,"Over $100,000",2266600
+Census,Rural1,Not Rural,28576355
+Census,Rural1,Rural,6575373
+Census,Province,Newfoundland and Labrador,519716
+Census,Province,Prince Edward Island,142907
+Census,Province,Nova Scotia,923598
+Census,Province,New Brunswick,747101
+Census,Province,Quebec,8164361
+Census,Province,Ontario,13448494
+Census,Province,Manitoba,1278365
+Census,Province,Saskatchewan,1098352
+Census,Province,Alberta,4067175
+Census,Province,British Columbia,4648055

@@ -1,4 +1,5 @@
 source('R_Scripts/2_data_preparation.R')
+source('R_Scripts/2a_demographic_comparison.R')
 theme_set(theme_minimal())
 #### Demographic Summary ####
 library(flextable)
@@ -99,14 +100,80 @@ ggplot(full, aes(x=trust_average,fill=Sample,..scaled..))+geom_density(alpha=0.5
 ggsave(here("Plots", "trust_average_group_density.png"))
 
 #### Ideology ####
+#Compare differences in self-reported ideology
 full %>%
   select(Sample, Q51)%>%
   rename(Ideology=Q51)%>%
   group_by(Sample)%>%
   summarize(Average=mean(Ideology, na.rm=T), n=n(), sd=sd(Ideology, na.rm=T), se=sd/sqrt(n))%>%
   ggplot(., aes(x=Sample, y=Average))+geom_point()+geom_errorbar(aes(ymin=Average-(1.96*se), ymax=Average+1.96*se), width=0)+ylim(c(0,10))
+#Save out the plot
+ggsave(here("Plots", "cjph_ideology_sample_genpop.png"))
 
-ggsave(here("Plots", "cjph_ideology_group_density.png"))
+#Check variable labels for worldview questions
+full %>% select(Q37_1:Q39_3) %>% 
+  map(., var_label)
+names(full)
+#Ideological Variable Labels
+full %>% select(Ideology, Q38_1_x:Q39_3_x) %>% 
+  names()->ideology_variable_labels
+ideology_variable_labels<-data.frame(Item=ideology_variable_labels, label=c(
+  "Self-Reported Ideology",
+  "Support for reducing inequalities between rich and poor",
+  "Discrimination against visible minorities still a serious problem",
+  "More to do to reduce inequalities between men and women",
+  "Support for free markets over government programs",
+  "Opposition to rich sharing money",
+  "Opposition to limit choices to protect people",
+  "Private sector to create jobs",
+  "Authorities imposing stricter punishments",
+  "Support for Respect for Authoritiy should be fundamental value",
+  "First Nations have too many rights compared to regular citizens"
+))
+
+full %>% 
+  select(Sample, Ideology, Q38_1_x:Q39_3_x) %>% 
+    pivot_longer(., cols=-Sample) %>% 
+  group_by(Sample, name) %>% 
+  summarize(Average=mean(value, na.rm=T), sd=sd(value, na.rm=T), n=n(), se=sd/sqrt(n)) %>% 
+  rename(Item=name) %>% 
+  left_join(., ideology_variable_labels) %>% 
+#   arrange(name, Sample) %>% 
+# group_by(name) %>% 
+#   mutate(Difference=Average-lag(Average)) %>% 
+#   ungroup() %>% 
+  ggplot(., aes(x=Average, y=fct_reorder(label, Average), col=Sample))+geom_point()+xlim(c(0,1))+scale_color_grey()+geom_errorbar(width=0,aes(xmin=Average-(1.96*se), xmax=Average+(1.96*se)))+labs(x="1=Right-wing position, 0=Left-Wing position; Underlying scale 1 to 7", y="Item")
+ggsave(filename=here("Plots", "cjph_ideology_worldviews_sample_genpop.png"))
+
+
+
+
+#Compare Weighted and Unweighted Averages
+full.wtd %>% 
+  select(Ideology) %>% 
+  summarize(Weighted_Ideology=survey_mean(Ideology), 
+            Unweighted_Ideology=unweighted(mean(Ideology)),
+            Unweighted_sd=unweighted(sd(Ideology)), Unweighted_n=unweighted(n()), Unweighted_Ideology_se=unweighted(Unweighted_sd/sqrt(Unweighted_n))) %>% 
+  select(1:3,6)->out
+names(out)
+out
+out %>% 
+  pivot_longer(., cols=everything(), names_to=c('Variable', ".value"), names_pattern = "^([^_]+)_(.*)") %>% 
+  rename(Mean=Ideology, se=Ideology_se)->out
+  out
+full %>% 
+  filter(Sample=="Public Health") %>% 
+  summarize(Mean=mean(Ideology, na.rm=T), sd=sd(Ideology, na.rm=T), n=n(), se=sd/sqrt(n)) %>% 
+  select(1,4) %>% 
+  mutate(Variable="Public Health") %>% 
+  bind_rows(., out)->ideology_mean
+ideology_mean$Variable<-car::Recode(ideology_mean$Variable, "'Weighted'='Weighted General Population' ; 'Unweighted'='Unweighted General Population'")
+  ggplot(ideology_mean, aes(x=Variable, y=Mean, col=Variable))+geom_point()+ylim(c(0,1))+labs(y="Average Ideology Score, 0 to 1", x="")+scale_color_manual(values=rep('black', 3), guide="none")
+ggsave(filename=here("Plots", "weighted_unweighted_public_health_ideology_mean.png"))
+
+ideology_model<-lm(Ideology~Sample+rich+degree+francophone+old+rural, data=full)
+summary(ideology_model)
+#### WorldViews ####
 
 #### Influence #### 
 lookfor(full, "influence")
@@ -160,7 +227,21 @@ mutate(name=str_replace_all(name, pattern="_|_|should", replace=" ")) %>%
 
 #ggsave(here("Plots", "influences_should_group.png"), width=6, height=2)
 #### Science Literacy ####
+full$mean_know
 
+?geom_histogram
+  
+  full %>% 
+  select(Sample, mean_know) %>% 
+    group_by(Sample) %>% 
+    summarize(average=round(mean(mean_know),2)) %>% 
+    mutate(x=c(0.5, 0.5), y=c(950, 950), average=paste("Mean score", average, sep=" "))->means
+full %>% 
+  select(Sample, mean_know) %>% 
+  ggplot(., aes(x=mean_know))+geom_histogram(bins=5)+facet_grid(~Sample)+geom_text(aes(x=x, y=y, label=average), data=means) +labs(x="Average score, scaled 0 to 1", y="n")
+  ggsave(here("Plots", "science_literacy_sample.png"), width=6, height=2)
+
+  
 #### Response to Local Conditions ####
 #install.packages('corrr')
 library(corrr)
@@ -182,13 +263,20 @@ library(corrr)
 #   ggplot(., aes(x=value, y=name, fill=Sample))+geom_col(position="dodge")+xlim(c(-0.2,0.2))+labs(title="Correlation Between Policy Preference\nand Local Conditions" , x="Pearson correlation Coefficient")
 
 
+# Examine case trend
+  qplot(full$case_trend, geom="histogram")
+
+#Examine case trend by day
+  full %>% 
+    group_by(date) %>% 
+    summarize(avg=mean(case_trend, na.rm=T)) %>% 
+    ggplot(., aes(x=date, y=avg))+geom_col()
+
 full %>% 
   select(Sample, Q8_1:Q8_3, case_trend) %>% 
   rename(., `Mandatory Vaccine`=2, `Close Down Bars and Restaurants`=3, `Fines For People Not Wearing Masks`=4) %>%
   pivot_longer(cols=2:4,  names_to="Policy", values_to="Support") %>% 
-  ggplot(., aes(x=case_trend, y=Support, col=Sample))+facet_grid(~Policy)+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+geom_vline(xintercept=1, linetype=2)+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
-
-
+  ggplot(., aes(x=case_trend, y=Support, col=Sample))+facet_grid(~Policy)+geom_point(size=0.5)+geom_smooth(method="loess", se=F)+scale_color_grey()+geom_vline(xintercept=1, linetype=2)+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
 ggsave(here("Plots", "cjph_local_case_trend_preferences.png"), width=8, height=2)
 
 lookfor(full, "economy")
@@ -206,19 +294,27 @@ full %>%
   select(Sample, Q8_1:Q8_3, avgtotal_last7_pop_per_capita) %>% 
   rename(., `Mandatory Vaccine`=2, `Close Down Bars and Restaurants`=3, `Fines For People Not Wearing Masks`=4) %>%
   pivot_longer(cols=2:4,  names_to="Policy", values_to="Support") %>% 
-  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Support, col=Sample))+facet_grid(~str_wrap(Policy, width=20))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
-ggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), width=8, height=3)
+  filter(., avgtotal_last7_pop_per_capita<0.0003) %>% 
+  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Support, col=Sample))+facet_grid(~str_wrap(Policy, width=20))+geom_point(size=0.5)+geom_smooth(method="lm", se=T)+scale_color_grey()+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
+dggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), width=8, height=3)
+
 full %>% 
-  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>% 
+  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>%
   rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
   pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
-  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
+  filter(., avgtotal_last7_pop_per_capita<0.0003) %>% 
+  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="loess", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
 ggsave(here("Plots", "cjph_local_case_severity_per_capita_trade_offs.png"), width=8, height=3)
-
-full %>% 
-  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>% 
-  rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
-  pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
-  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="loess", se=F)+scale_color_grey()+facet_grid(~Goal)
-
+qplot(x=avgtotal_last7_pop_per_capita, y=decline_economy, fill=Sample, data=full)
+ggplot(full, mapping=aes(x=avgtotal_last7_pop_per_capita, y=decline_economy, col=Sample))+geom_point()+geom_smooth(method="lm")
 #### Local Conditions 
+
+#### Searching For Technocracy
+lookfor(full, "scient")
+full$Q31_4
+table(full$Sample, full$Q31_4)
+full %>% 
+  select(starts_with('Q31_')) %>% 
+  var_label()
+
+lookfor(full, "influence")

@@ -40,10 +40,11 @@ names(health_regions)
 names(full)
 
 #Merge With full
-nrow(full)
 full %>% 
   left_join(., health_regions, by=c("CID", "FSA"))->full
 names(full)
+full %>% 
+  rename(`FSA.pop.2016`=pop.2016, FSA.area.km2=area.km2, FSA.pop.km2=pop.km2)->full
 #Check which cases have deviant provinces
 full %>% 
   mutate(province_fsa_bad=case_when(
@@ -80,7 +81,7 @@ library(Covid19CanadaData)
 #This appears to download health canada's comprehensive time series by health region
 #However, this file does not contain the HRUIDs 
 covid<-read_csv(file="https://health-infobase.canada.ca/src/data/covidLive/file_out_v5.csv")
-head(covid)
+
 #Note that there are no HR_UID numbers in the covid file.
 
 # THE FUNDAMENTAL PROBLEM IS THAT TIM'S FILE HAS THE HRUID BUT THE COVID CASE DATA DOES NOT
@@ -90,9 +91,7 @@ head(covid)
 # #### Get HHR_UID AND HEALTH REGION POPULATION####
 # #This file does have the health region names and the hruids
 hruid<-read_csv(file="https://raw.githubusercontent.com/ccodwg/Covid19Canada/master/other/hr_map.csv")
-names(hruid)
-hruid$health_region
-hruid$health_region_esri
+
 
 #Some inspections
 names(covid)
@@ -168,14 +167,15 @@ covid %>%
 full %>% 
   left_join(., covid, by=c( "province", "health_region","HR_UID",  "date" )) ->full
 
-#Some variable renames
+#rename population variables for the health region and the fsa
 full %>% 
-  rename("health_region_population"="pop", "FSA_population"="pop.2016")->full
-
+  rename("health_region_population"="pop")->full
+names(full)
 #Checkout missing FSA data
+
 full %>% 
-  filter(is.na(FSA_population)) %>% 
-  select(FSA, health_region, pop.km2, CID,Comm_Name) ->missing_CID
+  filter(is.na(FSA.pop.2016)) %>% 
+  select(FSA, health_region, FSA.pop.2016,FSA.pop.km2, CID,Comm_Name) ->missing_CID
 missing_CID
 
 #### Fill IN Missing Data

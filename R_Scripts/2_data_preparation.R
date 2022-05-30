@@ -1,4 +1,6 @@
 #This script will contain code that prepares the dataset for analysis
+####package management
+library(skpersonal)
 ####Data Import####
 library(here)
 #This runs the data import file, so running this file from top to bottom will import the data as well. 
@@ -75,7 +77,7 @@ mutate(across(starts_with('know'),as.numeric)) %>%
 #
 
 library(knitr)
-
+library(kableExtra)
 full %>%
   select(Q18_1:Q21_1) %>%
   pivot_longer(cols=1:4) %>%
@@ -83,9 +85,8 @@ full %>%
   summarize(n=n()) %>%
 pivot_wider(., names_from=c('name'), values_from='n') %>%
   rename(., "response"=1) %>%
-  kable(., format="html") %>%
-  cat(., file=here("Tables", "CRT_responses.html"))
-
+  kable(., format="html") %>% 
+save_kable(., file=here("Tables", "CRT_responses.html"))
 #Find the questions on crt
 look_for(full, 'race')
 #Check value labels for Q18
@@ -212,8 +213,24 @@ full %>%
   ungroup()->full
 #### Ideology ####
 full %>%
-  mutate(Ideology=skpersonal::revScale(Q51))->full
+  mutate(Ideology=revScale(Q51))->full
+#### Worldviews
+#Scale Egalitarian items 0 to 1
 
+full %>% 
+  mutate(across(Q38_1:Q38_3, revScale, reverse=T,.names="{.col}_x")) ->full
+#Scale Individual Items 0 to 1
+#Note reverse scale all but Q38_4
+full %>% 
+  mutate(Q37_1_x=revScale(Q37_1, reverse=T),
+         Q37_2_x=revScale(Q37_2, reverse=T),
+         Q37_3_x=revScale(Q37_3, reverse=T),
+         Q37_4_x=revScale(Q37_4, reverse=F),
+         ) ->full
+#Scale Hierarchy Items 0 to 1
+full %>% 
+  mutate(across(Q39_1:Q39_3, skpersonal::revScale, .names="{.col}_x")) ->full
+####
 ####TRUST SCALE####
 
 ##Preview variables and labels
@@ -288,6 +305,15 @@ full %>%
 full$trust_average
 full %>% 
   select(starts_with('trust'))
+#### Interest in Politics ####
+full %>% 
+  mutate(Interest=case_when(
+    Q52==1~ 0,
+    Q52==2~0.25,
+    Q52==5~0.5,
+    Q52==3~0.75,
+    Q52==4~1
+  ))->full
 #### Code Public Health Most Important Problem Respones ####
 #### This code below assigns meaningful variable names to the most important problem variables
 
@@ -383,6 +409,8 @@ names(full)
 
 #### Demographics ####
 #Age
+#
+full$Age<-2021-full$Q55_1
 look_for(full, 'year')
 # Q55_1 is the age variable
 # Start with dataframe
@@ -395,9 +423,24 @@ full %>%
     TRUE~ 0
   ))->full
 
-#
-full$Age<-2021-full$Q55_1
+# Create second old variable
+full %>% 
+  select(Sample, Age) %>% 
+  group_by(Sample) %>% 
+  summarize(mean=mean(Age))
+2021-65
+full %>%
+  #mutate and create a new variable with a meaningful name
+  mutate(old2=case_when(
+    #If Q55_1 is greater than 2021-65, then yes, they are "old" , so they get a 1
+    Q55_1<2021-44 ~1,
+    #otherwise they get a zero
+    TRUE~ 0
+  ))->full
 
+
+
+table(full$old2, full$Age)
 full %>% 
 mutate(age_4=case_when(
 #18 to 34
@@ -546,8 +589,21 @@ full %>%
 
 
 #### Provide names for trade-off variables
-full<-full %>% 
-  rename(., decline_economy=Q9_1, social_isolation=Q10_1, schools_open=Q11_1, seniors_isolation=Q12_1)->full
+#Check this
+full %>% 
+mutate(across(Q9_1:Q12_1, revScale, .names="{.col}_x")) %>% 
+  select(Q9_1_x:Q12_1_x) %>% 
+  summary()
+
+#Repeat and ave
+full %>% 
+  mutate(across(Q9_1:Q12_1, revScale, .names="{.col}_x"))->full
+
+#Add the named versions of these variables for backwards compatibility
+full %>% 
+  mutate(decline_economy=Q9_1,
+         social_isolation=Q10_1, schools_open=Q11_1, seniors_isolation=Q12_1 )->full
+
 
 
 #This line executes the file that merges Tim's FSA file with the COVID case count data
@@ -559,29 +615,29 @@ source('R_scripts/2b_fsa_merge_covid_incidence.R')
 #### Assigning Rural Values ####
 #Draw a histogram of the population density
 
-qplot(full$pop.km2)
-summary(full$pop.km2) #median is at 903
+qplot(full$FSA.pop.km2)
+summary(full$FSA.pop.km2) #median is at 903
 
 # mean is at 4593, so there are some huge outliers, very dense populations. 
 full$Sample
 full %>% 
   filter(Sample=="Public Health") %>% 
-  ggplot(., aes(x=pop.km2))+geom_histogram()
+  ggplot(., aes(x=FSA.pop.km2))+geom_histogram()
 
 full %>% 
   group_by(Sample) %>% 
-  summarize(mean=mean(pop.km2, na.rm=T), median=median(pop.km2, na.rm=T))
+  summarize(mean=mean(FSA.pop.km2, na.rm=T), median=median(FSA.pop.km2, na.rm=T))
 
 full %>% 
-  filter(pop.km2<25000) %>% 
-  ggplot(., aes(x=pop.km2))+geom_histogram()+facet_grid(~Sample)
+  filter(FSA.pop.km2<25000) %>% 
+  ggplot(., aes(x=FSA.pop.km2))+geom_histogram()+facet_grid(~Sample)
 
 # First Cut Rural < 1430 people per square km urban > 1429 people per square km
 
 full %>% 
   mutate(rural=case_when(
-    pop.km2 < 1430 ~ 1,
-    pop.km2 > 1429 ~ 0,
+    FSA.pop.km2 < 400 ~ 1,
+    FSA.pop.km2 > 401 ~ 0,
     TRUE ~ NA_real_
   ))->full
 
@@ -595,9 +651,11 @@ library(labelled)
 names(full)
 #Set the variable label for each variable
 var_label(full$old)<-'Dichotomous variable, R is 65+'
+var_label(full$old2)<-'Dichotomous variable, R is 45+'
 #Set the value labels for each variable
 val_labels(full$old)<-c(`Over 65`=1, `Under 65`=0)
-
+val_labels(full$old2)<-c(`Over 45`=1, `Under 45`=0)
+var_label(full$degree)<-c('Dichotomous variable, R has university degree')
 val_labels(full$degree)<-c(`Degree`=1, `No Degree`=0)
 
 var_label(full$rich)<-'Dichotomous variable, R household > $100,000'
@@ -635,11 +693,13 @@ var_label(full$HR)<- 'Health region code'
 var_label(full$HR_UID)<- 'Health region code'
 #Add var_label to HR_Name specifying it is the name of the health region
 var_label(full$HR_NAME) <- 'Name of health region'
-
+names(full)
 #Add variable label to pop.2016 specifying that it is population for FSA
-var_label(full$FSA_population)<- 'Population for FSA'
+var_label(full$FSA.pop.2016)<- 'Population for FSA'
+#Add variable label to pop.2016 specifying that it is population for FSA
+var_label(full$FSA.pop.km2)<- 'Population per km2 for FSA'
 #Add Var label to area.km2 specifying it is FSA Square Kilometer
-var_label(full$area.km2)<- 'FSA Square Kilometer'
+var_label(full$FSA.area.km2)<- 'FSA Square Kilometer'
 # Add var label to date_report specifying it is the date reported of Covid cases for Respondent Health Region
 var_label(full$date_report)<- 'Date reported of COVID cases for the respondent health region'
 # Add var label to cases specifying it is the # of COVID cases for that health region
@@ -659,24 +719,56 @@ var_label(full$health_region_population) <- 'Population of health region'
 var_label(full$avgtotal_last7_pop_per_capita) <- 'Average COVID cases in last 7 days per capita'
 var_label(full$Age)<-"R Age"
 
+full %>% 
+  select(Q9_1:Q12_1) %>% 
+  val_labels()
+var_label(full$Q9_1_x)<-"Stop Economic Decline At Expense of Increased COVID19"
+var_label(full$Q10_1_x)<-"Reprieve From Social Isolation At Expense of Increased COVID19"
+var_label(full$Q11_1_x)<-"Keep Schools Open At Expense of Increased COVID19"
+var_label(full$Q12_1_x)<-"Reprieve For Seniors fro Isolation At Expense of Increased COVID19"
+
+# Value and variable labels for interest
+var_label(full$Interest)<-'interest in politics'
+val_labels(full$Interest)<-c(`Very disinterested`=0, `Moderately disinterested`=0.25, 
+                             `Neutral`=0.5, `Moderately interested`=0.75, `Very interested`=1)
+
 #Rename some variables
 
 #Saving factors with capitalized names
 full$`High Income`<-as_factor(full$rich)
+full$`High_Income`<-as_factor(full$rich)
 full$Rural1<-as_factor(full$rural)
 full$Francophone1<-as_factor(full$francophone)
 full$Degree1<-as_factor(full$degree)
 full$Female1<-as_factor(full$female)
-
+full$Old1<-as_factor(full$old)
+full$Old2<-as_factor(full$old2)
+full$Province<-full$province
 names(full)
 
 #Missing FSA,population or hrealth region data
 
 full %>% 
-  filter(is.na(pop.km2)) %>% 
+  filter(is.na(FSA.pop.km2)) %>% 
   select(CID, FSA, province, health_region)
+
+#### Bad Data####
+qplot(full$Age)
+full %>% 
+  filter(Age> 17)->full
+
+full %>% 
+  filter(province_fsa_bad==1) %>% 
+  select(FSA, province, province_full, Province)
+
+full %>% 
+  filter(province_fsa_bad!=1)->full
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)
+# 
 # write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
+names(full)
+table(full$province_fsa_bad) 
+
 
