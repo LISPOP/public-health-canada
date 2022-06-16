@@ -15,4 +15,4 @@ file.copy(cjph_tables[str_detect(cjph_tables, "cjph")], to="~/Dropbox/Public_Hea
 
 
 #file.copy(here('data', str_extract(list.files(path="data"), "^recoded_data.+[0-9].sav?")), to="~/Dropbox/Public_Health/Data")
-full$decline_economy
+

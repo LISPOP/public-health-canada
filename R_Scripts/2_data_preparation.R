@@ -9,6 +9,7 @@ source(here('R_Scripts', '1_data_import.R'))
 #Recode a sample variable with public health and general popuilation respondents
 full$Sample<-car::Recode(as.numeric(full$phase),"2='Public Health'; 1='General Population'")
 
+
 #### Science Literacy ####
 #Find the questions on science literacy
 look_for(full, 'tomatoes')
@@ -408,6 +409,21 @@ full %>%
 names(full)
 
 #### Demographics ####
+# Region
+
+full$Region<-car::Recode(full$province, "'Alberta'='West' ; 
+                            'British Columbia'='West'; 
+                            'Manitoba'='West' ; 
+                            'New Brunswick'='Atlantic';
+                            'Newfoundland and Labrador' ='Atlantic' ;
+                            'Northwest Territories' ='North' ; 
+                            'Nova Scotia' ='Atlantic' ;
+                            'Nunavut' ='North' ;
+                            'Ontario'='Ontario' ;
+                            'Prince Edward Island'='Atlantic';
+                            'Yukon'='North';
+                            'Saskatchewan'='West' ;
+                            'Quebec'='Quebec'", levels=c("Atlantic", "Quebec", "Ontario", "West", "North"))
 #Age
 #
 full$Age<-2021-full$Q55_1
@@ -528,8 +544,35 @@ full %>%
   filter(!is.na(Vaccines)) %>% 
   ggplot(., aes(y=Sample, fill=Vaccines))+geom_bar(position="fill")+labs(title="Plans to Vaccinate by Sample")
 #ggsave(filename=here("Plots", "vaccine_plans_group.png"), width=8, height=2)
+#### Field of Study ####
+#this converts field of study to a factor
+full %>% 
+  mutate(`Public_Health_Field`=case_when(
+    Q60==1|Q61==1 ~ "Health promotion",
+    Q60==2|Q61==2 ~ "Health protection",
+    Q60==3 | Q61==3 ~ "Epidemiology",
+    Q60==4 |Q61==4 ~ "Emergency Preparedness and response"
+  )) ->full
+full$`Public_Health_Field`<-factor(full$`Public_Health_Field`, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
+full$`Public_Health_Field`
+str_detect(full$Public_Health_Field, "promotion", negate=T)
 
+full %>% 
+  mutate(Health_Promotion=case_when(
+    Public_Health_Field=="Health promotion"~1,
+    Public_Health_Field=="Health protection"~0,
+    Public_Health_Field=="Epidemiology"~0,
+    Public_Health_Field=="Emergency Preparedness and response" ~0
+  ))->full
+table(full$Health_Promotion)
+val_labels(full$Health_Promotion)<-c('Health Promotion'=1, 'Other'=0)
 
+# full$`Public_Health_Field`<-as_factor(full$Q61)
+# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\).")
+# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\)")
+# full$Public_Health_Field<-str_trim(full$Public_Health_Field)
+# table(full$Public_Health_Field)
+# full$Public_Health_Field<-factor(full$Public_Health_Field, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
 #### Assign Variable Labels To Influence Questions #### 
 #These questions asked about what does and what should influence public policy
 #This code section takes the variable names from these questions and assigns them to 
@@ -766,9 +809,9 @@ full %>%
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)
-# 
+# full %>%
+#   rename_all(~str_replace_all(., "\\s+", ""))->full
 # write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
-names(full)
-table(full$province_fsa_bad) 
+# 
 
 

@@ -14,17 +14,87 @@ as_gt() %>%
 
 #### Most Important Problem#### 
 names(full)
+library(ggsignif)
+library(broom)
+#Store the variables necessary for crosstabbing. 
 full %>% 
   select(Sample, Obesity:Race_inequality) %>% 
  pivot_longer(-Sample) %>% 
-  group_by(Sample, name, value) %>%
-  as_factor() %>% 
+  #group_by(Sample, name, value) %>%
+  as_factor()->mip_genpop_public_health
+#Conduct chi-squared test on each variable by Sample Size
+mip_genpop_public_health %>% 
+#nesting by variable 
+    nest(-name) %>% 
+  #onto each variable, we are creating a model, which is the results of a qhi-square test
+  # of sample and value 
+  mutate(model=map(data, ~chisq.test(.$Sample, .$value)), 
+         #Tidy the results and storie in tidied
+         tidied=map(model, tidy)) %>% 
+  #Unnest tidied for viewing
+  unnest(tidied)->mip_genpop_public_health_x2
+
+#Adjust for multiple comparisons
+mip_genpop_public_health_x2$p.value<-p.adjust(mip_genpop_public_health_x2$p.value, 
+                                              method="bonferroni", n=nrow(mip_genpop_public_health_x2))
+library(ggsignif)
+mip_genpop_public_health_x2
+mip_genpop_public_health %>% 
+  group_by(name, Sample, value) %>% 
   summarize(n=n()) %>% 
   mutate(Percent=(n/sum(n))*100) %>% 
+  mutate(name=fct_recode(name, "Racial Inequalities"="Race_inequality", "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
   filter(value!="Not Selected") %>% 
-  ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Sample))+geom_col(position="dodge")+scale_fill_grey()+labs(title=str_wrap("Percent Selecting Issues as Most Important Public Health Problem After COVID-19", width=40), y="Issue")+guides(fill=guide_legend(reverse=T))
+  ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Sample))+
+    geom_col(position="dodge")+
+    scale_fill_grey()+
+    guides(fill=guide_legend(reverse=T))+  
+  geom_text(aes(label=round(Percent,0)), position=position_dodge(width=0.9), hjust=-0.5)+xlim(c(0,60))+
+  geom_signif(y_position=c(38,42), xmin=c(5.3,6.2),xmax=c(4.8,5.7),
+              annotation=c("x2=16.0, p<0.001, df=1", "x2=13.5, p<0.001, df=1"), map_signif_level = T, angle=01, hjust=-0.05)+ labs( y="Issue")
+ggsave(here("Plots", "cjph_most_important_problem_group.png"), width=8, height=6)
 
-ggsave(here("Plots", "cjph_most_important_problem_group.png"), width=6, height=3)
+full %>% 
+  select(Health_Promotion, Obesity:Race_inequality) %>% 
+  pivot_longer(-Health_Promotion) %>% 
+ # group_by(Public_Health_Field, name, value) %>%
+  #filter(str_detect(Public_Health_Field, "Emergency|Epidemiology", negate=T)) %>% 
+  as_factor() %>% 
+filter(!is.na(Health_Promotion))->mip_public_health_field
+#This code shows that there are comparisons (e.g. vaping, smoking) with low cell sizes. Consequently we use Fisher's exact test
+# mip_public_health_field %>% 
+#   group_by(name, Public_Health_Field, value) %>% 
+#   summarize(n=n()) %>% 
+#   View()
+library(broom)
+mip_public_health_field %>% 
+  nest(-name) %>% 
+  mutate(model=map(data, ~fisher.test(.$Health_Promotion, .$value)), 
+         tidied=map(model, tidy)) %>% 
+  unnest(tidied)->mip_public_health_field_x2
+mip_public_health_field_x2$model
+mip_public_health_field_x2
+mip_public_health_field %>% 
+  group_by(name, Health_Promotion, value) %>% 
+  summarize(n=n()) %>% 
+   mutate(Percent=(n/sum(n))*100) %>% 
+   mutate(name=fct_recode(name, "Racial Inequalities"="Race_inequality", "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
+   filter(value!="Not Selected") %>% 
+  ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Health_Promotion))+
+  geom_col(position="dodge")+
+  scale_fill_grey()+
+  labs(y="Issue")+
+  guides(fill=guide_legend(reverse=T))+
+  geom_text(aes(label=round(Percent,0)), position=position_dodge(width=0.9), hjust=-0.5)+
+  geom_signif(
+    y_position=c(25, 30, 55, 70 ), xmin=c(2.7, 3.7, 6.7, 7.8), xmax=c(3.2,4.2 , 7.2, 8.2), 
+    annotations=c("x2=3.19, p=0.028", "x2=0.326, p=0.0255",
+   "x2=1.95, p=0.037", "x2=1.85, p=0.0644"), angle=1, hjust=-0.025)+xlim(c(0,90))
+ggsave(filename=here("Plots", "mip_public_health_field.png"), width=8, height=6)
+full %>% 
+  select(starts_with("Q1_")) %>% var_label()
+ggsave(here("Plots", "cjph_most_important_problem_field.png"), width=6, height=3)
+
 ####  Views on science in policy ####
 lookfor(full, "policy")
 ggplot(full, aes(x=as.numeric(Q30_1), fill=Sample,..scaled..))+
@@ -142,11 +212,31 @@ full %>%
 # group_by(name) %>% 
 #   mutate(Difference=Average-lag(Average)) %>% 
 #   ungroup() %>% 
-  ggplot(., aes(x=Average, y=fct_reorder(label, Average), col=Sample))+geom_point()+xlim(c(0,1))+scale_color_grey()+geom_errorbar(width=0,aes(xmin=Average-(1.96*se), xmax=Average+(1.96*se)))+labs(x="1=Right-wing position, 0=Left-Wing position; Underlying scale 1 to 7", y="Item")
+  ggplot(., aes(x=Average, y=fct_reorder(label, Average), col=Sample))+
+  geom_point()+xlim(c(0,1))+
+  scale_color_grey()+
+  geom_errorbar(width=0,aes(xmin=Average-(1.96*se), xmax=Average+(1.96*se)))+
+  labs(x="1=Right-wing position, 0=Left-Wing position; Underlying scale 1 to 7", y="Item")
 ggsave(filename=here("Plots", "cjph_ideology_worldviews_sample_genpop.png"))
 
+#### Worldviews Within Public Health ####
+look_for(full, "field")
+lookfor(full, "position")
 
-
+full %>% 
+  select(Health_Promotion, Ideology, Q38_1_x:Q39_3_x) %>% 
+  pivot_longer(-Health_Promotion, names_to=c("Item"), values_to=c("Score")) %>% 
+ # filter(!is.na(Public_Health_Field)) %>% 
+  as_factor() %>% 
+  left_join(ideology_variable_labels) %>% 
+  group_by(Health_Promotion, label) %>% 
+  summarize(Average=mean(Score, na.rm=T), n=n(), sd=sd(Score, na.rm=T), se=sd/sqrt(n)) %>% 
+  filter(!is.na(Health_Promotion)) %>% 
+  ggplot(., aes(y=fct_reorder(label, Average, .desc=F), x=Average, col=Health_Promotion))+
+  geom_point()+geom_errorbar(aes(xmin=Average-(1.96*se), xmax=Average+(1.96*se)), width=0)+
+  scale_color_grey(name="Field")+
+  labs(y="Item")+xlim(c(0,1))
+ggsave(here("Plots", "cjph_public_health_field_ideology_worldviews.png"), width=8, height=6)
 
 #Compare Weighted and Unweighted Averages
 full.wtd %>% 

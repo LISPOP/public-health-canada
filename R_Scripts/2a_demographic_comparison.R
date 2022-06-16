@@ -33,7 +33,8 @@ genpop %>%
   #Bind this to the dataset of sample_demographics
 bind_rows(., census_demographics) ->census_sample_comparison
 
-census_sample_comparison
+census_sample_comparison %>% 
+  print(n=34)
 #Capitalize variable names
 names(census_sample_comparison)<-str_to_title(names(census_sample_comparison))
 #REname variable data_source
@@ -269,13 +270,58 @@ ph %>%
   #Add a variable called Sample; each value of this variable for this dataset will be the word "Sample"
   mutate(Sample=rep('Sample', nrow(.))) %>% 
   #Bind these rows to the cpha object that was imported just above
-bind_rows(., cpha) %>%
+bind_rows(., cpha) ->cpha_sample_province
+
+cpha_sample_province %>% 
   #Now form groups by the variable Sample
 group_by(Sample) %>% 
   #mutate and add a new variable that calculates the row percentage of each sample.
   mutate(pct=n/sum(n)) %>% 
   #Mutate Province to turn "Unknown" into a missing v alue
 mutate(Province=car::Recode(Province, "'Unknown'=NA")) %>% 
+  filter(str_detect(Province, "Nunavut|Northwest Territories|Yukon|International",negate=T)) %>% 
+  mutate(Province=fct_reorder(Province, pct)) %>% 
   #Plot
-  ggplot(., aes(y=Province, x=pct, fill=Sample))+geom_col(position="dodge")+scale_fill_grey()
+  ggplot(., aes(y=Province, x=pct, fill=Sample))+
+  geom_col(position="dodge")+
+  geom_text(hjust=-0.5,aes(label=round(pct*100, 0)), position=position_dodge(width=0.9))+
+  scale_fill_grey(guide=guide_legend(reverse=T))+
+  labs(x="Percent")+
+  theme(legend.position = "bottom")+
+    scale_x_continuous(labels=scales::label_percent(accuracy=1), limits=c(0,0.45))
 ggsave(here("Plots/cpjph_cpha_sample_population_comparison.png"))
+
+cpha_sample_province %>% 
+  mutate(Region=car::Recode(Province, "'Alberta'='West' ; 
+                            'British Columbia'='West'; 
+                            'Manitoba'='West' ; 
+                            'New Brunswick'='Atlantic';
+                            'Newfoundland and Labrador' ='Atlantic' ;
+                            'Northwest Territories' ='North' ; 
+                            'Nova Scotia' ='Atlantic' ;
+                            'Nunavut' ='North' ;
+                            'Ontario'='Ontario' ;
+                            'Prince Edward Island'='Atlantic';
+                            'Yukon'='North';
+                            'Saskatchewan'='West' ;
+                            'Quebec'='Quebec'", levels=c("Atlantic", "Quebec", "Ontario", "West", "North"))) %>% 
+  #Now form groups by the variable Sample
+  group_by(Sample, Region) %>% 
+  summarize(n=sum(n)) %>% 
+  #mutate and add a new variable that calculates the row percentage of each sample.
+  mutate(pct=n/sum(n)) %>% 
+  #Filter
+  filter(!is.na(Region) & Region!="Unknown" &Region!="International") %>% 
+  #Mutate Province to turn "Unknown" into a missing v alue
+  #mutate(Province=car::Recode(Province, "'Unknown'=NA")) %>% 
+  #filter(str_detect(Province, "Nunavut|Northwest Territories|Yukon|International",negate=T)) %>% 
+  #mutate(Province=fct_reorder(Province, pct)) %>% 
+  #Plot
+  ggplot(., aes(y=fct_reorder(Region, pct), , x=pct, fill=Sample))+
+  geom_col(position="dodge")+
+  geom_text(hjust=-0.5,aes(label=round(pct*100, 0)), position=position_dodge(width=0.9))+
+  scale_fill_grey(guide=guide_legend(reverse=T))+
+  labs(x="Percent", y="Region")+
+  theme(legend.position = "bottom")+
+  scale_x_continuous(labels=scales::label_percent(accuracy=1), limits=c(0,0.45))
+ggsave(here("Plots/cpjph_cpha_sample_population_comparison_region.png"))

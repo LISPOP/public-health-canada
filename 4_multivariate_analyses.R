@@ -48,7 +48,8 @@ ideology_model_table %>%
              `Model 8`="Private Sector to create jobs", 
              `Model 9`="Authorities should impose stricter punishment", 
              `Model 10`="Respect for authority", 
-             `Model 11`="First Nations too many rights") %>% gtsave(., filename=here("Tables", "cjph_ideology_worldviews_regressions.html"))
+             `Model 11`="First Nations too many rights") %>% 
+  gtsave(., filename=here("Tables", "cjph_ideology_worldviews_regressions.html"))
 
 
 #### Are there differences in policy preferences controlling for demograhpics
@@ -116,7 +117,6 @@ trade_off_models_tab %>%
   tab_spanner(., label="Keep schools open", columns=c(8:10)) %>% 
   tab_spanner(., label="Reprieve from Social Isolation for Seniors", columns=c(11:13)) %>% 
   gtsave(., file=here("Tables", "cjph_trade_offs_ideology_demographics.html"))
-#stargazer(c(c(rbind(trade_off_models$model1, trade_off_models$model2, trade_off_models$model3))), type="html", out=here("Tables", "cjph_trade_off_sample_genpop_demographics.html"), column.labels = c("Stop Economic Decline", "Reprieve From Social Isolation", "Keep Schools Open", "Reprieve From Social Isolation From Seniors"), column.separate = c(3,3,3,3), digits=2, digits.extra=2)
 
 ####
 # Model odds of selecting raical inequalities
@@ -125,7 +125,7 @@ trade_off_models_tab %>%
 look_for(full, "vacc")
 #### Trust Versus Scientific Literacy
 
-full$Q1_
+
 salience_mod<-glm(Q1_8~Sample, data=full, family="binomial")
 salience_mod2<-glm(Q1_8~ Sample+degree+rich+female+old2, data=full, family="binomial")
 salience_mod3<-glm(Q1_8~ Sample+degree+rich+female+old2+Ideology, data=full, family="binomial")
@@ -140,9 +140,6 @@ salience_models_tab %>%
   tab_spanner(., label="Racial Inequalities", columns=c(2:4)) %>% 
   tab_spanner(., label="Vaccine Hesitancy", columns=c(5:7)) %>% 
   gtsave(., filename=here("Tables", "cjph_salience_demographics_ideology.html"))
-
-full %>% 
-  filter(Sample!="General Population")-> ph
 
 ####
 
