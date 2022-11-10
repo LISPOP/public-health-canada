@@ -93,7 +93,7 @@ mip_public_health_field %>%
 ggsave(filename=here("Plots", "mip_public_health_field.png"), width=8, height=6)
 full %>% 
   select(starts_with("Q1_")) %>% var_label()
-ggsave(here("Plots", "cjph_most_important_problem_field.png"), width=6, height=3)
+ggsave(here("Plots", "cjph_most_important_problem_field.png"), width=8, height=6)
 
 ####  Views on science in policy ####
 lookfor(full, "policy")
@@ -207,11 +207,12 @@ full %>%
   group_by(Sample, name) %>% 
   summarize(Average=mean(value, na.rm=T), sd=sd(value, na.rm=T), n=n(), se=sd/sqrt(n)) %>% 
   rename(Item=name) %>% 
-  left_join(., ideology_variable_labels) %>% 
+  left_join(., ideology_variable_labels) ->public_health_ideology_worldviews_scores
 #   arrange(name, Sample) %>% 
 # group_by(name) %>% 
 #   mutate(Difference=Average-lag(Average)) %>% 
 #   ungroup() %>% 
+public_health_ideology_worldviews_scores %>% 
   ggplot(., aes(x=Average, y=fct_reorder(label, Average), col=Sample))+
   geom_point()+xlim(c(0,1))+
   scale_color_grey()+
@@ -219,6 +220,13 @@ full %>%
   labs(x="1=Right-wing position, 0=Left-Wing position; Underlying scale 1 to 7", y="Item")
 ggsave(filename=here("Plots", "cjph_ideology_worldviews_sample_genpop.png"))
 
+public_health_ideology_worldviews_scores %>% 
+  ggplot(., aes(x=sd, y=fct_reorder(label, sd), col=Sample))+
+  geom_point()+
+  scale_color_grey()+
+  #geom_errorbar(width=0,aes(xmin=Average-(1.96*se), xmax=Average+(1.96*se)))+
+  labs(x="Standard Deviation, Measure of Consensus Amongst Samples", y="Item")
+ggsave(filename=here("Plots", "cjph_ideology_worldviews_sample_genpop_sd.png"))
 #### Worldviews Within Public Health ####
 look_for(full, "field")
 lookfor(full, "position")
@@ -379,32 +387,65 @@ full %>%
   ggplot(., aes(x=case_trend, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
 ggsave(here("Plots", "cjph_local_case_trend_trade_offs.png"), width=8, height=3)
 #### Local Conditions Case Severity ####
-
+avg14_2sd
+mean(full$avgtotal_last14_pop_per_capita, na.rm=T)-avg14_2sd
 full %>% 
-  select(Sample, Q8_1:Q8_3, avgtotal_last7_pop_per_capita) %>% 
+  select(Sample, Q8_1:Q8_3, avgtotal_last14_pop_per_capita) %>% 
   rename(., `Mandatory Vaccine`=2, `Close Down Bars and Restaurants`=3, `Fines For People Not Wearing Masks`=4) %>%
   pivot_longer(cols=2:4,  names_to="Policy", values_to="Support") %>% 
-  filter(., avgtotal_last7_pop_per_capita<0.0003) %>% 
-  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Support, col=Sample))+facet_grid(~str_wrap(Policy, width=20))+geom_point(size=0.5)+geom_smooth(method="lm", se=T)+scale_color_grey()+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
-dggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), width=8, height=3)
+ # filter(., avgtotal_last14_pop_per_capita< (mean(avgtotal_last14_pop_per_capita, na.rm=T)+avg14_2sd) ) %>% 
+  ggplot(., aes(x=avgtotal_last14_pop_per_capita, y=Support, col=Sample))+
+  facet_grid(~str_wrap(Policy, width=20))+
+  geom_point(size=0.5)+
+  geom_smooth(method="lm", se=T)+
+  scale_color_grey()+
+  labs(x="Health Region Average 14 Day Covid19 Case Count Per Capita")
+ggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), width=8, height=3)
 
 full %>% 
-  select(decline_economy:seniors_isolation, Sample, avgtotal_last7_pop_per_capita) %>%
+  select(decline_economy:seniors_isolation, Sample, avgtotal_last14_pop_per_capita) %>%
   rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
   pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
-  filter(., avgtotal_last7_pop_per_capita<0.0003) %>% 
-  ggplot(., aes(x=avgtotal_last7_pop_per_capita, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="loess", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
+  #filter(., avgtotal_last14_pop_per_capita<0.0003) %>% 
+  ggplot(., aes(x=avgtotal_last14_pop_per_capita, y=Score, col=Sample))+
+  geom_point(size=0.5)+geom_smooth(method="lm", se=T)+
+  scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(x="Health Region Average 7 Day Covid19 Case Count Per Capita")
 ggsave(here("Plots", "cjph_local_case_severity_per_capita_trade_offs.png"), width=8, height=3)
-qplot(x=avgtotal_last7_pop_per_capita, y=decline_economy, fill=Sample, data=full)
-ggplot(full, mapping=aes(x=avgtotal_last7_pop_per_capita, y=decline_economy, col=Sample))+geom_point()+geom_smooth(method="lm")
 #### Local Conditions 
 
 #### Searching For Technocracy
 lookfor(full, "scient")
-full$Q31_4
-table(full$Sample, full$Q31_4)
+lookfor(full, "evidence")
+#Uncomment and install if necessary
+#install.packages("plotrix")
+library(plotrix)
+library(knitr)
+library(kableExtra)
+t.test(Technocracy~Sample, data=full, var.equal=F)
+?t.test
 full %>% 
-  select(starts_with('Q31_')) %>% 
-  var_label()
+  group_by(Sample) %>% 
+  summarize(Average=mean(Technocracy, na.rm=T)) %>% 
+  kable(., digits=2) %>% 
+  save_kable(., file=here("Tables/cjph_technocracy.html"))
+#Create 
+full %>% 
+  ggplot(., aes(x=trust_government, y=as.numeric(Q30_1), col=Sample))+
+  geom_point()+geom_smooth(method="lm")+scale_color_grey()
+full$Sample
+table(full$Sample)
+trust_model<-lm(Technocracy~Sample+trust_government, data=full)
+trust_model2<-lm(Technocracy~Sample+trust_government:Sample, data=full)
+trust_model3<-lm(Technocracy~Sample+trust_government+Ideology, data=full)
+trust_model4<-lm(Technocracy~Sample+trust_government+Ideology:Sample, data=full)
+trust_model
 
-lookfor(full, "influence")
+#trust_people_model<-lm(as.numeric(Q30_1)~trust_people, data=full)
+stargazer(list(trust_model,trust_model2, trust_model3, trust_model4), 
+          out=here("Tables", "cjph_trust_government_evidence.html"))
+
+lookfor(full, "supervise")
+full %>% 
+  group_by(Q63) %>% 
+  as_factor() %>% 
+  summarize(mean(as.numeric(Q30_1)), std.error(as.numeric(Q30_1)))

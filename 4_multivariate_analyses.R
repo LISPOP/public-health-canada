@@ -6,11 +6,11 @@ full
 library(broom)
 
 full %>% 
-  select(Sample, Ideology, Q38_1_x:Q39_3_x, degree, rich, female, old2) %>% 
+  select(Sample, Ideology, Q38_1_x:Q39_3_x, degree, rich, female, old2, rural) %>% 
   pivot_longer(c(Ideology, Q38_1_x:Q39_3_x), names_to="Item", values_to="Score") %>% 
-  nest(data=c(degree, rich, female, old2,  Score, Sample)) %>% 
+  nest(data=c(degree, rich, female, old2,  rural, Score, Sample)) %>% 
   mutate(model1=map(data, ~lm(Score~ Sample, data=.x)), 
-         model2=map(data, ~lm(Score~Sample+as_factor(degree)+as_factor(rich)+as_factor(female)+as_factor(old2), data=.x))) %>% 
+         model2=map(data, ~lm(Score~Sample+as_factor(degree)+as_factor(rich)+as_factor(female)+as_factor(old2)+as_factor(rural), data=.x))) %>% 
   mutate(model1_tidied=map(model1, tidy), 
          model2_tidied=map(model2, tidy))  %>% 
   full_join(., ideology_variable_labels)->ideology_worldview_models
@@ -58,65 +58,111 @@ library(broom)
 full %>% 
   select(Q8_1:Q8_3) %>% 
   var_label()
+names(full)
 full %>% 
-  select(Sample, Q8_1_x:Q8_3_x, degree,  rich, female, old2, Ideology) %>% 
+  select(Sample, Q8_1_x:Q8_3_x, degree,  rich, female, Age, rural, Ideology) %>% 
   pivot_longer(Q8_1_x:Q8_3_x, names_to="Policy", values_to="Score") %>% 
-  nest(data=c(degree, rich, female, old2, Ideology, Score, Sample)) %>% 
+  nest(data=c(degree, rich, female, Age, rural, Ideology, Score, Sample)) %>% 
   mutate(model1=map(data, ~lm(Score~ Sample, data=.x)), 
-         model2=map(data, ~lm(Score~Sample+degree+rich+female+old2, data=.x)), 
-         model3=map(data, ~lm(Score~Sample+degree+rich+female+old2+Ideology, data=.x))) %>% 
+         model2=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural, data=.x)), 
+         model3=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology, data=.x)),
+         model4=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology+Age:Sample, data=.x)), 
+         model5=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology+female:Sample, data=.x)),
+         model6=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology+rural:Sample, data=.x))) %>% 
 mutate(tidied1=map(model1, tidy),
        tidied2=map(model2, tidy),
-       tidied3=map(model3, tidy)) ->models1
+       tidied3=map(model3, tidy),
+       tidied4=map(model4,tidy), 
+       tidied5=map(model5,tidy), 
+       tidied6=map(model6,tidy)) ->models1
 
-
+models1$model3
 library(stargazer)
-#This function prints the model
-# 
-# stargazer(
-#   #This weird bitty interleaves each element of each list
-#   #I am trying to print the models for each DV in successive order
-#   c(c(rbind(models1$model1, models1$model2, models1$model3))), 
-#   type="html", 
-#   #Specify file name
-#   out=here("Tables/cjph_policy_preferences_genpop_public_health_demographics.html"),
-#   #Define column labels
-#   column.labels=rep(c("Mandatory Vaccines", "Fines For Wearing Masks", "Close Bars and Restaurants Down"),3), 
-#   #Show that each column label should stretch over three columns
-#   column.separate=c(3,3,3), 
-#   digits=2, digits.extra=2
-#   )
 
-models1_table<-modelsummary(c(c(rbind(models1$model1, models1$model2, models1$model3))), output="gt", fmt=2, stars=c("*"=0.05, "**"=0.01, "***"=0.001), coef_omit="Intercept")
+
+models1_tab<-modelsummary(c(c(rbind(models1$model1, models1$model2, models1$model3, models1$model4, 
+                                    models1$model5, models1$model6))), 
+                          output="gt", fmt=2, stars=c("*"=0.05, "**"=0.01, "***"=0.001), coef_omit="Intercept")
+models1_tab
 models1_tab %>% 
   tab_style(style=cell_fill(color='lightgrey'), locations=cells_body(rows=1:2)) %>% 
-  tab_spanner(., label="Mandatory Vaccine", columns=2:4) %>% 
-tab_spanner(., label="Fines for Wearing Masks", columns=5:7) %>% 
-  tab_spanner(., label="Close Bars and Restaurants", columns=8:10) %>% 
+  tab_spanner(., label="Mandatory Vaccine", columns=2:8) %>% 
+tab_spanner(., label="Fines for Wearing Masks", columns=9:13) %>% 
+  tab_spanner(., label="Close Bars and Restaurants", columns=14:19) %>% 
   gtsave(., filename=here("Tables", "cjph_policy_preferences_ideology_demographics.html"))
 
+# Test interaction on age
+models1$model4 %>% 
+  map(., ggpredict, terms=c("Age[meansd]", "Sample")) %>% 
+  bind_rows() %>% 
+ data.frame() %>% 
+  mutate(Policy=rep(c("Vaccines", "Masks", "Bars"), each=6)) %>% 
+  filter(Policy!="Masks") %>% 
+  ggplot(., aes(x=x, y=predicted, col=group))+geom_line()+
+  facet_grid(~fct_relevel(Policy, "Vaccines",  "Bars"))+
+  geom_point()+
+  geom_errorbar(aes(ymin=conf.low, ymax=conf.high), width=0)+ylim(c(0,1))+
+  scale_color_grey(name="Sample")+labs(x="Age", y="Predicted Score")+theme(legend.position="left")->sample_age_interaction_plot
+
+models1$model6 %>% 
+  map(., ggpredict, terms=c("rural", "Sample")) %>% 
+  bind_rows() %>% 
+  data.frame() %>% 
+  mutate(Policy=rep(c("Vaccines", "Masks", "Bars"), each=4)) %>% 
+  filter(Policy!="Masks"&Policy!="Bars") %>%
+  mutate(x=fct_recode(as.factor(x), Rural="0", Urban="1")) %>% 
+  ggplot(., aes(x=as.factor(x), y=predicted, col=group, group=group))+
+  facet_grid(~Policy)+
+  geom_point()+
+  geom_line()+
+  geom_errorbar(aes(ymin=conf.low, ymax=conf.high), width=0)+
+  scale_color_grey(name="Sample")+theme(legend.position = "none")+
+  labs(x="Rural", y="")+ylim(c(0,1))->sample_rural_interaction_plot
+sample_rural_interaction_plot
+library(cowplot)
+
+plot_grid(sample_age_interaction_plot, sample_rural_interaction_plot)
+ggsave(filename=here("Plots", "sample_rural_age_interaction_policy.png"), width=8, height=2)
 #Second set of DVs is decline_economy to seniors isolation
 library(broom)
 
 full %>% 
-  select(Sample, Q9_1_x:Q12_1_x, degree,  rich, female, old2, Ideology) %>% 
+  select(Sample, Q9_1_x:Q12_1_x, degree,  rich, female, Age, rural, Ideology) %>% 
   pivot_longer(Q9_1_x:Q12_1_x, names_to="Trade_Off", values_to="Score") %>% 
-  nest(data=c(degree, rich, female, old2, Score, Sample, Ideology)) %>% 
+  nest(data=c(degree, rich, female, Age,rural, Score, Sample, Ideology)) %>% 
   mutate(model1=map(data, ~lm(Score~ Sample, data=.x)), 
-         model2=map(data, ~lm(Score~Sample+degree+rich+female+old2, data=.x)), 
-         model3=map(data, ~lm(Score~Sample+degree+rich+female+old2+Ideology, data=.x))) %>% 
+         model2=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural, data=.x)), 
+         model3=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology, data=.x)), 
+         model4=map(data, ~lm(Score~Sample+degree+rich+female+Age+rural+Ideology+Sample:Age, data=.x))) %>% 
   mutate(tidied1=map(model1, tidy),
-         tidied2=map(model2, tidy)) ->trade_off_models
+         tidied2=map(model2, tidy), 
+         tidied3=map(model3, tidy), 
+         tidied4=map(model4, tidy)) ->trade_off_models
 
-trade_off_models_tab<-modelsummary(c(c(rbind(trade_off_models$model1, trade_off_models$model2, trade_off_models$model3))), output="gt",stars=c("*"=0.05, "**"=0.01, "***"=0.001), fmt=2, coef_omit="Intercept")
-                                     
+trade_off_models_tab<-modelsummary(c(c(rbind(trade_off_models$model1,
+                                             trade_off_models$model2,
+                                             trade_off_models$model3, 
+                                             trade_off_models$model4))), 
+                                   output="gt",stars=c("*"=0.05, "**"=0.01, "***"=0.001), fmt=2, coef_omit="Intercept")
+                                     trade_off_models_tab
 trade_off_models_tab %>% 
   tab_style(style=cell_fill(color='lightgrey'), locations=cells_body(rows=1:2)) %>% 
-  tab_spanner(., label="Stop Economic Decline", columns=c(2:4)) %>% 
-  tab_spanner(., label="Reprieve from Social Isolation", columns=c(5:7)) %>% 
-  tab_spanner(., label="Keep schools open", columns=c(8:10)) %>% 
-  tab_spanner(., label="Reprieve from Social Isolation for Seniors", columns=c(11:13)) %>% 
+  tab_spanner(., label="Stop Economic Decline", columns=c(2:5)) %>% 
+  tab_spanner(., label="Reprieve from Social Isolation", columns=c(6:8)) %>% 
+  tab_spanner(., label="Keep schools open", columns=c(9:11)) %>% 
+  tab_spanner(., label="Reprieve from Social Isolation for Seniors", columns=c(12:14)) %>% 
   gtsave(., file=here("Tables", "cjph_trade_offs_ideology_demographics.html"))
+
+ggplot(full, aes(x=avgtotal_last7_pop_per_capita))+geom_histogram()
+full %>%
+  select(Sample, Q8_1_x:Q8_3_x, degree,  rich, female, old2, rural, Ideology, avgtotal_last14_pop_per_capita) %>%
+  pivot_longer(Q8_1_x:Q8_3_x, names_to="Policy", values_to="Score") %>%
+  nest(data=c(degree, rich, female, old2, rural, Ideology, Score, Sample, avgtotal_last14_pop_per_capita)) %>%
+  mutate(model1=map(data, ~lm(Score~ Sample+avgtotal_last14_pop_per_capita+Sample:avgtotal_last14_pop_per_capita, data=.x)))  %>%
+     #    model2=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural, data=.x)),
+      #   model3=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural+Ideology, data=.x))) %>%
+  mutate(tidied1=map(model1, tidy)) ->case_models
+case_models$tidied1
 
 ####
 # Model odds of selecting raical inequalities
@@ -128,10 +174,10 @@ look_for(full, "vacc")
 
 salience_mod<-glm(Q1_8~Sample, data=full, family="binomial")
 salience_mod2<-glm(Q1_8~ Sample+degree+rich+female+old2, data=full, family="binomial")
-salience_mod3<-glm(Q1_8~ Sample+degree+rich+female+old2+Ideology, data=full, family="binomial")
+salience_mod3<-glm(Q1_8~ Sample+degree+rich+female+old2+rural+Ideology, data=full, family="binomial")
 salience_mod4<-glm(Q1_2~Sample, data=full, family="binomial")
-salience_mod5<-glm(Q1_2~ Sample+degree+rich+female+old2, data=full, family="binomial")
-salience_mod6<-glm(Q1_2~ Sample+degree+rich+female+old2+Ideology, data=full, family="binomial")
+salience_mod5<-glm(Q1_2~ Sample+degree+rich+female+old2+rural, data=full, family="binomial")
+salience_mod6<-glm(Q1_2~ Sample+degree+rich+female+old2+rural+Ideology, data=full, family="binomial")
 summary(salience_mod)
 
 salience_models_tab<-modelsummary(list(salience_mod, salience_mod2, salience_mod3, salience_mod4, salience_mod5, salience_mod6), output='gt', fmt=2, stars=c("*"=0.05, "**"=0.01, "***"=0.001), coef_omit="Intercept")
@@ -194,4 +240,3 @@ c(genpop_evidence_trades_models$model1,genpop_evidence_trades_models$model2, gen
   modelsummary(., stars=T, output="gt") %>% 
   gtsave(., filename=here("Tables", "cjph_genpop_trade_offs_evidence_trust_knowledge_ideology.html"))
 
-#### Looking fo

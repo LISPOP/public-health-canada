@@ -231,6 +231,9 @@ mean(seven_day)/mean(fourteen_day)
 
 #Divide by population
 full$avgtotal_last7_pop_per_capita<-full$avgtotal_last7/full$health_region_population
+full$avgtotal_last14_pop_per_capita<-full$avgtotal_last14/full$health_region_population
+avg14_2sd<-2*sd(full$avgtotal_last14_pop_per_capita, na.rm=T)
+mean(full$avgtotal_last14_pop_per_capita, na.rm=T)+avg14_2sd
 qplot(full$case_trend, geom="histogram", main="Distribution of case trend variable")
 names(full)
 

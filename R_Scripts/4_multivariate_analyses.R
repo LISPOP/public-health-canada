@@ -94,6 +94,9 @@ full %>%
   mutate(tidied1=map(model1, tidy),
          tidied2=map(model2, tidy),
          tidied3=map(model3, tidy)) ->models2
+#Support for mandatory vaccines by ph
+m1<-lm(Q8_1_x ~avgtotal_last7_pop_per_capita, data=ph)
+m2<-lm(Q8_1_x ~avgtotal_last7_pop_per_capita, data=genpop)
 
 preferences_real_world_models_tab<-modelsummary(c(c(rbind(models2$model1, models2$model2, models2$model3))), output="gt",
              stars=c("*"=0.05, "**"=0.01, "***"=0.001), 
@@ -106,30 +109,35 @@ preferences_real_world_models_tab %>%
   tab_spanner(., label="Fines For Wearing Masks", columns=c(8:10)) 
 #Second set of DVs is decline_economy to seniors isolation
 library(broom)
-
+names(full)
+full$age
 full %>% 
-  select(Sample, Q9_1_x:Q12_1_x, degree,  rich, female, old2, rural, Ideology) %>% 
+  select(Sample, Q9_1_x:Q12_1_x, degree,  rich, female, old2, rural, Age,Ideology) %>% 
   pivot_longer(Q9_1_x:Q12_1_x, names_to="Trade_Off", values_to="Score") %>% 
-  nest(data=c(degree, rich, female, old2, rural,Score, Sample, Ideology)) %>% 
+  nest(data=c(degree, rich, female, old2, rural,Age,Score, Sample, Ideology)) %>% 
   mutate(model1=map(data, ~lm(Score~ Sample, data=.x)), 
          model2=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural, data=.x)), 
-         model3=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural+Ideology, data=.x))) %>% 
+         model3=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural+Ideology, data=.x)), 
+         model4=map(data, ~lm(Score~Sample+degree+rich+female+old2+rural+Ideology+Sample:old2, data=.x))) %>% 
   mutate(tidied1=map(model1, tidy),
-         tidied2=map(model2, tidy)) ->trade_off_models
+         tidied2=map(model2, tidy), 
+                     tidied3=map(model3, tidy), 
+         tidied4=map(model4, tidy)) ->trade_off_models
 
 trade_off_models_tab<-modelsummary(c(c(rbind(trade_off_models$model1, 
                                              trade_off_models$model2, 
-                                             trade_off_models$model3))), 
+                                             trade_off_models$model3,
+                                             trade_off_models$model4))), 
                                    output="gt",
                                    stars=c("*"=0.05, "**"=0.01, "***"=0.001), 
                                    fmt=2, coef_omit="Intercept")
 trade_off_models$model3
 trade_off_models_tab %>% 
   tab_style(style=cell_fill(color='lightgrey'), locations=cells_body(rows=1:2)) %>% 
-  tab_spanner(., label="Stop Economic Decline", columns=c(2:4)) %>% 
-  tab_spanner(., label="Reprieve from Social Isolation", columns=c(5:7)) %>% 
-  tab_spanner(., label="Keep schools open", columns=c(8:10)) %>% 
-  tab_spanner(., label="Reprieve from Social Isolation for Seniors", columns=c(11:13)) %>% 
+  tab_spanner(., label="Stop Economic Decline", columns=c(2:5)) %>% 
+  tab_spanner(., label="Reprieve from Social Isolation", columns=c(6:9)) %>% 
+  tab_spanner(., label="Keep schools open", columns=c(10:13)) %>% 
+  tab_spanner(., label="Reprieve from Social Isolation for Seniors", columns=c(14:17)) %>% 
   gtsave(., file=here("Tables", "cjph_trade_offs_ideology_demographics.html"))
 #stargazer(c(c(rbind(trade_off_models$model1, trade_off_models$model2, trade_off_models$model3))), type="html", out=here("Tables", "cjph_trade_off_sample_genpop_demographics.html"), column.labels = c("Stop Economic Decline", "Reprieve From Social Isolation", "Keep Schools Open", "Reprieve From Social Isolation From Seniors"), column.separate = c(3,3,3,3), digits=2, digits.extra=2)
 

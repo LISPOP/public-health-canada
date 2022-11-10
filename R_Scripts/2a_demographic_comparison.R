@@ -109,7 +109,7 @@ population.margins
 #Rake the survey design object according to the sample margins and the population margins
 #Weighting according to degree status, language status, income, age
 full.wtd<-rake(des, 
-               sample.margins=list(~~Degree1, ~Francophone1, ~High_Income, ~Old1), 
+               sample.margins=list(~Degree1, ~Francophone1, ~High_Income, ~Old1), 
                population.margins=list(population.margins[[1]], population.margins[[3]], population.margins[[4]], population.margins[[5]]))
 #### Compare weighted preferences with unweighted
 #Captuire the variable labels from the Q8 questions

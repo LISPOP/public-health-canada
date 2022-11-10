@@ -7,7 +7,8 @@ library(here)
 source(here('R_Scripts', '1_data_import.R'))
 #### Some basics####
 #Recode a sample variable with public health and general popuilation respondents
-full$Sample<-car::Recode(as.numeric(full$phase),"2='Public Health'; 1='General Population'")
+full$Sample<-car::Recode(as.numeric(full$phase),"2='Public Health'; 1='General Population'", 
+                         as.factor=T, levels=c("General Population", "Public Health"))
 
 
 #### Science Literacy ####
@@ -245,7 +246,10 @@ full$Q35
 var_label(full$Q35)
 full$Q36
 var_label(full$Q36)
-
+full$Q32
+# full%>% 
+#   select(starts_with("trust")) %>% 
+#   cor(., use="complete.obs")
 ##Mutating variables to be scaled from 0-1
 full %>% 
   mutate(
@@ -279,33 +283,29 @@ full %>%
     ),
     trust_people=case_when(
       #Q36 is scaled from 0-1
-      Q36 == 1 ~ 0,
-      Q36 == 2 ~ 1,
+      Q36 == 1 ~ 1,
+      Q36 == 2 ~ 0,
     )
   )->full
 
-#Calculate mean
+#Run a quick PCA on the trust items
+names(full)
+library(psych)
+principal(full[,grep('trust_', names(full))], nfactors=2)
+
 #Start with the dataframe
 full %>% 
-  #Work rowwise
-  rowwise() %>% 
   #mutate, create  anew variable called trust_averaage
-  mutate(trust_average=
-           #It is the product of the average of 
-           mean(
-             #The columns c_across specified in the next row
-             c_across(
-               #starts_with trust
-               starts_with('trust')
-               #Close the brackets
-               )
-             )
-         #save the foregoing
-         )->full
-#Check
-full$trust_average
+  mutate(trust_average=rowMeans(across(starts_with('trust'), na.rm=T)))->full
+
 full %>% 
-  select(starts_with('trust'))
+  #mutate, create  anew variable called trust_averaage
+  mutate(trust_government=rowMeans(across(trust_politicians_lie:trust_interests, na.rm=T)))->full
+
+#Technocracy
+full$Technocracy<-skpersonal::revScale(as.numeric(full$Q30_1), reverse=T)
+?rescale
+full$Q30_1
 #### Interest in Politics ####
 full %>% 
   mutate(Interest=case_when(
@@ -647,8 +647,12 @@ full %>%
   mutate(decline_economy=Q9_1,
          social_isolation=Q10_1, schools_open=Q11_1, seniors_isolation=Q12_1 )->full
 
-
-
+full %>% 
+  select(Q9_1_x:Q12_1_x)
+table(full$Q9_1, full$Q9_1_x)
+full %>% 
+  select(decline_economy:seniors_isolation) %>% 
+  val_labels()
 #This line executes the file that merges Tim's FSA file with the COVID case count data
 # When troubleshooting the merge script, it is advised to *not* run this line
 # INstead, it is advised to run this full script and then step through the code in 
