@@ -3,7 +3,7 @@ library(gt)
 library(here)
 source(here('R_Scripts', '2_data_preparation.R'))
 
-theme_set(theme_minimal())
+theme_set(theme_minimal(base_size = 20))
 #### Evaluate Demographic Representativeness of Genpop Sample ####
 #Read in demographic file
 census_demographics<-read.csv(file=here('data', 'canada_demographics_comparison.csv'))
@@ -246,8 +246,7 @@ table(genpop$province)
 full %>% 
   filter(Sample!="General Population")->ph
 look_for(ph, "health")
-View(ph)
-var_label(ph)
+
 ph$GROUP
 ph$Q64_1
 ph %>% 

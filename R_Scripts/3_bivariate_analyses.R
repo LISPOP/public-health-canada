@@ -38,12 +38,13 @@ mip_genpop_public_health %>%
 mip_genpop_public_health_x2$p.value<-p.adjust(mip_genpop_public_health_x2$p.value, 
                                               method="bonferroni", n=nrow(mip_genpop_public_health_x2))
 library(ggsignif)
-mip_genpop_public_health_x2
 mip_genpop_public_health %>% 
+  mutate(name=fct_recode(name, 
+                         "Racial Inequalities"="Race_inequality", 
+                         "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
   group_by(name, Sample, value) %>% 
   summarize(n=n()) %>% 
   mutate(Percent=(n/sum(n))*100) %>% 
-  mutate(name=fct_recode(name, "Racial Inequalities"="Race_inequality", "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
   filter(value!="Not Selected") %>% 
   ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Sample))+
     geom_col(position="dodge")+
@@ -75,10 +76,10 @@ mip_public_health_field %>%
 mip_public_health_field_x2$model
 mip_public_health_field_x2
 mip_public_health_field %>% 
+  mutate(name=fct_recode(name, "Racial Inequalities"="Race_inequality", "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
   group_by(name, Health_Promotion, value) %>% 
   summarize(n=n()) %>% 
    mutate(Percent=(n/sum(n))*100) %>% 
-   mutate(name=fct_recode(name, "Racial Inequalities"="Race_inequality", "Vaccine Hesitancy"="Vacc_hesitancy")) %>% 
    filter(value!="Not Selected") %>% 
   ggplot(., aes(y=fct_reorder(name, Percent), x=Percent, fill=Health_Promotion))+
   geom_col(position="dodge")+
@@ -113,6 +114,7 @@ ggsave(here("Plots", "cmoh_role_group.png"), width=8, height=2)
 full %>% 
   #Pick the variables working with
   select(decline_economy:seniors_isolation, Sample) %>% 
+zap_labels() %>% 
   #pivot them longer, except for the Sample variable
 pivot_longer(., cols=-Sample) %>% 
   #Convert to factor
@@ -135,19 +137,22 @@ ggsave(here('Plots', 'trade_off_group.png'), width=6, height=2)
 #### Difference Between Samples and Support For Measures
 full %>% 
   select(starts_with('Q8_'), Sample) %>% 
+  zap_labels() %>% 
   rename(`Mandatory Vaccines`=Q8_1, `Close Bars`=Q8_2, `Fine Non-Maskers`=Q8_3) %>% 
   pivot_longer(., cols=c(1,2,3)) %>% 
   #group_by(Sample) %>% 
-  ggplot(., aes(x=name, y=value, fill=as_factor(Sample)))+geom_boxplot()+
+  ggplot(., aes(x=name, y=value, fill=Sample))+geom_boxplot()+
   labs(title="Support For Interventions by Sample", x="Intervention")
 ggsave(here('Plots', 'Interventions_by_sample.png'))
 #### Correlation between Vaccine Severity and measures#### 
 
 full %>% 
   select(starts_with('Q8_'), avgtotal_last7, Sample) %>% 
+  zap_labels() %>% 
   pivot_longer(., cols=c(1,2,3)) %>% 
   # group_by(Sample, name) %>% 
-  ggplot(., aes(x=avgtotal_last7, y=value, col=as_factor(Sample)))+geom_point()+facet_grid(~name)+geom_smooth(method="lm")
+  ggplot(., aes(x=avgtotal_last7, y=value, col=Sample))+
+  geom_point()+facet_grid(~name)+geom_smooth(method="lm")
 
 #### Trust ####
 ggplot(full, aes(y=as.factor(Sample), fill=as_factor(Q32)))+geom_bar(position="fill")+labs(y='Sample')+scale_fill_grey(name="Politicians Are Ready to Lie")
@@ -253,8 +258,7 @@ full.wtd %>%
             Unweighted_Ideology=unweighted(mean(Ideology)),
             Unweighted_sd=unweighted(sd(Ideology)), Unweighted_n=unweighted(n()), Unweighted_Ideology_se=unweighted(Unweighted_sd/sqrt(Unweighted_n))) %>% 
   select(1:3,6)->out
-names(out)
-out
+
 out %>% 
   pivot_longer(., cols=everything(), names_to=c('Variable', ".value"), names_pattern = "^([^_]+)_(.*)") %>% 
   rename(Mean=Ideology, se=Ideology_se)->out
@@ -327,7 +331,7 @@ mutate(name=str_replace_all(name, pattern="_|_|should", replace=" ")) %>%
 #### Science Literacy ####
 full$mean_know
 
-?geom_histogram
+
   
   full %>% 
   select(Sample, mean_know) %>% 
@@ -382,6 +386,7 @@ names(full)
 
 full %>% 
   select(decline_economy:seniors_isolation, Sample, case_trend) %>% 
+  zap_labels() %>% 
   rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
   pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
   ggplot(., aes(x=case_trend, y=Score, col=Sample))+geom_point(size=0.5)+geom_smooth(method="lm", se=F)+scale_color_grey()+facet_grid(~str_wrap(Goal, width=20))+labs(caption="< 1 Case trend falling, > 1 Case trend rising", x="Case Trend")
@@ -404,6 +409,7 @@ ggsave(here("Plots", "cjph_local_case_severity_per_capita_preferences.png"), wid
 
 full %>% 
   select(decline_economy:seniors_isolation, Sample, avgtotal_last14_pop_per_capita) %>%
+  zap_labels() %>% 
   rename("Stop Economic Decline"=1, "Reduce Social Isolation"=2, "Keep Schools Open"=3,"Reduce Seniors Isolation"=4) %>% 
   pivot_longer(1:4,names_to=c("Goal"), values_to=c("Score")) %>% 
   #filter(., avgtotal_last14_pop_per_capita<0.0003) %>% 
