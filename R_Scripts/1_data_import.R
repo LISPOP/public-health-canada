@@ -45,5 +45,11 @@ nrow(full)
 #   select(CID,fsa:fsa2) %>%
 #   #distinct(CID) %>% 
 #   write_csv(., file=here("data", "fsa2.csv"))
-
-
+full%>% 
+  select(Q37_1, Q9_1) %>% 
+  map_df(., as.numeric) %>% 
+  ggplot(., aes(x=Q37_1, y=Q9_1))+
+  geom_point()+geom_smooth(method="lm")
+full %>% 
+  select(Q8_1:Q12_1) %>% 
+  filter(is.na(Q8_1))

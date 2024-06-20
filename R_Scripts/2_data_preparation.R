@@ -1,8 +1,10 @@
 #This script will contain code that prepares the dataset for analysis
 ####package management
 library(skpersonal)
+library(stargazer)
 ####Data Import####
 library(here)
+library(gt)
 #This runs the data import file, so running this file from top to bottom will import the data as well. 
 source(here('R_Scripts', '1_data_import.R'))
 #### Some basics####
@@ -10,6 +12,158 @@ source(here('R_Scripts', '1_data_import.R'))
 full$Sample<-car::Recode(as.numeric(full$phase),"2='Public Health'; 1='General Population'", 
                          as.factor=T, levels=c("General Population", "Public Health"))
 
+# Combine Sample with Health Promotion
+full %>% 
+  mutate(Group=case_when(
+    Sample =='General Population' ~ "General Population",
+    
+  ))
+
+
+#Look for straightlining
+
+library(careless)
+
+full %>% 
+  select(Q6_1:Q6_9) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q6=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+
+full %>% 
+  select(Q8_1:Q8_3) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q8=irv(.)) %>% 
+select(last_col()) %>% 
+  bind_cols(full, .)->full
+full %>% 
+  select(Q9_1:Q12_1) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q9_q12=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+full %>% 
+  select(Q8_1:Q8_3,Q9_1:Q12_1) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q8_q9_q12=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+full %>% select(starts_with("Q37")) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q37=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+
+full %>% select(starts_with("Q37_")|starts_with("Q38_")|starts_with("Q39_")) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q37_q39=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+
+full %>% select(starts_with("Q38")) %>% 
+  map_df(., as.numeric) %>% 
+  mutate(irv_q38=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+full %>% select(starts_with("Q39")) %>% 
+  map_df(., as.numeric) %>% 
+mutate(irv_q39=irv(.)) %>% 
+  select(last_col()) %>% 
+  bind_cols(full, .)->full
+
+full %>% 
+  filter(irv_q6==0) %>% 
+  select(starts_with("Q6_")) 
+
+# Define Straightliner.
+full %>% 
+  mutate(straightliner=case_when(
+    irv_q6==0~ 1,
+TRUE~0
+      ))->full
+full %>% 
+  count(Sample,straightliner) %>% 
+  gt() %>% 
+  gtsave(., filename=here("Tables/staightlining.html"))
+full %>% 
+  select(starts_with("Q6_")) %>% 
+  map(., var_label) %>% 
+  unlist() %>% 
+  data.frame() %>% 
+  gt() %>% 
+  gtsave(., filename="Tables/straightlining_questions.html")
+  
+#Compare speeding times by straightlining
+full %>% 
+  group_by(straightliner) %>% 
+  summarize(average=mean(LENGTH_OF_INTERVIEW))
+# Speeders
+full %>% 
+  ggplot(., aes(x=LENGTH_OF_INTERVIEW))+
+  geom_histogram()
+
+
+full %>% 
+  group_by(Sample) %>% 
+ mutate(median_time=median(LENGTH_OF_INTERVIEW)) %>% 
+  ungroup() %>% 
+mutate(speeder=case_when(
+  (LENGTH_OF_INTERVIEW/median_time)<0.3~1,
+  TRUE~ 0)) ->full
+
+#The big data quality shebang
+# full %>% 
+#   filter(irv_q8>0 &irv_q9_q12>0)->full
+# nrow(full)
+nrow(full)
+full %>% 
+  filter(straightliner==0)->full
+full %>% 
+  filter(speeder==0)->full
+nrow(full)
+table(full$Sample)
+
+# Field of Study
+#this converts field of study to a factor
+full %>% 
+  mutate(`Public_Health_Field`=case_when(
+    Q60==1|Q61==1 ~ "Health promotion",
+    Q60==2|Q61==2 ~ "Health protection",
+    Q60==3 | Q61==3 ~ "Epidemiology",
+    Q60==4 |Q61==4 ~ "Emergency Preparedness and response"
+  )) ->full
+full$`Public_Health_Field`<-factor(full$`Public_Health_Field`, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
+full$`Public_Health_Field`
+str_detect(full$Public_Health_Field, "promotion", negate=T)
+
+full %>% 
+  mutate(Health_Promotion=case_when(
+    Public_Health_Field=="Health promotion"~1,
+    Public_Health_Field=="Health protection"~0,
+    Public_Health_Field=="Epidemiology"~0,
+    Public_Health_Field=="Emergency Preparedness and response" ~0
+  ))->full
+table(full$Health_Promotion)
+val_labels(full$Health_Promotion)<-c('Health Promotion'=1, 'Other'=0)
+full$Health_Promotion
+full %>% 
+  mutate(Sample2=case_when(
+    Health_Promotion==1~ "Public Health - Health Promotion",
+    Health_Promotion==0~ "Public Health - Other",
+    Sample=="General Population"~ "General Population"
+  ))->full
+table(full$Sample2)
+full$Sample2<-factor(full$Sample2, levels=c("General Population",
+                              "Public Health - Health Promotion",
+                              "Public Health - Other"))
+
+# full$`Public_Health_Field`<-as_factor(full$Q61)
+# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\).")
+# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\)")
+# full$Public_Health_Field<-str_trim(full$Public_Health_Field)
+# table(full$Public_Health_Field)
+# full$Public_Health_Field<-factor(full$Public_Health_Field, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
 
 #### Science Literacy ####
 #Find the questions on science literacy
@@ -214,24 +368,48 @@ full %>%
   mutate(mean_crt=mean(c_across(starts_with('crt')))) %>% 
   ungroup()->full
 #### Ideology ####
-full %>%
-  mutate(Ideology=revScale(Q51))->full
+# ideology low score is left-wing
+full$Q51
+full$Ideology<-revScale(full$Q51)
+cor(full$Ideology, full$Q51)
 #### Worldviews
 #Scale Egalitarian items 0 to 1
-
+#These are the egalitarianism items scored so that low score is left
+# high score  is right
+# Note that these are for *graphs*
 full %>% 
   mutate(across(Q38_1:Q38_3, revScale, reverse=T,.names="{.col}_x")) ->full
+
+#These items are scored so that high score is left, low score is right
+# note that these are for *regression models*
+full %>% 
+  mutate(across(Q38_1:Q38_3, revScale, reverse=F,.names="{.col}_y")) ->full
+
 #Scale Individual Items 0 to 1
 #Note reverse scale all but Q38_4
+#1 is High individualism, 0 is low individualism
 full %>% 
   mutate(Q37_1_x=revScale(Q37_1, reverse=T),
          Q37_2_x=revScale(Q37_2, reverse=T),
          Q37_3_x=revScale(Q37_3, reverse=T),
          Q37_4_x=revScale(Q37_4, reverse=F),
          ) ->full
+#Correlate original hierarchical measures with ideology
+full %>% 
+  select(Q39_1:Q39_3, Ideology) %>% cor(., use="everything")
+#Correlate policy measures with hierarchy
+full %>% 
+  select(Q8_1:Q8_3, Q39_1:Q39_3) %>% cor(., use="everything")
+#Correlate policy measures with egalitarianism
+full %>% 
+  select(Q8_1:Q8_3, Q38_1:Q38_3) %>% cor(., use="everything")
 #Scale Hierarchy Items 0 to 1
 full %>% 
   mutate(across(Q39_1:Q39_3, skpersonal::revScale, .names="{.col}_x")) ->full
+cor(full$Q39_1, full$Q39_1_x)
+
+full$Q39_1
+full$Q8_1
 ####
 ####TRUST SCALE####
 
@@ -291,21 +469,19 @@ full %>%
 #Run a quick PCA on the trust items
 names(full)
 library(psych)
-principal(full[,grep('trust_', names(full))], nfactors=2)
-
-#Start with the dataframe
-full %>% 
-  #mutate, create  anew variable called trust_averaage
-  mutate(trust_average=rowMeans(across(starts_with('trust'), na.rm=T)))->full
+# principal(full[,grep('trust_', names(full))], nfactors=2)
 
 full %>% 
-  #mutate, create  anew variable called trust_averaage
-  mutate(trust_government=rowMeans(across(trust_politicians_lie:trust_interests, na.rm=T)))->full
+  #mutate, create  anew variable called trust_average
+  mutate(trust_average=mean(c_across(starts_with("trust")), na.rm=T))->full
+
+full %>% 
+  #mutate, create  anew variable called trust_government
+  mutate(trust_government=mean(c_across(trust_politicians_lie:trust_interests), na.rm=T))->full
 
 #Technocracy
 full$Technocracy<-skpersonal::revScale(as.numeric(full$Q30_1), reverse=T)
-?rescale
-full$Q30_1
+
 #### Interest in Politics ####
 full %>% 
   mutate(Interest=case_when(
@@ -393,9 +569,10 @@ mip %>%
 names(full)
 full %>%
   mutate(other_problem_text=tolower(Q1_9_SP)) %>%
-  full_join(., mip, by="other_problem_text") %>%
+  left_join(., mip, by="other_problem_text") %>%
   rename(.,other_mip=`category.x`)->full
 names(full)
+
 #### Pandemic Response Preferences #### 
 #This package provides a useful rescale function that rescales variables to 0 and 1
 #remotes::install_github('sjkiss/skpersonal')
@@ -403,10 +580,20 @@ library(skpersonal)
 summary(revScale(full$Q8_1))
 head(revScale(full$Q8_1))
 library(scales)
+# Original variables high values are COVID stringent
+# New Variables high values are are COVID non Stringent
+revScale(full$Q8_1)
+full %>% 
+  select(Q8_1:Q8_2) %>% 
+  summary()
+nrow(full)
+
+
 full %>% 
   ungroup() %>% 
   mutate(across(starts_with('Q8_'), revScale, .names="{.col}_x")) ->full
 names(full)
+cor(full$Q8_1, full$Q8_1_x)
 
 #### Demographics ####
 # Region
@@ -448,7 +635,7 @@ full %>%
 full %>%
   #mutate and create a new variable with a meaningful name
   mutate(old2=case_when(
-    #If Q55_1 is greater than 2021-65, then yes, they are "old" , so they get a 1
+    #If Q55_1 is greater than 2021-44, then yes, they are "old" , so they get a 1
     Q55_1<2021-44 ~1,
     #otherwise they get a zero
     TRUE~ 0
@@ -475,13 +662,13 @@ val_labels(full$age_4)<-c('Age 65+' = 4, 'Age 51-64'= 3, 'Age 35-50' = 2, 'Age 1
 full%>%
 mutate(age_2=case_when(
 #Under 50
-  Age < 50 ~ 1,
+  Age >24 & Age< 55 ~ 1,
 #50 and up
-  Age > 49 ~ 2
+  Age > 54&Age<65 ~ 2
 ))->full
 
 var_label(full$age_2)<-'Age Category (2), R Age'
-val_labels(full$age_2)<-c('Age 50+' = 2, 'Age 18-49' = 1)
+val_labels(full$age_2)<-c('55-64' = 2, '25-54' = 1)
 
 names(full)
 
@@ -537,42 +724,16 @@ full %>%
 full$Vaccines<-as_factor(full$Q23)
 levels(full$Vaccines)
 full$Vaccines<-fct_relevel(full$Vaccines, "Not Sure", after=2)
+full$Vaccines
 full %>% 
-  mutate(Vaccines=recode(Vaccines, 'I have already been vaccinated'=NA_character_)) ->full
+  mutate(Vaccines=car::recode(Vaccines, 
+                         "'I have already been vaccinated'=NA")) ->full
 
 full %>% 
   filter(!is.na(Vaccines)) %>% 
   ggplot(., aes(y=Sample, fill=Vaccines))+geom_bar(position="fill")+labs(title="Plans to Vaccinate by Sample")
 #ggsave(filename=here("Plots", "vaccine_plans_group.png"), width=8, height=2)
-#### Field of Study ####
-#this converts field of study to a factor
-full %>% 
-  mutate(`Public_Health_Field`=case_when(
-    Q60==1|Q61==1 ~ "Health promotion",
-    Q60==2|Q61==2 ~ "Health protection",
-    Q60==3 | Q61==3 ~ "Epidemiology",
-    Q60==4 |Q61==4 ~ "Emergency Preparedness and response"
-  )) ->full
-full$`Public_Health_Field`<-factor(full$`Public_Health_Field`, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
-full$`Public_Health_Field`
-str_detect(full$Public_Health_Field, "promotion", negate=T)
 
-full %>% 
-  mutate(Health_Promotion=case_when(
-    Public_Health_Field=="Health promotion"~1,
-    Public_Health_Field=="Health protection"~0,
-    Public_Health_Field=="Epidemiology"~0,
-    Public_Health_Field=="Emergency Preparedness and response" ~0
-  ))->full
-table(full$Health_Promotion)
-val_labels(full$Health_Promotion)<-c('Health Promotion'=1, 'Other'=0)
-
-# full$`Public_Health_Field`<-as_factor(full$Q61)
-# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\).")
-# full$`Public_Health_Field`<-str_remove_all(full$`Public_Health_Field`, "\\(.+\\)")
-# full$Public_Health_Field<-str_trim(full$Public_Health_Field)
-# table(full$Public_Health_Field)
-# full$Public_Health_Field<-factor(full$Public_Health_Field, levels=c("Health promotion", "Health protection", "Epidemiology", "Emergency Preparedness and response"))
 #### Assign Variable Labels To Influence Questions #### 
 #These questions asked about what does and what should influence public policy
 #This code section takes the variable names from these questions and assigns them to 
@@ -630,18 +791,61 @@ full %>%
   #Bind the columns from the original `full` dataframe and add to them the new variables we just made
   bind_cols(full, .) ->full
 
+# Harm Reduction
+lookfor(full, "drugs")
+#scale the original variable from 0 to 1
+full$harm_reduction<-skpersonal::revScale(as.numeric(full$Q13_2))
+full$Q13_2
+#Test correlation
+cor(full$Q13_2, full$harm_reduction)
+# Center and classify above and below mean
 
-#### Provide names for trade-off variables
-#Check this
 full %>% 
-mutate(across(Q9_1:Q12_1, revScale, .names="{.col}_x")) %>% 
+  group_by(Sample) %>% 
+  summarize(mean(harm_reduction, na.rm=T))
+#Center for each group
+
+full %>% 
+  group_by(Sample) %>% 
+  mutate(harm=harm_reduction-mean(harm_reduction,na.rm=T)) ->full
+qplot(harm, geom="histogram", data=full)
+full %>% 
+  ungroup()->full
+full %>% 
+  mutate(harm1=case_when(
+    harm_reduction<0.5 ~ "Anti-Harm Reduction",
+    harm_reduction>0.5 ~"Pro-Harm Reduction"
+))->full
+
+# Isolation
+lookfor(full, "isolation")
+full %>% 
+  mutate(isolation=skpersonal::revScale(Q12_1, reverse=T))->full
+
+
+full %>% 
+  mutate(isolation1=case_when(
+    isolation<0.5~"Anti "
+  ))
+#### Provide names for trade-off variables
+# In Original, Low levels are COVID stringent
+# High levels are not COVID stringent
+#Reverse in _x to match Q8 questions
+# In _x variables, high is COVID STRINGENT
+full %>% 
+mutate(across(Q9_1:Q12_1, revScale, reverse=F,.names="{.col}_x")) %>% 
   select(Q9_1_x:Q12_1_x) %>% 
   summary()
 
 #Repeat and ave
 full %>% 
-  mutate(across(Q9_1:Q12_1, revScale, .names="{.col}_x"))->full
-
+  mutate(across(Q9_1:Q12_1, revScale, reverse=T,.names="{.col}_x"))->full
+full %>% 
+  select(Q9_1, Q9_1_x) %>% 
+  cor(., use="everything")
+val_labels(full$Q9_1)
+full %>% 
+  ggplot(., aes(x=Q9_1, y=Q9_1_x))+geom_smooth(method="lm")
 #Add the named versions of these variables for backwards compatibility
 full %>% 
   mutate(decline_economy=Q9_1,
@@ -690,6 +894,34 @@ full %>%
 
 
 names(full)
+
+#Create three measures of worldviews
+# full %>%
+#   rowwise( ) %>%
+#   mutate(individualism1=mean(c_across(Q37_1_x:Q37_4_x), na.rm=T),
+#          #Note Use the ones scored so that high scores are egalitarian
+#          egalitarianism1=mean(c_across(Q38_1_y:Q38_3_y), na.rm=T),
+#          hierarchism1=mean(c_across(Q39_1_x:Q39_3_x), na.rm=T)) %>%
+#   ungroup()->full
+
+# full %>% 
+#   select(Q38_1:Q38_3, Q37_1:Q37_3, Q39_1:Q39_3) %>% 
+#   map_df(., var_label)  %>% 
+#   pivot_longer(cols=everything()) %>% 
+#   mutate(value=str_remove(value, " - .*$")) %>% 
+# mutate(value=str_remove(value, "Q3[789]_[123] ")) %>% 
+# select(value) %>% 
+# mutate(Measure=c(rep("Egalitarianism", 3), rep("Individualism", 3), rep("Hierarchism", 3))) %>% 
+#   rename(Item=value) %>% 
+#   gt() %>% 
+#   gtsave(filename = here("Tables/table_a4_worldviews_items.html"))
+
+full %>% 
+  select(Q38_1:Q39_3) %>% 
+  map_df(., as.numeric) %>% 
+  pivot_longer(cols=1:6) %>% 
+  ggplot(., aes(x=value))+geom_histogram() +
+  facet_wrap(~name)
 #### Assign Value labels and variable labels ####
 #This code section assigns some value labels and variable labels to new variables 
 # to improve communication with colleagues
@@ -721,7 +953,7 @@ add_value_labels(full,
                  Q30_1=c('Public policy should be based on the best available scientific evidence'=1, 
                          'Public policy should be determined by many factors including scientific evidence'=7))
 val_labels(full$rural)<-c(`Rural`=1, `Not Rural`=0)
-
+var_label(full$province)<-c('Province of Residence')
 # Add Variable Labels for Q8_1_x specifying that they are reversed versions of Q8_1, Q8_2, etc. 
 var_label(full$Q8_1_x)<- 'Reversed version of Q8_1'
 var_label(full$Q8_2_x)<- 'Reversed version of Q8_2'
@@ -769,6 +1001,7 @@ var_label(full$Age)<-"R Age"
 full %>% 
   select(Q9_1:Q12_1) %>% 
   val_labels()
+#Variable labels for scaled trade-off questions
 var_label(full$Q9_1_x)<-"Stop Economic Decline At Expense of Increased COVID19"
 var_label(full$Q10_1_x)<-"Reprieve From Social Isolation At Expense of Increased COVID19"
 var_label(full$Q11_1_x)<-"Keep Schools Open At Expense of Increased COVID19"
@@ -778,6 +1011,11 @@ var_label(full$Q12_1_x)<-"Reprieve For Seniors fro Isolation At Expense of Incre
 var_label(full$Interest)<-'interest in politics'
 val_labels(full$Interest)<-c(`Very disinterested`=0, `Moderately disinterested`=0.25, 
                              `Neutral`=0.5, `Moderately interested`=0.75, `Very interested`=1)
+#Var label for world view averages
+
+# var_label(full$hierarchism)<-c("Mean score of hierarchy measures Q39")
+# var_label(full$individualism)<-c("Mean score of individualism measures Q37")
+# var_label(full$egalitarianism)<-c("Mean score of egalitarian measures Q38")
 
 #Rename some variables
 
@@ -809,7 +1047,16 @@ full %>%
   select(FSA, province, province_full, Province)
 
 full %>% 
+  filter(province!="International")->full
+full %>% 
   filter(province_fsa_bad!=1)->full
+table(full$Q58)
+#This filters out the 12 students 
+full %>% 
+  #Q58==1 for students But the genpop sample
+  #Was not asked the question, so we have to include missing values 
+  # on Q58
+  filter(Q58==2|is.na(Q58))->full
 #### Write out the data save file ####
 # names(full)
 # table(full$Sample)
@@ -818,4 +1065,79 @@ full %>%
 # write_sav(full, path=paste0(here("data", "/recoded_data"), "_",Sys.Date(), ".sav"))
 # 
 
+#Factor analysis for worldviews
+full %>%
+  select(Q38_1_y:Q39_3_x) %>% 
+  #select(-ends_with("y")) %>% 
+  scale(.)->worldview_items
+worldview_items
+# Produce scree plot of items
 
+psych::scree(worldview_items)
+#Exract 3 factors and rotate allowing correlation
+pca2<-principal(worldview_items, nfactors=3, rotate="oblimin")
+print(pca2, cut=0.3, sort=T)
+
+var_label(full$Q37_1)
+val_labels(full$Q37_1)
+var_label(full$Q38_1)
+#Add scores to data and name
+
+full$egalitarianism<-pca2$scores[,1]
+full$hierarchism<-pca2$scores[,2]
+full$individualism<-pca2$scores[,3]
+#Get function fa_table
+source("https://raw.githubusercontent.com/franciscowilhelm/r-collection/master/fa_table.R")
+
+#save Loadings
+fa_table(pca2, diffuse=F)$ind_table %>% 
+  fmt_number(decimals=2) %>% 
+  gtsave(filename="Tables/table_a6_pca_loadings.html")
+#Save Vaccounted
+fa_table(pca2, diffuse=F)$f_table %>% 
+  fmt_number(decimals=2) %>% 
+  gtsave(filename="Tables/table_a7_pca_vaccounted.html")
+# Vote
+library(car)
+full$Q57
+full$Vote<-Recode(as.numeric(full$Q57), 
+                  "1='Conservative';
+                  2='Liberal';
+                  3='NDP';
+                  4='BQ';
+                  5='Green';
+                  6:8=NA", levels=c("Liberal",
+                                    "Conservative","
+  NDP", "BQ", "Green"))
+full %>% 
+  select(Q64_1:Q64_6)
+full$Q64_6
+table(full$Q64_6_SP)
+unique(full$Q64_6_SP)
+
+full %>%
+  mutate(CIPHI=case_when(
+    str_detect(Q64_6_SP,"Canadian Institute of Public Health|CIPHI|CPHIC|CPHI|ciphi|Ciphi|des inspecteurs en sante publique")~ 1,
+    TRUE~ 0
+  )) %>% 
+mutate(Other_Assoc=case_when(
+str_detect(Q64_6_SP, "CMA|various including|CPS|Canadian Registered|
+Canadian Evaluation Society|
+CARNA|IPAC Canada|
+Social work|Manitoba College of Social Workers|
+Crnm|Marriage|CNA|several professional organizations")~ 1,
+str_detect(Q64_6_SP, "None|none|n/a|aucune| ")~ 0,
+Q64_6==1&CIPHI!=1~1,
+TRUE~0))->full
+
+
+full %>%   
+select(., CPHA=Q64_1, PHPC=Q64_2, ASPQ=Q64_3, HPC=Q64_4, Provincial=Q64_5, CIPHI,Other_Assoc) %>% 
+  pivot_longer(., cols=CPHA:Other_Assoc, names_to="Organization", values_to="Selected") %>% 
+  filter(Selected==1) %>% 
+count(Organization) %>% 
+  arrange(desc(n))
+
+full %>% 
+  group_by(Sample) %>% 
+  summarize(min=min(date), max=max(date))
